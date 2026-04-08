@@ -1,0 +1,68 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# AI / Editor tool dirs
+.claude/
+.cursor/
+.learnings/
+.vscode/
+
+# Environment / Secrets
+.env
+.env.*
+*.pem
+*.key
+*_rsa
+*_rsa.pub
+*.p12
+*.pfx
+ssh.md
+
+# Internal operational docs (not public)
+CEREBRO-HOST-02-CHANGELOG.md
+CEREBRO-HOST-03-DEVELOPMENT.md
+CEREBRO-HOST-04-PROGRESS.md
+CEREBRO-HOST-05-DEPLOYMENT.md
+CEREBRO-HOST-06-RAGFILE.md
+FILE-ORGANIZATION-SUMMARY.md
+FILE-ORGANIZATION.tpl
+
+cerebro.host-main/BACKUP-STRATEGY.md
+cerebro.host-main/GO-LIVE-CHECKLIST.md
+cerebro.host-main/PASTE-HTML-INSTRUCTIONS.md
+cerebro.host-main/PUBLIC-HTML-UPLOAD-GUIDE.md
+cerebro.host-main/SITEJET-IMPLEMENTATION-CHECKLIST.md
+cerebro.host-main/SITEJET-QUICK-START.md
+
+# Old backup HTML files
+cerebro.host-main/cerebro-backup1-v2.html
+cerebro.host-main/cerebro-backup2-v2.html
+cerebro.host-articles/cerebro-articles-backup-v1.html
+
+# Internal articles docs
+cerebro.host-articles/CEREBRO.HOST-ARTICLES-02-CHANGELOG.md
+cerebro.host-articles/CEREBRO.HOST-ARTICLES-03-DEVELOPMENT.md
+cerebro.host-articles/CEREBRO.HOST-ARTICLES-04-PROGRESS.md
+cerebro.host-articles/CEREBRO.HOST-ARTICLES-05-DEPLOYMENT.md
+cerebro.host-articles/CEREBRO.HOST-ARTICLES-06-RAGFILE.md
+cerebro.host-articles/SITEJET-PASTE-GUIDE.md
+cerebro.host-articles/LINKEDIN-ARTICLES-COLLECTION.md
+
+# Generated / build artifacts
+cerebro.host-articles/all-month-sections-backup.txt
+cerebro.host-articles/all-month-sections.txt
+cerebro.host-articles/articles-html-clean.txt
+cerebro.host-articles/articles-html-final.txt
+cerebro.host-articles/articles-html-snippet.txt
+cerebro.host-articles/generated-articles-html.txt
+cerebro.host-articles/month-sections-clean.txt
+
+# Internal content docs with hosting details
+content/sitejet-implementation-guide.md
+
+# Duplicate assets
+content/xprbppurpleback.jpg
+
+# CSV / data exports
+*.csv
