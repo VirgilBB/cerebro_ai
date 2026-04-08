@@ -1,12 +1,47 @@
-# cerebro.host
+# Cerebro AI — cerebro.host
 
-Personal website showcasing blockchain infrastructure operations across multiple networks — live at [cerebro.host](https://cerebro.host).
+Multi-chain infrastructure operator. Website source for [cerebro.host](https://cerebro.host).
 
-## What It Is
+## Overview
 
-A static, multi-page site built as custom HTML/CSS hosted via a website builder. No framework dependencies — just portable, self-contained HTML that can be pasted into any host or served directly.
+Cerebro AI operates production blockchain infrastructure across multiple networks, builds A2A microservices, and conducts security research. This repo contains the source for the main website.
 
-## Architecture
+## Platform
+
+| Project | Description | Links |
+|---|---|---|
+| Cerebro AI | Platform source | [GitHub](https://github.com/VirgilBB) |
+| AGDP.io | Agent with 5 service offerings on A2A marketplace | [Agent Profile](https://agdp.io) |
+| Moltbook | A2A social platform for agent-to-agent content sharing | [Profile](https://moltbook.com) |
+
+## Production Systems
+
+| Project | Role | Links |
+|---|---|---|
+| XPR Network | Block Producer | [Mainnet](https://mainnet.cerebro.host) |
+| Metal Blockchain | Validator | [Explorer](https://explorer.metalblockchain.org) |
+| Akash Network | Validator | [Stats](https://akash.network) |
+| Decred Network | VSP Operator | [Live](https://dcr.cerebro.host) |
+| VB ARMS | FFL ecommerce; gov contract bidding via BidForge | [GitHub](https://github.com/VirgilBB) |
+
+## Akash Deployment Templates
+
+Reproducible infrastructure templates deployed on Akash decentralized cloud.
+
+| Template | Description | Links |
+|---|---|---|
+| Metal Validator | Metal blockchain validator deployment template | [GitHub](https://github.com/VirgilBB) |
+| DCRPulse | Decred VSP deployment template | [GitHub](https://github.com/VirgilBB) |
+
+## Security Research
+
+- 29-class vulnerability taxonomy covering DeFi, bridges, ZK circuits, governance, and Web2 infrastructure
+- Mandatory program intake gate — scope, prior audits, and eligibility verified before analysis begins
+- Every finding validated with Foundry fork tests against live chain state
+- Protocol-type routing to prioritize highest-impact bug classes per target
+- [Security Portfolio](https://github.com/VirgilBB/virgilbb-security-portfolio)
+
+## Website Source Structure
 
 ```
 cerebro.host/
@@ -33,19 +68,8 @@ cerebro.host/
 
 - Multi-network blockchain operator showcase (XPR, Metal, Akash, Decred, Metallicus)
 - Articles page with 107 LinkedIn items (89 articles + 18 videos), searchable with 80+ keyword filters
-- Keyword quick-access buttons (BTC, ETH, Stable Tokens, and more)
 - Fully responsive, no build step required
 - Self-contained HTML — deploy by pasting into any host
-
-## Infrastructure Highlighted
-
-| Network | Role | Details |
-|---|---|---|
-| XPR Network | Block Producer | `cerebroai` — mainnet.cerebro.host |
-| Metal Blockchain | Validator (×2) | Dedicated + Akash-deployed, 60K METAL staked |
-| Akash Network | Provider + Validator | CPAX Unity (112 CPU, 1TB RAM) |
-| Decred | VSP Operator | dcr.cerebro.host, 0.888% fee, multi-cloud |
-| Metallicus | Ecosystem Integration | Validator services |
 
 ## Tech Stack
 
