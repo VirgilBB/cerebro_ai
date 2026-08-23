@@ -48,10 +48,9 @@ TPL = """<!doctype html>
         <a class="btn btn-ghost" href="../../">Browse all {count} gifs</a>
       </div>
       <div class="platforms">
-        <dl>
-          <dt class="yes">Link works</dt><dd>Discord · Telegram · Slack · Reddit</dd>
-          <dt>Upload the file</dt><dd>X · Instagram · WhatsApp · Signal · Facebook · LinkedIn · Bluesky</dd>
-        </dl>
+        <p style="margin:0"><strong>X, Instagram and most social apps</strong> need the
+        file itself — a link shows a still frame. Chat apps vary: some animate a pasted
+        link, some don't. When in doubt, download and attach.</p>
       </div>
     </div>
   </div>

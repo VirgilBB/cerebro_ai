@@ -1,5 +1,5 @@
 {
- "count": 79,
+ "count": 78,
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
@@ -32,25 +32,6 @@
     "buy",
     "shut up",
     "wallet",
-    "cash"
-   ],
-   "sizeBytes": 669430,
-   "hasMobile": false,
-   "mp4FromGif": true,
-   "new": false
-  },
-  {
-   "slug": "fry-take-my-money-metal",
-   "title": "Fry \u2014 Take My Money (Metal)",
-   "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, Metal branded",
-   "reaction": "take-my-money",
-   "source": "fry",
-   "branded": "mtl",
-   "tags": [
-    "money",
-    "buy",
-    "shut up",
-    "metal",
     "cash"
    ],
    "sizeBytes": 669430,
