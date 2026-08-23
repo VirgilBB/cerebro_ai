@@ -1,6 +1,6 @@
 # Progress — cerebro-gifs GIF library
 
-_Last updated: 2026-08-23_
+_Last updated: 2026-08-23 (deployed)_
 
 Two parallel sets, tied together by a shared number:
 - **Wave masters** — source clips in `wave1`–`wave4` (mostly `.mp4`).
@@ -70,15 +70,24 @@ and the Giphy creator account was denied.
 | Deep-link pages generated | 79 |
 | Initial page load | 0 gif + 0 mp4 requests (verified via netlog) |
 
+### Deployed 2026-08-23
+- **Live at https://xpr-gifs.pages.dev** — Cloudflare Pages project `xpr-gifs`,
+  account `50a670e61c07a36d77ba423be605b7f0`, 413 files, 78 gifs.
+- `_headers` confirmed applied: assets return `cache-control: immutable` + CORS `*`.
+- Hover playback confirmed working in a real browser.
+
 ### Still open
-- **Not yet deployed.** Needs `wrangler` (pinned, >7 days old) + Cloudflare Pages
-  project + `gifs.cerebro.host` DNS record.
+- **`gifs.cerebro.host` is `pending`.** The Pages custom domain is registered but will
+  not validate until a DNS record exists. The wrangler OAuth token has `zone (read)`
+  only — no DNS write — so this needs the dashboard:
+  `cerebro.host` → DNS → add **CNAME `gifs` → `xpr-gifs.pages.dev`**, proxied.
+  Zone id `7212c6a9bc34d429969d0d54cc6e6470`.
 - **`SUBMIT_URL` in `site/app.js` is a placeholder** (`https://t.me/cerebro_ai`) —
   point it at the real community channel before launch.
-- Video playback needs confirming in a real browser; headless Chrome cannot composite
-  `<video>` without a GPU, so it was verified structurally (DOM) rather than visually.
-- Platform table (which services animate a remote GIF link) is a working hypothesis —
-  hand-verify each before launch.
+- Platform claims were removed from the UI entirely (never verified; the earlier
+  LAN-URL test was invalid because Telegram/Signal unfurl server-side and could not
+  reach 192.168.1.123). Now testable for real against a public URL:
+  https://xpr-gifs.pages.dev/assets/gif/pepe-take-my-money.gif
 - Sitejet nav link from cerebro.host → gifs.cerebro.host not yet added.
 
 ### Conversion backlog — 28 wave MP4s with no GIF
