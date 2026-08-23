@@ -1,0 +1,340 @@
+/* XPR Gifs -- grid, filters, hover playback, lightbox.
+   Hard rule: the grid paints posters only. No .gif or .mp4 byte is fetched until
+   the user shows intent (hover on desktop, tap on touch). 79 items at ~3MB each
+   would otherwise be a quarter-gigabyte scroll. */
+
+'use strict';
+
+var SUBMIT_URL = 'https://t.me/cerebro_ai';  // TODO: point at the real community channel
+
+var REACTIONS = [
+  ['take-my-money', 'Take My Money'], ['let-him-cook', 'Let Him Cook'],
+  ['approval', 'Approval'], ['hype', 'Hype'], ['celebration', 'Celebration'],
+  ['confused', 'Confused'], ['popcorn', 'Popcorn'], ['cope', 'Cope']
+];
+var SOURCES = [
+  ['pepe', 'Pepe'], ['one-piece', 'One Piece'], ['cats', 'Cats'], ['goku', 'Dragon Ball'],
+  ['fry', 'Fry'], ['drake', 'Drake'], ['other', 'Everything else']
+];
+var NETWORKS = [['xpr', '$XPR'], ['mtl', '$MTL / Metallicus'], ['none', 'Unbranded']];
+
+var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var coarse = window.matchMedia('(hover: none)').matches;
+if (reduced) document.body.classList.add('reduced');
+
+var gifs = [];
+var filters = { q: '', reaction: null, source: null, network: null };
+var grid = document.getElementById('grid');
+var countEl = document.getElementById('count');
+var emptyEl = document.getElementById('empty');
+
+/* ---------------- boot ---------------- */
+
+document.getElementById('submit-link').href = SUBMIT_URL;
+
+fetch('gifs-data.json')
+  .then(function (r) {
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return r.json();
+  })
+  .then(function (data) {
+    gifs = data.gifs || [];
+    buildChips();
+    render();
+    openFromHash();
+  })
+  .catch(function (err) {
+    grid.innerHTML = '';
+    emptyEl.hidden = false;
+    emptyEl.textContent = 'Could not load the GIF library (' + err.message + '). Try a refresh.';
+  });
+
+/* ---------------- first-visit banner ---------------- */
+
+(function () {
+  var banner = document.getElementById('banner');
+  var seen;
+  try { seen = localStorage.getItem('xprgifs-banner'); } catch (e) { seen = null; }
+  if (!seen) banner.hidden = false;
+  document.getElementById('banner-close').addEventListener('click', function () {
+    banner.hidden = true;
+    try { localStorage.setItem('xprgifs-banner', '1'); } catch (e) { /* private mode */ }
+  });
+})();
+
+/* ---------------- chips ---------------- */
+
+function buildChips() {
+  // [containerId, label, options, filterKey, dataField]
+  // filterKey and dataField differ for network: the record field is `branded`.
+  var groups = [
+    ['chips-reaction', 'Reaction', REACTIONS, 'reaction', 'reaction'],
+    ['chips-source', 'Source', SOURCES, 'source', 'source'],
+    ['chips-network', 'Network', NETWORKS, 'network', 'branded']
+  ];
+  groups.forEach(function (g) {
+    var box = document.getElementById(g[0]);
+    var label = document.createElement('span');
+    label.className = 'chiplabel';
+    label.textContent = g[1];
+    box.appendChild(label);
+
+    g[2].forEach(function (pair) {
+      var n = gifs.filter(function (x) { return x[g[4]] === pair[0]; }).length;
+      if (!n) return;
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'chip';
+      b.textContent = pair[1] + ' ' + n;
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', function () {
+        filters[g[3]] = filters[g[3]] === pair[0] ? null : pair[0];
+        syncChips();
+        render();
+      });
+      b.dataset.group = g[3];
+      b.dataset.value = pair[0];
+      box.appendChild(b);
+    });
+  });
+}
+
+function syncChips() {
+  document.querySelectorAll('.chip').forEach(function (c) {
+    c.setAttribute('aria-pressed', String(filters[c.dataset.group] === c.dataset.value));
+  });
+}
+
+document.getElementById('search').addEventListener('input', function (e) {
+  filters.q = e.target.value.trim().toLowerCase();
+  render();
+});
+
+/* ---------------- render ---------------- */
+
+function matches(g) {
+  if (filters.reaction && g.reaction !== filters.reaction) return false;
+  if (filters.source && g.source !== filters.source) return false;
+  if (filters.network && g.branded !== filters.network) return false;
+  if (filters.q) {
+    var hay = (g.title + ' ' + g.tags.join(' ') + ' ' + g.alt).toLowerCase();
+    if (hay.indexOf(filters.q) === -1) return false;
+  }
+  return true;
+}
+
+var io = 'IntersectionObserver' in window
+  ? new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        en.target._visible = en.isIntersecting;
+        if (!en.isIntersecting) stopCard(en.target);
+      });
+    }, { rootMargin: '200px' })
+  : null;
+
+function render() {
+  var list = gifs.filter(matches);
+  grid.innerHTML = '';
+  emptyEl.hidden = list.length > 0;
+  countEl.textContent = list.length + (list.length === 1 ? ' gif' : ' gifs');
+
+  var frag = document.createDocumentFragment();
+  list.forEach(function (g) { frag.appendChild(card(g)); });
+  grid.appendChild(frag);
+}
+
+function card(g) {
+  var el = document.createElement('div');
+  el.className = 'card';
+  el.tabIndex = 0;
+  el.setAttribute('role', 'button');
+  el.setAttribute('aria-label', g.title + ' — open');
+  el._gif = g;
+
+  var img = document.createElement('img');
+  img.src = 'assets/poster/' + g.slug + '.jpg';
+  img.alt = g.alt;
+  img.loading = 'lazy';
+  img.decoding = 'async';
+  el.appendChild(img);
+
+  if (g.new) {
+    var badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = 'New';
+    el.appendChild(badge);
+  }
+
+  if (reduced) {
+    var play = document.createElement('span');
+    play.className = 'play';
+    play.innerHTML = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>';
+    el.appendChild(play);
+  }
+
+  var dl = document.createElement('a');
+  dl.className = 'dl';
+  dl.href = downloadHref(g);
+  dl.setAttribute('download', g.slug + '.gif');
+  dl.title = 'Download ' + g.title + ' as a GIF';
+  dl.setAttribute('aria-label', 'Download ' + g.title + ' as a GIF');
+  dl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"' +
+    ' stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2' +
+    ' 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
+  dl.addEventListener('click', function (e) { e.stopPropagation(); });
+  el.appendChild(dl);
+
+  if (!reduced) {
+    if (coarse) {
+      el.addEventListener('click', function (e) {
+        // First tap plays in place, second opens the detail view.
+        if (!el._video) { e.preventDefault(); playCard(el, g); }
+        else open(g);
+      });
+    } else {
+      el.addEventListener('mouseenter', function () { playCard(el, g); });
+      el.addEventListener('mouseleave', function () { stopCard(el); });
+      el.addEventListener('click', function () { open(g); });
+    }
+  } else {
+    el.addEventListener('click', function () { open(g); });
+  }
+
+  el.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(g); }
+  });
+
+  if (io) io.observe(el);
+  return el;
+}
+
+/* Attach src only on intent. preload="none" plus late src assignment means an
+   un-hovered card costs exactly one lazy poster and nothing else. */
+function playCard(el, g) {
+  if (el._video || el._visible === false) return;
+  var v = document.createElement('video');
+  v.muted = true; v.loop = true; v.playsInline = true;
+  v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+  v.preload = 'none';
+  // Poster behind the video: if decode is slow or autoplay is refused, the card
+  // shows the frame rather than a black box.
+  v.poster = 'assets/poster/' + g.slug + '.jpg';
+  v.src = 'assets/preview/' + g.slug + '.mp4';
+  el.appendChild(v);
+  el._video = v;
+  var p = v.play();
+  if (p && p.catch) p.catch(function () { stopCard(el); });
+}
+
+function stopCard(el) {
+  if (!el._video) return;
+  el._video.pause();
+  el._video.removeAttribute('src');
+  el._video.load();
+  el._video.remove();
+  el._video = null;
+}
+
+/* ---------------- downloads ---------------- */
+
+/* The 14 GIFs over 5MB can't be posted from a phone. Hand small screens the
+   compressed variant so the download is always actually usable where you are. */
+function downloadHref(g) {
+  var small = window.matchMedia('(max-width: 820px)').matches;
+  return (small && g.hasMobile ? 'assets/gif-mobile/' : 'assets/gif/') + g.slug + '.gif';
+}
+
+/* ---------------- lightbox ---------------- */
+
+var lb = document.getElementById('lb');
+var lbMedia = document.getElementById('lb-media');
+var current = null;
+
+function open(g) {
+  current = g;
+  document.getElementById('lb-title').textContent = g.title;
+
+  var mb = (g.sizeBytes / 1048576).toFixed(1);
+  var bits = [mb + ' MB GIF'];
+  if (g.hasMobile) bits.push('mobile version available');
+  document.getElementById('lb-meta').textContent = bits.join(' · ');
+
+  lbMedia.innerHTML = '';
+  if (reduced) {
+    var im = document.createElement('img');
+    im.src = 'assets/poster/' + g.slug + '.jpg';
+    im.alt = g.alt;
+    lbMedia.appendChild(im);
+  } else {
+    var v = document.createElement('video');
+    v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true;
+    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
+    v.poster = 'assets/poster/' + g.slug + '.jpg';
+    v.src = 'assets/preview/' + g.slug + '.mp4';
+    v.setAttribute('aria-label', g.alt);
+    v.addEventListener('error', function () {
+      // Never leave the panel black -- fall back to the still.
+      var im = document.createElement('img');
+      im.src = 'assets/poster/' + g.slug + '.jpg';
+      im.alt = g.alt;
+      lbMedia.innerHTML = '';
+      lbMedia.appendChild(im);
+    });
+    lbMedia.appendChild(v);
+  }
+
+  var d = document.getElementById('lb-download');
+  d.href = downloadHref(g);
+  d.setAttribute('download', g.slug + '.gif');
+
+  var m = document.getElementById('lb-mp4');
+  m.href = 'assets/mp4/' + g.slug + '.mp4';
+  m.setAttribute('download', g.slug + '.mp4');
+
+  document.getElementById('lb-hint').innerHTML = coarse
+    ? '<strong>Long-press the GIF to save it</strong>, then attach it in your X post.'
+    : '<strong>Download, then drag into your X post</strong> — X only animates uploaded files, not links.';
+
+  var url = pageUrl(g);
+  document.getElementById('lb-x').href =
+    'https://x.com/intent/post?text=' + encodeURIComponent(g.title + ' ');
+
+  document.getElementById('lb-copy').textContent = 'Copy link';
+  document.getElementById('lb-copy').dataset.url = url;
+
+  if (typeof lb.showModal === 'function') lb.showModal(); else lb.setAttribute('open', '');
+  history.replaceState(null, '', '#' + g.slug);
+}
+
+function pageUrl(g) {
+  return location.origin + location.pathname.replace(/index\.html$/, '') + 'g/' + g.slug + '/';
+}
+
+function close() {
+  lbMedia.innerHTML = '';
+  current = null;
+  if (typeof lb.close === 'function' && lb.open) lb.close(); else lb.removeAttribute('open');
+  history.replaceState(null, '', location.pathname + location.search);
+}
+
+document.getElementById('lb-close').addEventListener('click', close);
+lb.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
+lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+
+document.getElementById('lb-copy').addEventListener('click', function () {
+  var btn = this;
+  var url = btn.dataset.url;
+  var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy link'; }, 1600); };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(done, function () { prompt('Copy this link:', url); });
+  } else {
+    prompt('Copy this link:', url);
+  }
+});
+
+function openFromHash() {
+  var slug = location.hash.replace(/^#/, '');
+  if (!slug) return;
+  var g = gifs.filter(function (x) { return x.slug === slug; })[0];
+  if (g) open(g);
+}

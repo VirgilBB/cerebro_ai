@@ -1,0 +1,1239 @@
+{
+ "_comment": "Authoring catalog for XPR Gifs. build-assets.sh reads this, generates derivatives, and emits ../gifs-data.json with computed file sizes. Publish gate: every record needs a non-empty reaction, source and alt or the build fails it.",
+ "_reactions": [
+  "take-my-money",
+  "let-him-cook",
+  "approval",
+  "cope",
+  "hype",
+  "celebration",
+  "confused",
+  "popcorn"
+ ],
+ "_sources": [
+  "pepe",
+  "drake",
+  "fry",
+  "goku",
+  "one-piece",
+  "cats",
+  "other"
+ ],
+ "_branded": [
+  "xpr",
+  "mtl",
+  "none"
+ ],
+ "items": [
+  {
+   "src": "live gifs/1.1-new-fry-take my money XPR.gif",
+   "slug": "fry-take-my-money-xpr",
+   "title": "Fry — Take My Money ($XPR)",
+   "reaction": "take-my-money",
+   "source": "fry",
+   "branded": "xpr",
+   "tags": [
+    "money",
+    "buy",
+    "shut up",
+    "wallet",
+    "cash"
+   ],
+   "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $XPR branded"
+  },
+  {
+   "src": "live gifs/1.1-fry take my money mtl.gif",
+   "slug": "fry-take-my-money-mtl",
+   "title": "Fry — Take My Money ($MTL)",
+   "reaction": "take-my-money",
+   "source": "fry",
+   "branded": "mtl",
+   "tags": [
+    "money",
+    "buy",
+    "shut up",
+    "wallet",
+    "cash"
+   ],
+   "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $MTL branded"
+  },
+  {
+   "src": "live gifs/86-fry take my money metal.gif",
+   "slug": "fry-take-my-money-metal",
+   "title": "Fry — Take My Money (Metal)",
+   "reaction": "take-my-money",
+   "source": "fry",
+   "branded": "mtl",
+   "tags": [
+    "money",
+    "buy",
+    "shut up",
+    "metal",
+    "cash"
+   ],
+   "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, Metal branded"
+  },
+  {
+   "src": "live gifs/67-pepe take my money.gif",
+   "slug": "pepe-take-my-money",
+   "title": "Pepe — Take My Money",
+   "reaction": "take-my-money",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "money",
+    "buy",
+    "cash",
+    "rich",
+    "shill"
+   ],
+   "alt": "Pepe the Frog shoving handfuls of cash toward the screen"
+  },
+  {
+   "src": "live gifs/44-Donald Duck Money GIF (1).gif",
+   "slug": "donald-duck-money",
+   "title": "Donald Duck — Money",
+   "reaction": "take-my-money",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "money",
+    "cash",
+    "rich",
+    "duck"
+   ],
+   "alt": "Donald Duck gleefully throwing money into the air"
+  },
+  {
+   "src": "live gifs/78-colbert give it to me.gif",
+   "slug": "colbert-give-it-to-me",
+   "title": "Colbert — Give It To Me",
+   "reaction": "take-my-money",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "want",
+    "gimme",
+    "eager",
+    "colbert"
+   ],
+   "alt": "Stephen Colbert beckoning with both hands, wanting something badly"
+  },
+  {
+   "src": "live gifs/49-let cook marmot.gif",
+   "slug": "let-him-cook-marmot",
+   "title": "Let Him Cook — Marmot",
+   "reaction": "let-him-cook",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cook",
+    "chef",
+    "marmot",
+    "patience"
+   ],
+   "alt": "A marmot at a stove, captioned let him cook"
+  },
+  {
+   "src": "live gifs/50-let cook patriot.gif",
+   "slug": "let-him-cook-patriot",
+   "title": "Let Him Cook — Patriot",
+   "reaction": "let-him-cook",
+   "source": "other",
+   "branded": "none",
+   "tags": [
+    "cook",
+    "chef",
+    "patriot",
+    "patience"
+   ],
+   "alt": "A patriot-themed let him cook reaction"
+  },
+  {
+   "src": "live gifs/51-let cook toy story.gif",
+   "slug": "let-him-cook-toy-story",
+   "title": "Let Him Cook — Toy Story",
+   "reaction": "let-him-cook",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cook",
+    "chef",
+    "toy story",
+    "woody"
+   ],
+   "alt": "Toy Story characters captioned let him cook"
+  },
+  {
+   "src": "live gifs/52-let cook goku dragon ball.gif",
+   "slug": "let-him-cook-goku",
+   "title": "Let Him Cook — Goku",
+   "reaction": "let-him-cook",
+   "source": "goku",
+   "branded": "xpr",
+   "tags": [
+    "cook",
+    "chef",
+    "goku",
+    "dragon ball"
+   ],
+   "alt": "Goku from Dragon Ball captioned let him cook"
+  },
+  {
+   "src": "live gifs/53-let cook mouse.gif",
+   "slug": "let-him-cook-mouse",
+   "title": "Let Him Cook — Mouse",
+   "reaction": "let-him-cook",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cook",
+    "chef",
+    "mouse",
+    "ratatouille"
+   ],
+   "alt": "A mouse at a stove captioned let him cook"
+  },
+  {
+   "src": "live gifs/54-let cook monkey.gif",
+   "slug": "let-him-cook-monkey",
+   "title": "Let Him Cook — Monkey",
+   "reaction": "let-him-cook",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cook",
+    "chef",
+    "monkey",
+    "patience"
+   ],
+   "alt": "A monkey at a stove captioned let him cook"
+  },
+  {
+   "src": "live gifs/57-pepe ok sign.gif",
+   "slug": "pepe-ok-sign",
+   "title": "Pepe — OK Sign",
+   "reaction": "approval",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "ok",
+    "agree",
+    "fine",
+    "good",
+    "nod"
+   ],
+   "alt": "Pepe the Frog making an OK hand sign"
+  },
+  {
+   "src": "live gifs/58-pepe winking.gif",
+   "slug": "pepe-winking",
+   "title": "Pepe — Winking",
+   "reaction": "approval",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "wink",
+    "agree",
+    "sly",
+    "knowing"
+   ],
+   "alt": "Pepe the Frog winking knowingly at the viewer"
+  },
+  {
+   "src": "live gifs/64-pepe sounds good.gif",
+   "slug": "pepe-sounds-good",
+   "title": "Pepe — Sounds Good",
+   "reaction": "approval",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "agree",
+    "yes",
+    "good",
+    "approve"
+   ],
+   "alt": "Pepe the Frog nodding in approval"
+  },
+  {
+   "src": "live gifs/4-man nodding.gif",
+   "slug": "man-nodding",
+   "title": "Man Nodding",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "nod",
+    "yes",
+    "agree",
+    "approve"
+   ],
+   "alt": "A man nodding emphatically in agreement"
+  },
+  {
+   "src": "live gifs/14-ryan reynolds smiling.gif",
+   "slug": "ryan-reynolds-smiling",
+   "title": "Ryan Reynolds — Smiling",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "smile",
+    "smug",
+    "pleased",
+    "reynolds"
+   ],
+   "alt": "Ryan Reynolds breaking into a satisfied smile"
+  },
+  {
+   "src": "live gifs/12-jesus bless.gif",
+   "slug": "jesus-bless",
+   "title": "Jesus Blessing",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "bless",
+    "amen",
+    "blessed",
+    "pray"
+   ],
+   "alt": "A depiction of Jesus raising a hand in blessing"
+  },
+  {
+   "src": "live gifs/32-smart brain.gif",
+   "slug": "smart-brain",
+   "title": "Roll Safe — Think About It",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "roll safe",
+    "think",
+    "smart",
+    "galaxy brain",
+    "clever"
+   ],
+   "alt": "Roll Safe tapping his temple in the think about it meme"
+  },
+  {
+   "src": "live gifs/35-rickmorty point.gif",
+   "slug": "rick-and-morty-point",
+   "title": "Rick and Morty — Pointing",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "point",
+    "this",
+    "agree",
+    "rick",
+    "morty"
+   ],
+   "alt": "Rick and Morty pointing at something approvingly"
+  },
+  {
+   "src": "live gifs/38-cat excellent.gif",
+   "slug": "cat-excellent",
+   "title": "Cat — Excellent",
+   "reaction": "approval",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "excellent",
+    "cat",
+    "scheming",
+    "perfect"
+   ],
+   "alt": "A cat steepling its paws in an excellent, scheming gesture"
+  },
+  {
+   "src": "live gifs/68-archer.gif",
+   "slug": "archer",
+   "title": "Archer — My Body Is Ready",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "archer",
+    "ready",
+    "eager",
+    "lets go"
+   ],
+   "alt": "A character from Archer declaring my body is ready"
+  },
+  {
+   "src": "live gifs/75-ted lasso i like.gif",
+   "slug": "ted-lasso-i-like",
+   "title": "Ted Lasso — I Like It",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "like",
+    "approve",
+    "ted lasso",
+    "yes"
+   ],
+   "alt": "Ted Lasso grinning with clear approval"
+  },
+  {
+   "src": "live gifs/84-tombstone wink.gif",
+   "slug": "tombstone-wink",
+   "title": "Tombstone — Wink",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "wink",
+    "doc holliday",
+    "knowing",
+    "sly"
+   ],
+   "alt": "Doc Holliday from Tombstone winking"
+  },
+  {
+   "src": "1new/point finger GIF.gif",
+   "slug": "point-finger",
+   "title": "Pointing Finger",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "none",
+   "tags": [
+    "point",
+    "this",
+    "that",
+    "agree"
+   ],
+   "alt": "A finger pointing decisively at something",
+   "new": true
+  },
+  {
+   "src": "live gifs/21-wojak hugs.gif",
+   "slug": "wojak-hugs",
+   "title": "Wojak Hugs",
+   "reaction": "cope",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "cope",
+    "hug",
+    "comfort",
+    "wojak",
+    "sad"
+   ],
+   "alt": "Two Wojak figures embracing in consolation"
+  },
+  {
+   "src": "live gifs/65-pepe smile cry.gif",
+   "slug": "pepe-smile-cry",
+   "title": "Pepe — Smiling Through Tears",
+   "reaction": "cope",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "cope",
+    "sad",
+    "crying",
+    "smile",
+    "pain"
+   ],
+   "alt": "Pepe the Frog smiling while tears stream down his face"
+  },
+  {
+   "src": "live gifs/80-simpsons barney.gif",
+   "slug": "simpsons-barney",
+   "title": "Simpsons — Hook It To My Veins",
+   "reaction": "take-my-money",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "veins",
+    "want",
+    "more",
+    "simpsons",
+    "gimme"
+   ],
+   "alt": "A Simpsons character demanding it be hooked straight to his veins"
+  },
+  {
+   "src": "live gifs/2-lockin.gif",
+   "slug": "lock-in",
+   "title": "Lock In",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "lock in",
+    "focus",
+    "grind",
+    "serious"
+   ],
+   "alt": "A lock-in reaction, signalling total focus"
+  },
+  {
+   "src": "live gifs/18-tigger gm.gif",
+   "slug": "tigger-gm",
+   "title": "Tigger — GM",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "gm",
+    "good morning",
+    "bounce",
+    "tigger",
+    "energy"
+   ],
+   "alt": "Tigger bouncing energetically, captioned GM"
+  },
+  {
+   "src": "live gifs/22-chappelle cant stop.gif",
+   "slug": "chappelle-cant-stop",
+   "title": "Chappelle — Can't Stop",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cant stop",
+    "chappelle",
+    "unstoppable",
+    "hype"
+   ],
+   "alt": "Dave Chappelle in an unstoppable, hyped-up moment"
+  },
+  {
+   "src": "live gifs/27-sugar rush.gif",
+   "slug": "sugar-rush",
+   "title": "Sugar Rush",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "hyper",
+    "energy",
+    "sugar",
+    "wild"
+   ],
+   "alt": "A frantic sugar-rush burst of energy"
+  },
+  {
+   "src": "live gifs/28-vegeta.gif",
+   "slug": "vegeta",
+   "title": "Vegeta",
+   "reaction": "hype",
+   "source": "goku",
+   "branded": "xpr",
+   "tags": [
+    "vegeta",
+    "dragon ball",
+    "power",
+    "saiyan"
+   ],
+   "alt": "Vegeta from Dragon Ball powering up"
+  },
+  {
+   "src": "live gifs/31-goku super.gif",
+   "slug": "goku-super-saiyan",
+   "title": "Goku — Super Saiyan",
+   "reaction": "hype",
+   "source": "goku",
+   "branded": "xpr",
+   "tags": [
+    "goku",
+    "super saiyan",
+    "power up",
+    "dragon ball"
+   ],
+   "alt": "Goku transforming into Super Saiyan with an aura of energy"
+  },
+  {
+   "src": "live gifs/30-it's alive.gif",
+   "slug": "its-alive",
+   "title": "It's Alive!",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "alive",
+    "frankenstein",
+    "it works",
+    "launch"
+   ],
+   "alt": "A mad scientist declaring it's alive"
+  },
+  {
+   "src": "live gifs/33-the wire webay.gif",
+   "slug": "the-wire-webay",
+   "title": "The Wire — WeBay",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "the wire",
+    "webay",
+    "corner",
+    "hustle"
+   ],
+   "alt": "A scene from The Wire captioned WeBay"
+  },
+  {
+   "src": "live gifs/42-dlow.gif",
+   "slug": "dlow",
+   "title": "DLow",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dlow",
+    "dance",
+    "hype",
+    "energy"
+   ],
+   "alt": "A DLow dance reaction"
+  },
+  {
+   "src": "live gifs/43-stickman thrust.gif",
+   "slug": "stickman-thrust",
+   "title": "Stickman Thrust",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "stickman",
+    "dance",
+    "thrust",
+    "hype"
+   ],
+   "alt": "An animated stick figure thrusting in a dance loop"
+  },
+  {
+   "src": "live gifs/47-wolf of.gif",
+   "slug": "wolf-of-wall-street",
+   "title": "Wolf of Wall Street",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "wolf of wall street",
+    "belfort",
+    "money",
+    "hype"
+   ],
+   "alt": "Jordan Belfort riling up a trading floor in The Wolf of Wall Street"
+  },
+  {
+   "src": "live gifs/69-austin-powers-come here.gif",
+   "slug": "dr-evil-come-here",
+   "title": "Dr. Evil — Come Here",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dr evil",
+    "austin powers",
+    "come here",
+    "beckon"
+   ],
+   "alt": "Dr. Evil from Austin Powers beckoning with both hands"
+  },
+  {
+   "src": "live gifs/7-margharetti.gif",
+   "slug": "margharetti",
+   "title": "Margharetti",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "margharetti",
+    "hype",
+    "energy"
+   ],
+   "alt": "A Margharetti hype reaction"
+  },
+  {
+   "src": "live gifs/70-metal hand fire.gif",
+   "slug": "metal-hand-fire",
+   "title": "Metal Hand — Fire",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "metal",
+    "fire",
+    "horns",
+    "rock"
+   ],
+   "alt": "A hand throwing metal horns wreathed in fire, $MTL branded"
+  },
+  {
+   "src": "live gifs/74-halo ship.gif",
+   "slug": "halo-ship",
+   "title": "Halo — Ship",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "halo",
+    "ship",
+    "launch",
+    "space"
+   ],
+   "alt": "A Halo ship launching dramatically"
+  },
+  {
+   "src": "live gifs/77-cage let's go.gif",
+   "slug": "cage-lets-go",
+   "title": "Nicolas Cage — Let's Go",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cage",
+    "lets go",
+    "hype",
+    "ready"
+   ],
+   "alt": "Nicolas Cage psyched up and shouting let's go"
+  },
+  {
+   "src": "live gifs/85-back at it again.gif",
+   "slug": "back-at-it-again",
+   "title": "Back At It Again",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "none",
+   "tags": [
+    "back at it",
+    "again",
+    "grind",
+    "return"
+   ],
+   "alt": "A back at it again reaction"
+  },
+  {
+   "src": "live gifs/63-pepe laughing purple.gif",
+   "slug": "pepe-laughing-purple",
+   "title": "Pepe — Laughing (Purple)",
+   "reaction": "hype",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "laugh",
+    "lol",
+    "pepe",
+    "purple"
+   ],
+   "alt": "Pepe the Frog laughing hard against a purple background"
+  },
+  {
+   "src": "live gifs/66-pepe purple fire.gif",
+   "slug": "pepe-purple-fire",
+   "title": "Pepe — Purple Fire",
+   "reaction": "hype",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "fire",
+    "pepe",
+    "purple",
+    "hype",
+    "burn"
+   ],
+   "alt": "Pepe the Frog surrounded by purple flames"
+  },
+  {
+   "src": "live gifs/36-cat typing.gif",
+   "slug": "cat-typing",
+   "title": "Cat — Typing",
+   "reaction": "hype",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "typing",
+    "cat",
+    "working",
+    "fast",
+    "grind"
+   ],
+   "alt": "A cat furiously typing at a keyboard"
+  },
+  {
+   "src": "live gifs/37-cat gang.gif",
+   "slug": "cat-gang",
+   "title": "Cat Gang",
+   "reaction": "hype",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "cats",
+    "gang",
+    "crew",
+    "squad"
+   ],
+   "alt": "A group of cats moving together like a gang"
+  },
+  {
+   "src": "live gifs/87-one piece joyboy eyes.gif",
+   "slug": "one-piece-joyboy-eyes",
+   "title": "One Piece — Joyboy Eyes",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "xpr",
+   "tags": [
+    "one piece",
+    "joyboy",
+    "luffy",
+    "awakening"
+   ],
+   "alt": "Luffy's eyes glowing in the Joyboy awakening from One Piece"
+  },
+  {
+   "src": "live gifs/88-One Piece Gear 5 laugh.gif",
+   "slug": "one-piece-gear-5-laugh",
+   "title": "One Piece — Gear 5 Laugh",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "xpr",
+   "tags": [
+    "one piece",
+    "gear 5",
+    "luffy",
+    "laugh"
+   ],
+   "alt": "Luffy laughing in Gear 5 form from One Piece"
+  },
+  {
+   "src": "1new/luffy laughing.gif",
+   "slug": "luffy-laughing",
+   "title": "Luffy Laughing",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "none",
+   "tags": [
+    "one piece",
+    "luffy",
+    "laugh",
+    "lol"
+   ],
+   "alt": "Monkey D. Luffy laughing openly",
+   "new": true
+  },
+  {
+   "src": "1new/One Piece Conquerors Haki.gif",
+   "slug": "one-piece-conquerors-haki",
+   "title": "One Piece — Conqueror's Haki",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "none",
+   "tags": [
+    "one piece",
+    "haki",
+    "conqueror",
+    "power"
+   ],
+   "alt": "A burst of Conqueror's Haki from One Piece",
+   "new": true
+  },
+  {
+   "src": "1new/One Piece Laughing.gif",
+   "slug": "one-piece-laughing",
+   "title": "One Piece — Laughing",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "none",
+   "tags": [
+    "one piece",
+    "laugh",
+    "lol",
+    "crew"
+   ],
+   "alt": "One Piece characters laughing together",
+   "new": true
+  },
+  {
+   "src": "live gifs/13-leo toast xpr.gif",
+   "slug": "leo-toast-xpr",
+   "title": "Leo Toast ($XPR)",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cheers",
+    "toast",
+    "leo",
+    "gatsby",
+    "celebrate"
+   ],
+   "alt": "Leonardo DiCaprio raising a glass in a toast, $XPR branded"
+  },
+  {
+   "src": "live gifs/13.1-leo toast mtl.gif",
+   "slug": "leo-toast-mtl",
+   "title": "Leo Toast ($MTL)",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "cheers",
+    "toast",
+    "leo",
+    "gatsby",
+    "celebrate"
+   ],
+   "alt": "Leonardo DiCaprio raising a glass in a toast, $MTL branded"
+  },
+  {
+   "src": "live gifs/46-xpr celebrate.gif",
+   "slug": "xpr-celebrate",
+   "title": "XPR Celebrate",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "celebrate",
+    "xpr",
+    "party",
+    "win"
+   ],
+   "alt": "An $XPR-branded celebration animation"
+  },
+  {
+   "src": "live gifs/20-drake dance.gif",
+   "slug": "drake-dance",
+   "title": "Drake Dance",
+   "reaction": "celebration",
+   "source": "drake",
+   "branded": "xpr",
+   "tags": [
+    "drake",
+    "dance",
+    "hotline bling",
+    "celebrate"
+   ],
+   "alt": "Drake dancing in the Hotline Bling style"
+  },
+  {
+   "src": "live gifs/34-bobs burgers dance.gif",
+   "slug": "bobs-burgers-dance",
+   "title": "Bob's Burgers — Dance",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "none",
+   "tags": [
+    "dance",
+    "bobs burgers",
+    "celebrate",
+    "happy"
+   ],
+   "alt": "A Bob's Burgers character doing a happy dance"
+  },
+  {
+   "src": "live gifs/39-booyah.gif",
+   "slug": "booyah",
+   "title": "Booyah",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "booyah",
+    "win",
+    "yes",
+    "celebrate"
+   ],
+   "alt": "A triumphant booyah celebration"
+  },
+  {
+   "src": "live gifs/41-rick flair woo.gif",
+   "slug": "ric-flair-woo",
+   "title": "Ric Flair — Woo",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "woo",
+    "ric flair",
+    "wrestling",
+    "celebrate"
+   ],
+   "alt": "Ric Flair strutting and shouting Woo"
+  },
+  {
+   "src": "live gifs/45-snoopy dance.gif",
+   "slug": "snoopy-dance",
+   "title": "Snoopy Dance",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "snoopy",
+    "dance",
+    "happy",
+    "peanuts"
+   ],
+   "alt": "Snoopy doing his signature happy dance"
+  },
+  {
+   "src": "live gifs/55-pepe dance jamming.gif",
+   "slug": "pepe-dance-jamming",
+   "title": "Pepe — Dancing",
+   "reaction": "celebration",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "dance",
+    "pepe",
+    "jam",
+    "party"
+   ],
+   "alt": "Pepe the Frog dancing and jamming to music"
+  },
+  {
+   "src": "live gifs/60-pepe cat dance.gif",
+   "slug": "pepe-cat-dance",
+   "title": "Pepe and Cat Dancing",
+   "reaction": "celebration",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "dance",
+    "pepe",
+    "cat",
+    "party"
+   ],
+   "alt": "Pepe the Frog dancing alongside a cat"
+  },
+  {
+   "src": "live gifs/6-cat dance.gif",
+   "slug": "cat-dance",
+   "title": "Cat Dance",
+   "reaction": "celebration",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "cat",
+    "dance",
+    "party",
+    "happy"
+   ],
+   "alt": "A cat dancing on its hind legs"
+  },
+  {
+   "src": "live gifs/71-lasso dance.gif",
+   "slug": "lasso-dance",
+   "title": "Lasso Dance",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "lasso",
+    "dance",
+    "celebrate",
+    "yeehaw"
+   ],
+   "alt": "A lasso-swinging dance celebration"
+  },
+  {
+   "src": "live gifs/73-halo dance.gif",
+   "slug": "halo-dance",
+   "title": "Halo — Dance",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "halo",
+    "dance",
+    "spartan",
+    "celebrate"
+   ],
+   "alt": "A Halo Spartan doing a victory dance"
+  },
+  {
+   "src": "live gifs/79-kidyes.gif",
+   "slug": "kid-yes",
+   "title": "Success Kid — Yes",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "success",
+    "kid",
+    "win",
+    "fist pump"
+   ],
+   "alt": "The success kid clenching a fist in triumph"
+  },
+  {
+   "src": "live gifs/91-happy gilmore shooter.gif",
+   "slug": "happy-gilmore-shooter",
+   "title": "Happy Gilmore — Shooter",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "happy gilmore",
+    "shooter",
+    "golf",
+    "celebrate"
+   ],
+   "alt": "Shooter McGavin from Happy Gilmore doing his finger-guns gesture"
+  },
+  {
+   "src": "live gifs/92-mario level up.gif",
+   "slug": "mario-level-up",
+   "title": "Mario — Level Up",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "mario",
+    "level up",
+    "win",
+    "nintendo",
+    "power up"
+   ],
+   "alt": "Mario powering up and levelling up"
+  },
+  {
+   "src": "live gifs/26-hangover math.gif",
+   "slug": "hangover-math",
+   "title": "Hangover Math",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "math",
+    "confused",
+    "calculating",
+    "hangover",
+    "lady"
+   ],
+   "alt": "The confused math lady meme with equations floating over her face"
+  },
+  {
+   "src": "live gifs/48-always sunny.gif",
+   "slug": "always-sunny",
+   "title": "Always Sunny — Conspiracy",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "charlie",
+    "conspiracy",
+    "always sunny",
+    "pepe silvia"
+   ],
+   "alt": "Charlie from Always Sunny frantically explaining a conspiracy board"
+  },
+  {
+   "src": "live gifs/61-cat shocked.gif",
+   "slug": "cat-shocked",
+   "title": "Cat — Shocked",
+   "reaction": "confused",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "shocked",
+    "cat",
+    "surprised",
+    "wide eyes"
+   ],
+   "alt": "A cat with wide shocked eyes"
+  },
+  {
+   "src": "live gifs/9-marmot surprised.gif",
+   "slug": "marmot-surprised",
+   "title": "Marmot — Surprised",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "surprised",
+    "marmot",
+    "shocked",
+    "gasp"
+   ],
+   "alt": "A marmot rearing back in surprise"
+  },
+  {
+   "src": "live gifs/29-decocco.gif",
+   "slug": "decocco",
+   "title": "Decocco",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "decocco",
+    "confused",
+    "reaction"
+   ],
+   "alt": "A Decocco reaction"
+  },
+  {
+   "src": "live gifs/89-popcorn Murder She Wrote.gif",
+   "slug": "popcorn-murder-she-wrote",
+   "title": "Popcorn — Murder She Wrote",
+   "reaction": "popcorn",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "popcorn",
+    "watching",
+    "drama",
+    "tea",
+    "jessica fletcher"
+   ],
+   "alt": "Jessica Fletcher from Murder She Wrote eating popcorn while watching intently"
+  },
+  {
+   "src": "1new/popcorn black dude.gif",
+   "slug": "popcorn-guy",
+   "title": "Popcorn Guy",
+   "reaction": "popcorn",
+   "source": "other",
+   "branded": "none",
+   "tags": [
+    "popcorn",
+    "watching",
+    "drama",
+    "tea"
+   ],
+   "alt": "A man eating popcorn while watching something unfold",
+   "new": true
+  },
+  {
+   "src": "1new/popcorn Michael Jackson.gif",
+   "slug": "popcorn-michael-jackson",
+   "title": "Popcorn — Michael Jackson",
+   "reaction": "popcorn",
+   "source": "other",
+   "branded": "none",
+   "tags": [
+    "popcorn",
+    "michael jackson",
+    "thriller",
+    "watching",
+    "drama"
+   ],
+   "alt": "Michael Jackson eating popcorn in the Thriller theatre scene",
+   "new": true
+  },
+  {
+   "src": "1new/popcorn snl.gif",
+   "slug": "popcorn-snl",
+   "title": "Popcorn — SNL",
+   "reaction": "popcorn",
+   "source": "other",
+   "branded": "none",
+   "tags": [
+    "popcorn",
+    "snl",
+    "watching",
+    "drama"
+   ],
+   "alt": "An SNL cast member eating popcorn while watching drama unfold",
+   "new": true
+  }
+ ]
+}

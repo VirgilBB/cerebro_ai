@@ -1,0 +1,16 @@
+# Media. Deliberately not in git -- ~580MB of binaries.
+# Source GIFs/MP4s live on disk (and in Syncthing); derivatives are reproducible
+# from them with: python3 site/build/build-assets.py
+live gifs/
+wave1/
+wave2/
+wave3/
+wave4/
+wave5/
+1new/
+0cerebro-related/
+.__capcut_export_temp_folder_*/
+site/assets/
+
+__pycache__/
+.DS_Store
