@@ -91,6 +91,18 @@ function attachDrag(el, g) {
   });
 }
 
+
+/* Counts what Cloudflare Web Analytics cannot see: downloads, copies, shares.
+   Fire-and-forget; failures are ignored so a blocked beacon never breaks a click. */
+function track(ev, slug) {
+  try {
+    var u = 'https://cerebro.host/gifs/__e?ev=' + encodeURIComponent(ev) +
+            '&slug=' + encodeURIComponent(slug);
+    if (navigator.sendBeacon) navigator.sendBeacon(u);
+    else fetch(u, { method: 'GET', mode: 'no-cors', keepalive: true });
+  } catch (e) { /* never let analytics break an action */ }
+}
+
 var gifs = [];
 var filters = { q: '', reaction: null, source: null, network: null };
 var grid = document.getElementById('grid');
@@ -256,7 +268,10 @@ function card(g) {
   dl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"' +
     ' stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2' +
     ' 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
-  dl.addEventListener('click', function (e) { e.stopPropagation(); });
+  dl.addEventListener('click', function (e) {
+    e.stopPropagation();
+    track('download', g.slug);
+  });
   el.appendChild(dl);
 
   var cp = document.createElement('button');
@@ -268,6 +283,7 @@ function card(g) {
   cp.addEventListener('click', function (e) {
     e.stopPropagation();
     copyLink(pageUrl(g), cp);
+    track('copy', g.slug);
   });
   el.appendChild(cp);
 
@@ -332,7 +348,7 @@ function gifHref(g) {
   var small = window.matchMedia('(max-width: 820px)').matches;
   return (small && g.hasMobile ? 'assets/gif-mobile/' : 'assets/gif/') + g.slug + '.gif';
 }
-var downloadHref = gifHref;
+function downloadHref(g) { return gifHref(g) + '?dl=1'; }
 
 /* ---------------- lightbox ---------------- */
 
@@ -409,6 +425,15 @@ lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
 
 document.getElementById('lb-copy').addEventListener('click', function () {
   copyLink(this.dataset.url, this);
+  if (current) track('copy', current.slug);
+});
+
+document.getElementById('lb-x').addEventListener('click', function () {
+  if (current) track('share', current.slug);
+});
+
+document.getElementById('lb-download').addEventListener('click', function () {
+  if (current) track('download', current.slug);
 });
 
 function openFromHash() {
