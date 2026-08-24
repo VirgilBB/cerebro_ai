@@ -78,13 +78,37 @@ function absUrl(path) {
   return new URL(path, location.href).href;
 }
 
+/* Blobs kept so dragstart -- which is synchronous and cannot await -- has a real
+   File ready to offer. Populated when the lightbox opens; the .gif is already in
+   cache by then, so this costs nothing. */
+var fileCache = {};
+
+function prefetchFile(g) {
+  if (fileCache[g.slug]) return;
+  fetch(gifHref(g))
+    .then(function (r) { return r.ok ? r.blob() : null; })
+    .then(function (b) {
+      if (b) fileCache[g.slug] = new File([b], g.slug + '.gif', { type: 'image/gif' });
+    })
+    .catch(function () { /* drag falls back to the URL */ });
+}
+
 function attachDrag(el, g) {
   el.addEventListener('dragstart', function (e) {
     var href = absUrl(gifHref(g));
     var name = g.slug + '.gif';
+
+    // Best effort: offer an actual File. Whether a cross-origin drop target ever
+    // receives it is up to the browser -- Chromium historically does not deliver
+    // page-authored Files to another site. Harmless when ignored.
+    var f = fileCache[g.slug];
+    if (f) {
+      try { e.dataTransfer.items.add(f); } catch (err) { /* ignored */ }
+    }
     try {
+      // Chromium only: makes a drop onto the filesystem land as a named .gif.
       e.dataTransfer.setData('DownloadURL', 'image/gif:' + name + ':' + href);
-    } catch (err) { /* not supported outside Chromium */ }
+    } catch (err) { /* not supported elsewhere */ }
     e.dataTransfer.setData('text/uri-list', href);
     e.dataTransfer.setData('text/plain', href);
     e.dataTransfer.effectAllowed = 'copy';
@@ -364,6 +388,8 @@ function open(g) {
   var bits = [mb + ' MB GIF'];
   if (g.hasMobile) bits.push('mobile version available');
   document.getElementById('lb-meta').textContent = bits.join(' · ');
+
+  if (!reduced) prefetchFile(g);
 
   lbMedia.innerHTML = '';
   // The real .gif, not the mp4 preview. Costs more bytes on open, but it is the

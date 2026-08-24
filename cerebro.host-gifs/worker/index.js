@@ -19,9 +19,9 @@ const ORIGIN = 'xpr-gifs.pages.dev';
 const EVENTS = new Set(['download', 'copy', 'share']);
 
 function record(env, ctx, type, slug, request) {
-  if (!env.GIF_EVENTS || !EVENTS.has(type)) return;
+  if (!env.analytics_engine || !EVENTS.has(type)) return;
   try {
-    env.GIF_EVENTS.writeDataPoint({
+    env.analytics_engine.writeDataPoint({
       // slug first so it can be grouped on in queries
       blobs: [slug || 'unknown', type, request.headers.get('cf-ipcountry') || 'XX'],
       doubles: [1],

@@ -5,10 +5,8 @@
   "routes": [
     { "pattern": "cerebro.host/gifs", "zone_name": "cerebro.host" },
     { "pattern": "cerebro.host/gifs/*", "zone_name": "cerebro.host" }
+  ],
+  "analytics_engine_datasets": [
+    { "binding": "analytics_engine", "dataset": "gifs" }
   ]
-  // To turn on event counting: enable Analytics Engine in the dashboard, then
-  // uncomment the binding below and redeploy. The Worker no-ops without it.
-  // ,"analytics_engine_datasets": [
-  //   { "binding": "GIF_EVENTS", "dataset": "xpr_gifs_events" }
-  // ]
 }
