@@ -30,7 +30,10 @@ var emptyEl = document.getElementById('empty');
 
 /* ---------------- boot ---------------- */
 
-document.getElementById('submit-link').href = SUBMIT_URL;
+['submit-link', 'submit-link-top'].forEach(function (id) {
+  var el = document.getElementById(id);
+  if (el) el.href = SUBMIT_URL;
+});
 
 fetch('gifs-data.json')
   .then(function (r) {
@@ -297,7 +300,8 @@ function open(g) {
 
   var url = pageUrl(g);
   document.getElementById('lb-x').href =
-    'https://x.com/intent/post?text=' + encodeURIComponent(g.title + ' ');
+    'https://x.com/intent/post?text=' + encodeURIComponent(g.title) +
+    '&url=' + encodeURIComponent(url);
 
   document.getElementById('lb-copy').textContent = 'Copy link';
   document.getElementById('lb-copy').dataset.url = url;

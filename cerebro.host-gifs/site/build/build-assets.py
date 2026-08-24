@@ -153,7 +153,13 @@ def main():
                 problems.append(f"{slug}: poster generation failed")
 
         # 4+5. Motion. Prefer the pristine wave original over the lossy GIF.
-        motion_src = find_source_mp4(it["src"]) or src
+        # `mp4src` is an explicit, frame-verified override for the cases where the
+        # wave original does not share the GIF's basename. Never guess this by fuzzy
+        # name match -- several near-matches are the same scene with a *different*
+        # brand watermark, which would ship an off-brand MP4.
+        override = it.get("mp4src")
+        motion_src = (os.path.join(ROOT, override) if override
+                      else find_source_mp4(it["src"])) or src
         from_gif = motion_src == src
         if FORCE or not os.path.exists(p_prev):
             ok, err = make_mp4(motion_src, p_prev, 480, 30)
