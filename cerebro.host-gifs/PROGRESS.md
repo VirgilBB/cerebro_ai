@@ -83,8 +83,8 @@ and the Giphy creator account was denied.
 - Hover playback confirmed working in a real browser.
 
 ### Still open
-- **`gifs.cerebro.host` explored, then abandoned** in favour of the path. Still
-  registered on the Pages project as `pending`/inert. To activate later: add CNAME
+- **`gifs.cerebro.host` explored, then removed** in favour of the path. No longer on
+  the Pages project; the path route needs no DNS record. To revive later: add CNAME
   `gifs` → `xpr-gifs.pages.dev` in **Cloudflare** (the domain is registered at
   Namecheap but DNS is delegated to Cloudflare, so Namecheap records are ignored).
   Zone id `7212c6a9bc34d429969d0d54cc6e6470`.

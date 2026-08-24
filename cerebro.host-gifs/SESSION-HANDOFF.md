@@ -77,10 +77,12 @@ DNS note: domain is **registered at Namecheap but DNS is delegated to Cloudflare
   site is not being updated for now. Ready-to-paste snippet sits at
   `site/ADD-GIFS-BUTTON.md` — it needs a column wrapper because `.hero-inner` is a flex
   row, so a bare second anchor lands *beside* News rather than above it.
-- **`gifs.cerebro.host` was explored and abandoned.** It is still registered on the
-  Pages project in `pending` state and is inert. Activating it only needs a CNAME
-  `gifs -> xpr-gifs.pages.dev` added in **Cloudflare** (not Namecheap). Left as an
-  escape hatch.
+- **`gifs.cerebro.host` was explored and removed** (2026-08-24). It is no longer on
+  the Pages project. The path route needs no DNS record at all -- cerebro.host already
+  resolves and the Worker intercepts `/gifs*`. If the subdomain is ever wanted: re-add
+  it as a Pages custom domain and create CNAME `gifs -> xpr-gifs.pages.dev` in
+  **Cloudflare** (the domain is registered at Namecheap but DNS is delegated to
+  Cloudflare, so Namecheap records are ignored).
 
 ---
 
