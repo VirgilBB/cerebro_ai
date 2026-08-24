@@ -25,6 +25,9 @@ TPL = """<!doctype html>
 <meta name="twitter:description" content="{alt}">
 <meta name="twitter:image" content="{base}/assets/poster/{slug}.jpg">
 <link rel="canonical" href="{base}/g/{slug}/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/brand/favicon-32.png">
+<link rel="icon" type="image/png" sizes="256x256" href="../../assets/brand/cerebro-256.png">
+<link rel="apple-touch-icon" href="../../assets/brand/apple-touch-icon.png">
 <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>

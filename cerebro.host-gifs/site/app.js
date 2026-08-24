@@ -61,6 +61,36 @@ function haystack(g) {
           g.source.replace(/-/g, ' ')).toLowerCase();
 }
 
+
+/* Drag-out support.
+ *
+ * Two mechanisms, because no single one covers everything:
+ *   1. `DownloadURL` -- Chrome/Edge only. Lets a drag out of the browser land as a
+ *      real, correctly-named .gif on the desktop or in a file picker.
+ *   2. text/uri-list + text/plain -- the universal fallback. Targets that accept a
+ *      URL (most chat composers) get the absolute gif link.
+ *
+ * Dragging the lightbox image straight into a composer works in Chromium browsers
+ * because the drag source is a genuine GIF element. Behaviour in other browsers and
+ * target apps varies and is not something this page can guarantee.
+ */
+function absUrl(path) {
+  return new URL(path, location.href).href;
+}
+
+function attachDrag(el, g) {
+  el.addEventListener('dragstart', function (e) {
+    var href = absUrl(gifHref(g));
+    var name = g.slug + '.gif';
+    try {
+      e.dataTransfer.setData('DownloadURL', 'image/gif:' + name + ':' + href);
+    } catch (err) { /* not supported outside Chromium */ }
+    e.dataTransfer.setData('text/uri-list', href);
+    e.dataTransfer.setData('text/plain', href);
+    e.dataTransfer.effectAllowed = 'copy';
+  });
+}
+
 var gifs = [];
 var filters = { q: '', reaction: null, source: null, network: null };
 var grid = document.getElementById('grid');
@@ -198,6 +228,9 @@ function card(g) {
   img.alt = g.alt;
   img.loading = 'lazy';
   img.decoding = 'async';
+  img.draggable = true;
+  // Without this a card drag would hand over the poster JPEG -- a still frame.
+  attachDrag(img, g);
   el.appendChild(img);
 
   if (g.new) {
@@ -293,10 +326,11 @@ function stopCard(el) {
 
 /* The 14 GIFs over 5MB can't be posted from a phone. Hand small screens the
    compressed variant so the download is always actually usable where you are. */
-function downloadHref(g) {
+function gifHref(g) {
   var small = window.matchMedia('(max-width: 820px)').matches;
   return (small && g.hasMobile ? 'assets/gif-mobile/' : 'assets/gif/') + g.slug + '.gif';
 }
+var downloadHref = gifHref;
 
 /* ---------------- lightbox ---------------- */
 
@@ -314,28 +348,22 @@ function open(g) {
   document.getElementById('lb-meta').textContent = bits.join(' · ');
 
   lbMedia.innerHTML = '';
-  if (reduced) {
-    var im = document.createElement('img');
+  // The real .gif, not the mp4 preview. Costs more bytes on open, but it is the
+  // actual artifact -- which is what makes dragging it into X/Discord work at all.
+  // Poster sits behind it as a background so there is no blank while it loads.
+  var im = document.createElement('img');
+  im.src = reduced ? ('assets/poster/' + g.slug + '.jpg') : gifHref(g);
+  im.alt = g.alt;
+  im.draggable = true;
+  im.style.backgroundImage = 'url("assets/poster/' + g.slug + '.jpg")';
+  im.style.backgroundSize = 'contain';
+  im.style.backgroundRepeat = 'no-repeat';
+  im.style.backgroundPosition = 'center';
+  attachDrag(im, g);
+  im.addEventListener('error', function () {
     im.src = 'assets/poster/' + g.slug + '.jpg';
-    im.alt = g.alt;
-    lbMedia.appendChild(im);
-  } else {
-    var v = document.createElement('video');
-    v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true;
-    v.setAttribute('muted', ''); v.setAttribute('playsinline', '');
-    v.poster = 'assets/poster/' + g.slug + '.jpg';
-    v.src = 'assets/preview/' + g.slug + '.mp4';
-    v.setAttribute('aria-label', g.alt);
-    v.addEventListener('error', function () {
-      // Never leave the panel black -- fall back to the still.
-      var im = document.createElement('img');
-      im.src = 'assets/poster/' + g.slug + '.jpg';
-      im.alt = g.alt;
-      lbMedia.innerHTML = '';
-      lbMedia.appendChild(im);
-    });
-    lbMedia.appendChild(v);
-  }
+  });
+  lbMedia.appendChild(im);
 
   var d = document.getElementById('lb-download');
   d.href = downloadHref(g);
@@ -347,7 +375,8 @@ function open(g) {
 
   document.getElementById('lb-hint').innerHTML = coarse
     ? '<strong>Long-press the GIF to save it</strong>, then attach it in your X post.'
-    : '<strong>Download, then drag into your X post</strong> — X only animates uploaded files, not links.';
+    : '<strong>Drag the GIF straight into your X post</strong> — or download it first. ' +
+      'X only animates uploaded files, never links.';
 
   var url = pageUrl(g);
   // Link only -- no prefilled title text.
