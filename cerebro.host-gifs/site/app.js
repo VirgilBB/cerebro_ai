@@ -307,6 +307,8 @@ function playCard(el, g) {
   // shows the frame rather than a black box.
   v.poster = 'assets/poster/' + g.slug + '.jpg';
   v.src = 'assets/preview/' + g.slug + '.mp4';
+  v.draggable = true;
+  attachDrag(v, g);
   el.appendChild(v);
   el._video = v;
   var p = v.play();
