@@ -350,9 +350,9 @@ function open(g) {
     : '<strong>Download, then drag into your X post</strong> — X only animates uploaded files, not links.';
 
   var url = pageUrl(g);
+  // Link only -- no prefilled title text.
   document.getElementById('lb-x').href =
-    'https://x.com/intent/post?text=' + encodeURIComponent(g.title) +
-    '&url=' + encodeURIComponent(url);
+    'https://x.com/intent/post?url=' + encodeURIComponent(url);
 
   document.getElementById('lb-copy').textContent = 'Copy link';
   document.getElementById('lb-copy').dataset.url = url;
