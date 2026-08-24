@@ -1219,6 +1219,409 @@
    ],
    "alt": "An SNL cast member eating popcorn while watching drama unfold",
    "new": true
+  },
+  {
+   "src": "live gifs/3-Do It! $XPR.gif",
+   "slug": "do-it-xpr",
+   "title": "Do It! ($XPR)",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "do it",
+    "go",
+    "just do it",
+    "commit"
+   ],
+   "alt": "A man in sunglasses urging DO IT, $XPR branded",
+   "new": true
+  },
+  {
+   "src": "live gifs/10-happy gilmore.gif",
+   "slug": "happy-gilmore-swing",
+   "title": "Happy Gilmore — The Swing",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "golf",
+    "swing",
+    "happy gilmore",
+    "win"
+   ],
+   "alt": "Happy Gilmore taking his running golf swing before a crowd",
+   "new": true
+  },
+  {
+   "src": "live gifs/11-jack nicholson yes.gif",
+   "slug": "jack-nicholson-yes",
+   "title": "Jack Nicholson — Yes",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "nod",
+    "grin",
+    "approve",
+    "nicholson"
+   ],
+   "alt": "Jack Nicholson grinning and nodding in approval",
+   "new": true
+  },
+  {
+   "src": "live gifs/15-shaq shimmy.gif",
+   "slug": "shaq-shimmy",
+   "title": "Shaq Shimmy",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "shaq",
+    "shimmy",
+    "dance",
+    "celebrate"
+   ],
+   "alt": "Shaquille O'Neal doing a shoulder shimmy",
+   "new": true
+  },
+  {
+   "src": "live gifs/16-so cool face.gif",
+   "slug": "so-cool-face",
+   "title": "So Cool",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cool",
+    "amazed",
+    "wow",
+    "crowd"
+   ],
+   "alt": "A group reacting with amazement",
+   "new": true
+  },
+  {
+   "src": "live gifs/17-surprise chris pratt.gif",
+   "slug": "chris-pratt-surprise",
+   "title": "Chris Pratt — Surprise",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "surprise",
+    "shocked",
+    "pratt",
+    "wow"
+   ],
+   "alt": "Chris Pratt reacting with wide-eyed surprise",
+   "new": true
+  },
+  {
+   "src": "live gifs/19-tomjerry-love.gif",
+   "slug": "tom-jerry-love",
+   "title": "Tom and Jerry — Heart Eyes",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "love",
+    "heart eyes",
+    "tom and jerry",
+    "want"
+   ],
+   "alt": "Tom from Tom and Jerry with heart-shaped eyes",
+   "new": true
+  },
+  {
+   "src": "live gifs/5-i'm in.gif",
+   "slug": "im-in",
+   "title": "I'm In",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "im in",
+    "count me in",
+    "yes",
+    "join"
+   ],
+   "alt": "A character leaning out of a window declaring I'm in",
+   "new": true
+  },
+  {
+   "src": "live gifs/8-Dog Smile Shyboos GIF.gif",
+   "slug": "dog-smile",
+   "title": "Dog Smile",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dog",
+    "smile",
+    "happy",
+    "good boy"
+   ],
+   "alt": "A dog smiling contentedly at the camera",
+   "new": true
+  },
+  {
+   "src": "live gifs/23-charlie murphy.gif",
+   "slug": "charlie-murphy",
+   "title": "Charlie Murphy",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "charlie murphy",
+    "skeptical",
+    "side eye",
+    "really"
+   ],
+   "alt": "Charlie Murphy giving a skeptical sideways look",
+   "new": true
+  },
+  {
+   "src": "live gifs/24-chappelle.gif",
+   "slug": "chappelle-rick-james",
+   "title": "Chappelle — Rick James",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "rick james",
+    "chappelle",
+    "hype",
+    "cocaine is a hell of a drug"
+   ],
+   "alt": "Dave Chappelle as Rick James gesturing wildly",
+   "new": true
+  },
+  {
+   "src": "live gifs/25-fry shocked.gif",
+   "slug": "fry-shocked",
+   "title": "Fry — Shocked",
+   "reaction": "confused",
+   "source": "fry",
+   "branded": "xpr",
+   "tags": [
+    "shocked",
+    "fry",
+    "futurama",
+    "wait what"
+   ],
+   "alt": "Fry from Futurama reacting with shock",
+   "new": true
+  },
+  {
+   "src": "live gifs/40-arnold.gif",
+   "slug": "arnold-terminator",
+   "title": "Arnold — Terminator Nod",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "terminator",
+    "arnold",
+    "nod",
+    "approve"
+   ],
+   "alt": "Arnold Schwarzenegger as the Terminator nodding",
+   "new": true
+  },
+  {
+   "src": "live gifs/56-pepe-crazy.gif",
+   "slug": "pepe-crazy",
+   "title": "Pepe — Crazy",
+   "reaction": "hype",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "crazy",
+    "wild",
+    "pepe",
+    "excited"
+   ],
+   "alt": "Pepe the Frog waving arms in a manic pose",
+   "new": true
+  },
+  {
+   "src": "live gifs/59-pepe-thinking.gif",
+   "slug": "pepe-thinking",
+   "title": "Pepe — Thinking",
+   "reaction": "confused",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "thinking",
+    "hmm",
+    "pepe",
+    "considering"
+   ],
+   "alt": "Pepe the Frog resting his chin on his hands, thinking",
+   "new": true
+  },
+  {
+   "src": "live gifs/62-pepe-money.gif",
+   "slug": "pepe-money",
+   "title": "Pepe — Money",
+   "reaction": "take-my-money",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "money",
+    "cash",
+    "pepe",
+    "rich"
+   ],
+   "alt": "Pepe the Frog with money",
+   "new": true
+  },
+  {
+   "src": "live gifs/72-ted lasso yes.gif",
+   "slug": "ted-lasso-yes",
+   "title": "Ted Lasso — Yes",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "ted lasso",
+    "approve",
+    "point"
+   ],
+   "alt": "Ted Lasso pointing and saying yes",
+   "new": true
+  },
+  {
+   "src": "live gifs/76-star trek make it so.gif",
+   "slug": "picard-make-it-so",
+   "title": "Picard — Make It So",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "make it so",
+    "picard",
+    "star trek",
+    "go ahead",
+    "approve"
+   ],
+   "alt": "Captain Picard gesturing make it so",
+   "new": true
+  },
+  {
+   "src": "live gifs/81-joe rogan omg.gif",
+   "slug": "joe-rogan-omg",
+   "title": "Joe Rogan — OMG",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "omg",
+    "rogan",
+    "shocked",
+    "wild"
+   ],
+   "alt": "A commentator throwing his arms up in disbelief",
+   "new": true
+  },
+  {
+   "src": "live gifs/83-blinking-white-guy.gif",
+   "slug": "blinking-white-guy",
+   "title": "Blinking White Guy",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "blinking",
+    "confused",
+    "what",
+    "drew scanlon"
+   ],
+   "alt": "The blinking white guy reaction",
+   "new": true
+  },
+  {
+   "src": "live gifs/90-learning SpongeBob.gif",
+   "slug": "spongebob-learning",
+   "title": "SpongeBob — Learning",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "learning",
+    "reading",
+    "studying",
+    "spongebob",
+    "taking notes"
+   ],
+   "alt": "SpongeBob SquarePants reading a book attentively",
+   "new": true
+  },
+  {
+   "src": "live gifs/93-napoleon dynamite yes xpr.gif",
+   "slug": "napoleon-dynamite-yes-xpr",
+   "title": "Napoleon Dynamite — Yes ($XPR)",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "napoleon dynamite",
+    "approve",
+    "nod"
+   ],
+   "alt": "Napoleon Dynamite nodding yes, $XPR branded",
+   "new": true
+  },
+  {
+   "src": "live gifs/94-napoleon dynamite yes mtl.gif",
+   "slug": "napoleon-dynamite-yes-mtl",
+   "title": "Napoleon Dynamite — Yes ($MTL)",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "yes",
+    "napoleon dynamite",
+    "approve",
+    "nod"
+   ],
+   "alt": "Napoleon Dynamite nodding yes, Metallicus branded",
+   "new": true
+  },
+  {
+   "src": "live gifs/95-One Piece Ace.gif",
+   "slug": "one-piece-ace",
+   "title": "One Piece — Ace",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "xpr",
+   "tags": [
+    "one piece",
+    "ace",
+    "fire",
+    "power"
+   ],
+   "alt": "Ace from One Piece surrounded by flame",
+   "new": true
+  },
+  {
+   "src": "live gifs/96-wolf of - leo dance.gif",
+   "slug": "wolf-of-wall-street-dance",
+   "title": "Wolf of Wall Street — Dance",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dance",
+    "celebrate",
+    "wolf of wall street",
+    "party"
+   ],
+   "alt": "Jordan Belfort dancing on the trading floor",
+   "new": true
   }
  ]
 }

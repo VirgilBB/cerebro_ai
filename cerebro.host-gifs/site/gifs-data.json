@@ -1,5 +1,5 @@
 {
- "count": 78,
+ "count": 103,
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
@@ -1420,6 +1420,459 @@
    "sizeBytes": 503908,
    "hasMobile": false,
    "mp4FromGif": true,
+   "new": true
+  },
+  {
+   "slug": "do-it-xpr",
+   "title": "Do It! ($XPR)",
+   "alt": "A man in sunglasses urging DO IT, $XPR branded",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "do it",
+    "go",
+    "just do it",
+    "commit"
+   ],
+   "sizeBytes": 2235460,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "happy-gilmore-swing",
+   "title": "Happy Gilmore \u2014 The Swing",
+   "alt": "Happy Gilmore taking his running golf swing before a crowd",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "golf",
+    "swing",
+    "happy gilmore",
+    "win"
+   ],
+   "sizeBytes": 3984336,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "jack-nicholson-yes",
+   "title": "Jack Nicholson \u2014 Yes",
+   "alt": "Jack Nicholson grinning and nodding in approval",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "nod",
+    "grin",
+    "approve",
+    "nicholson"
+   ],
+   "sizeBytes": 4270695,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "shaq-shimmy",
+   "title": "Shaq Shimmy",
+   "alt": "Shaquille O'Neal doing a shoulder shimmy",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "shaq",
+    "shimmy",
+    "dance",
+    "celebrate"
+   ],
+   "sizeBytes": 1006482,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "so-cool-face",
+   "title": "So Cool",
+   "alt": "A group reacting with amazement",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cool",
+    "amazed",
+    "wow",
+    "crowd"
+   ],
+   "sizeBytes": 3466236,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "chris-pratt-surprise",
+   "title": "Chris Pratt \u2014 Surprise",
+   "alt": "Chris Pratt reacting with wide-eyed surprise",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "surprise",
+    "shocked",
+    "pratt",
+    "wow"
+   ],
+   "sizeBytes": 2055538,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "tom-jerry-love",
+   "title": "Tom and Jerry \u2014 Heart Eyes",
+   "alt": "Tom from Tom and Jerry with heart-shaped eyes",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "love",
+    "heart eyes",
+    "tom and jerry",
+    "want"
+   ],
+   "sizeBytes": 1171491,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "im-in",
+   "title": "I'm In",
+   "alt": "A character leaning out of a window declaring I'm in",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "im in",
+    "count me in",
+    "yes",
+    "join"
+   ],
+   "sizeBytes": 6938963,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "dog-smile",
+   "title": "Dog Smile",
+   "alt": "A dog smiling contentedly at the camera",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dog",
+    "smile",
+    "happy",
+    "good boy"
+   ],
+   "sizeBytes": 4560835,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "charlie-murphy",
+   "title": "Charlie Murphy",
+   "alt": "Charlie Murphy giving a skeptical sideways look",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "charlie murphy",
+    "skeptical",
+    "side eye",
+    "really"
+   ],
+   "sizeBytes": 14266167,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "chappelle-rick-james",
+   "title": "Chappelle \u2014 Rick James",
+   "alt": "Dave Chappelle as Rick James gesturing wildly",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "rick james",
+    "chappelle",
+    "hype",
+    "cocaine is a hell of a drug"
+   ],
+   "sizeBytes": 4006258,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "fry-shocked",
+   "title": "Fry \u2014 Shocked",
+   "alt": "Fry from Futurama reacting with shock",
+   "reaction": "confused",
+   "source": "fry",
+   "branded": "xpr",
+   "tags": [
+    "shocked",
+    "fry",
+    "futurama",
+    "wait what"
+   ],
+   "sizeBytes": 2136816,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "arnold-terminator",
+   "title": "Arnold \u2014 Terminator Nod",
+   "alt": "Arnold Schwarzenegger as the Terminator nodding",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "terminator",
+    "arnold",
+    "nod",
+    "approve"
+   ],
+   "sizeBytes": 10748977,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "pepe-crazy",
+   "title": "Pepe \u2014 Crazy",
+   "alt": "Pepe the Frog waving arms in a manic pose",
+   "reaction": "hype",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "crazy",
+    "wild",
+    "pepe",
+    "excited"
+   ],
+   "sizeBytes": 2533176,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "pepe-thinking",
+   "title": "Pepe \u2014 Thinking",
+   "alt": "Pepe the Frog resting his chin on his hands, thinking",
+   "reaction": "confused",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "thinking",
+    "hmm",
+    "pepe",
+    "considering"
+   ],
+   "sizeBytes": 1555145,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "pepe-money",
+   "title": "Pepe \u2014 Money",
+   "alt": "Pepe the Frog with money",
+   "reaction": "take-my-money",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "money",
+    "cash",
+    "pepe",
+    "rich"
+   ],
+   "sizeBytes": 416666,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "ted-lasso-yes",
+   "title": "Ted Lasso \u2014 Yes",
+   "alt": "Ted Lasso pointing and saying yes",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "ted lasso",
+    "approve",
+    "point"
+   ],
+   "sizeBytes": 752659,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "picard-make-it-so",
+   "title": "Picard \u2014 Make It So",
+   "alt": "Captain Picard gesturing make it so",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "make it so",
+    "picard",
+    "star trek",
+    "go ahead",
+    "approve"
+   ],
+   "sizeBytes": 2899897,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "joe-rogan-omg",
+   "title": "Joe Rogan \u2014 OMG",
+   "alt": "A commentator throwing his arms up in disbelief",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "omg",
+    "rogan",
+    "shocked",
+    "wild"
+   ],
+   "sizeBytes": 2695268,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "blinking-white-guy",
+   "title": "Blinking White Guy",
+   "alt": "The blinking white guy reaction",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "blinking",
+    "confused",
+    "what",
+    "drew scanlon"
+   ],
+   "sizeBytes": 4606800,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "spongebob-learning",
+   "title": "SpongeBob \u2014 Learning",
+   "alt": "SpongeBob SquarePants reading a book attentively",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "learning",
+    "reading",
+    "studying",
+    "spongebob",
+    "taking notes"
+   ],
+   "sizeBytes": 465721,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "napoleon-dynamite-yes-xpr",
+   "title": "Napoleon Dynamite \u2014 Yes ($XPR)",
+   "alt": "Napoleon Dynamite nodding yes, $XPR branded",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "napoleon dynamite",
+    "approve",
+    "nod"
+   ],
+   "sizeBytes": 3194773,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "napoleon-dynamite-yes-mtl",
+   "title": "Napoleon Dynamite \u2014 Yes ($MTL)",
+   "alt": "Napoleon Dynamite nodding yes, Metallicus branded",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "yes",
+    "napoleon dynamite",
+    "approve",
+    "nod"
+   ],
+   "sizeBytes": 2898839,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "one-piece-ace",
+   "title": "One Piece \u2014 Ace",
+   "alt": "Ace from One Piece surrounded by flame",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "xpr",
+   "tags": [
+    "one piece",
+    "ace",
+    "fire",
+    "power"
+   ],
+   "sizeBytes": 2376605,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "wolf-of-wall-street-dance",
+   "title": "Wolf of Wall Street \u2014 Dance",
+   "alt": "Jordan Belfort dancing on the trading floor",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dance",
+    "celebrate",
+    "wolf of wall street",
+    "party"
+   ],
+   "sizeBytes": 8163284,
+   "hasMobile": true,
+   "mp4FromGif": false,
    "new": true
   }
  ]

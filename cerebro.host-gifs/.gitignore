@@ -14,3 +14,7 @@ site/assets/
 
 __pycache__/
 .DS_Store
+
+# Secrets -- never commit
+.env
+.env.*
