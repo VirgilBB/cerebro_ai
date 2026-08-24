@@ -46,6 +46,22 @@ function copyLink(url, btn) {
   }
 }
 
+
+/* Network synonyms, so someone typing "xpr", "mtl", "metal" or "metallicus" finds
+   the branded gifs -- the network is a chip facet, but people type it too. */
+var NETWORK_WORDS = {
+  xpr: 'xpr $xpr xpr network proton',
+  mtl: 'mtl $mtl metal metallicus metal blockchain',
+  none: 'unbranded plain generic no branding'
+};
+
+function haystack(g) {
+  return (g.title + ' ' + g.tags.join(' ') + ' ' + g.alt + ' ' +
+          (NETWORK_WORDS[g.branded] || '') + ' ' +
+          g.reaction.replace(/-/g, ' ') + ' ' +
+          g.source.replace(/-/g, ' ')).toLowerCase();
+}
+
 var gifs = [];
 var filters = { q: '', reaction: null, source: null, network: null };
 var grid = document.getElementById('grid');
@@ -61,6 +77,7 @@ fetch('gifs-data.json')
   })
   .then(function (data) {
     gifs = data.gifs || [];
+    gifs.forEach(function (g) { g._hay = haystack(g); });
     buildChips();
     render();
     openFromHash();
@@ -139,8 +156,12 @@ function matches(g) {
   if (filters.source && g.source !== filters.source) return false;
   if (filters.network && g.branded !== filters.network) return false;
   if (filters.q) {
-    var hay = (g.title + ' ' + g.tags.join(' ') + ' ' + g.alt).toLowerCase();
-    if (hay.indexOf(filters.q) === -1) return false;
+    var hay = g._hay || haystack(g);
+    // Every whitespace-separated term must match, so "pepe money" narrows.
+    var terms = filters.q.split(/\s+/);
+    for (var i = 0; i < terms.length; i++) {
+      if (terms[i] && hay.indexOf(terms[i]) === -1) return false;
+    }
   }
   return true;
 }
