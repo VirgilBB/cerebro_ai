@@ -40,7 +40,7 @@ Add to the stylesheet block (next to the existing `.hero-articles-button` rule):
 
 ```html
 <div class="hero-cta-stack">
-    <a href="https://gifs.cerebro.host" class="hero-articles-button">
+    <a href="https://cerebro.host/gifs" class="hero-articles-button">
         <span>Gifs</span>
         <span class="hero-articles-button-icon">→</span>
     </a>
@@ -55,7 +55,7 @@ The News anchor is unchanged — it just moves inside the wrapper.
 
 ## Order matters
 
-Do this **after** `gifs.cerebro.host` is deployed and returns 200. Shipping the button
+Do this **after** `cerebro.host/gifs` is deployed and returns 200. Shipping the button
 first points the community at a dead link.
 
 ## Reference

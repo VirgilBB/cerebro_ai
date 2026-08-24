@@ -56,9 +56,9 @@ already there.
 ## 5. Verify after deploy
 
 ```bash
-curl -sI https://gifs.cerebro.host/ | head -1                       # 200
-curl -sI https://gifs.cerebro.host/assets/gif/pepe-take-my-money.gif | grep -i 'content-type\|cache'
-curl -sI https://gifs.cerebro.host/g/pepe-take-my-money/ | head -1   # 200
+curl -sI https://cerebro.host/gifs/ | head -1                       # 200
+curl -sI https://cerebro.host/gifs/assets/gif/pepe-take-my-money.gif | grep -i 'content-type\|cache'
+curl -sI https://cerebro.host/gifs/g/pepe-take-my-money/ | head -1   # 200
 ```
 
 Then by hand, in a real browser (none of this was confirmable headlessly):
@@ -73,7 +73,7 @@ Then by hand, in a real browser (none of this was confirmable headlessly):
 
 ## 6. Link it from cerebro.host
 
-Add a nav item "XPR Gifs" → `https://gifs.cerebro.host` in the Sitejet editor.
+Add a nav item "XPR Gifs" → `https://cerebro.host/gifs` in the Sitejet editor.
 
 ## Adding GIFs later
 

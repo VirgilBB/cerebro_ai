@@ -5,8 +5,6 @@
 
 'use strict';
 
-var SUBMIT_URL = 'https://t.me/cerebro_ai';  // TODO: point at the real community channel
-
 var REACTIONS = [
   ['take-my-money', 'Take My Money'], ['let-him-cook', 'Let Him Cook'],
   ['approval', 'Approval'], ['hype', 'Hype'], ['celebration', 'Celebration'],
@@ -22,6 +20,32 @@ var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var coarse = window.matchMedia('(hover: none)').matches;
 if (reduced) document.body.classList.add('reduced');
 
+
+var LINK_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"' +
+  ' stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0' +
+  ' 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>';
+var TICK_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"' +
+  ' stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+
+function copyLink(url, btn) {
+  var restore = btn.innerHTML;
+  var isBtn = btn.classList.contains('cp');
+  var done = function () {
+    btn.innerHTML = isBtn ? TICK_ICON : btn.innerHTML;
+    if (!isBtn) btn.textContent = 'Copied';
+    btn.classList.add('copied');
+    setTimeout(function () {
+      btn.classList.remove('copied');
+      if (isBtn) btn.innerHTML = restore; else btn.textContent = 'Copy link';
+    }, 1500);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(done, function () { prompt('Copy this link:', url); });
+  } else {
+    prompt('Copy this link:', url);
+  }
+}
+
 var gifs = [];
 var filters = { q: '', reaction: null, source: null, network: null };
 var grid = document.getElementById('grid');
@@ -29,11 +53,6 @@ var countEl = document.getElementById('count');
 var emptyEl = document.getElementById('empty');
 
 /* ---------------- boot ---------------- */
-
-['submit-link', 'submit-link-top'].forEach(function (id) {
-  var el = document.getElementById(id);
-  if (el) el.href = SUBMIT_URL;
-});
 
 fetch('gifs-data.json')
   .then(function (r) {
@@ -187,6 +206,18 @@ function card(g) {
   dl.addEventListener('click', function (e) { e.stopPropagation(); });
   el.appendChild(dl);
 
+  var cp = document.createElement('button');
+  cp.type = 'button';
+  cp.className = 'dl cp';
+  cp.title = 'Copy link to ' + g.title;
+  cp.setAttribute('aria-label', 'Copy link to ' + g.title);
+  cp.innerHTML = LINK_ICON;
+  cp.addEventListener('click', function (e) {
+    e.stopPropagation();
+    copyLink(pageUrl(g), cp);
+  });
+  el.appendChild(cp);
+
   if (!reduced) {
     if (coarse) {
       el.addEventListener('click', function (e) {
@@ -326,14 +357,7 @@ lb.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
 lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
 
 document.getElementById('lb-copy').addEventListener('click', function () {
-  var btn = this;
-  var url = btn.dataset.url;
-  var done = function () { btn.textContent = 'Copied'; setTimeout(function () { btn.textContent = 'Copy link'; }, 1600); };
-  if (navigator.clipboard && navigator.clipboard.writeText) {
-    navigator.clipboard.writeText(url).then(done, function () { prompt('Copy this link:', url); });
-  } else {
-    prompt('Copy this link:', url);
-  }
+  copyLink(this.dataset.url, this);
 });
 
 function openFromHash() {

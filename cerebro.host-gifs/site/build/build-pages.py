@@ -5,7 +5,7 @@ Also writes site/_headers for Cloudflare Pages caching."""
 import html, json, os
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = "https://gifs.cerebro.host"
+BASE = "https://cerebro.host/gifs"
 
 TPL = """<!doctype html>
 <html lang="en">

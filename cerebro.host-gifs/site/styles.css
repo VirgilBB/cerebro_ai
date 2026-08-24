@@ -143,9 +143,11 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
   backdrop-filter: blur(10px);
 }
 
-/* The single card-level action. Nothing competes with it. */
+/* The two things this page exists for: copy a link, or download the file.
+   Both live on the card so neither requires opening the lightbox first. */
 .card .dl {
   position: absolute; right: 7px; bottom: 7px;
+  padding: 0; font: inherit; cursor: pointer;
   width: 34px; height: 34px; display: grid; place-items: center;
   background: rgba(10, 12, 14, 0.78); border: 1px solid var(--border-strong);
   border-radius: 50%; color: var(--text);
@@ -154,8 +156,11 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
   backdrop-filter: blur(10px);
 }
 .card:hover .dl, .card:focus-within .dl { opacity: 1; transform: none; }
+.card .dl.copied { opacity: 1; transform: none; }
 .card .dl:hover { background: var(--accent); color: #04140d; border-color: var(--accent); }
 .card .dl svg { width: 16px; height: 16px; }
+.card .dl.cp { right: 47px; }
+.card .dl.copied { background: var(--accent); color: #04140d; border-color: var(--accent); }
 @media (hover: none) { .card .dl { opacity: 1; transform: none; } }
 
 .empty { color: var(--text-dim); padding: 50px 0; text-align: center; }
