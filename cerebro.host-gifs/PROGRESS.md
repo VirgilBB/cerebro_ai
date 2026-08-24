@@ -1,6 +1,6 @@
 # Progress — cerebro-gifs GIF library
 
-_Last updated: 2026-08-23 (deployed)_
+_Last updated: 2026-08-24 (shipped)_
 
 Two parallel sets, tied together by a shared number:
 - **Wave masters** — source clips in `wave1`–`wave4` (mostly `.mp4`).
@@ -70,25 +70,31 @@ and the Giphy creator account was denied.
 | Deep-link pages generated | 79 |
 | Initial page load | 0 gif + 0 mp4 requests (verified via netlog) |
 
-### Deployed 2026-08-23
-- **Live at https://xpr-gifs.pages.dev** — Cloudflare Pages project `xpr-gifs`,
-  account `50a670e61c07a36d77ba423be605b7f0`, 413 files, 78 gifs.
+### Shipped 2026-08-24
+- **Live at https://cerebro.host/gifs** — Worker `xpr-gifs-route` on the
+  `cerebro.host/gifs*` route proxies to Cloudflare Pages project `xpr-gifs`
+  (`xpr-gifs.pages.dev`), account `50a670e61c07a36d77ba423be605b7f0`, 78 gifs.
+- **Hero button on the main site deliberately deferred** — not updating cerebro.host
+  for now. Snippet ready at `site/ADD-GIFS-BUTTON.md`.
+- **MP4 download kept** alongside the GIF: all 78 have one (64 from wave originals,
+  14 transcoded from the gif).
+- **Submit CTA removed** — the library is for taking gifs, not collecting them.
 - `_headers` confirmed applied: assets return `cache-control: immutable` + CORS `*`.
 - Hover playback confirmed working in a real browser.
 
 ### Still open
-- **`gifs.cerebro.host` is `pending`.** The Pages custom domain is registered but will
-  not validate until a DNS record exists. The wrangler OAuth token has `zone (read)`
-  only — no DNS write — so this needs the dashboard:
-  `cerebro.host` → DNS → add **CNAME `gifs` → `xpr-gifs.pages.dev`**, proxied.
+- **`gifs.cerebro.host` explored, then abandoned** in favour of the path. Still
+  registered on the Pages project as `pending`/inert. To activate later: add CNAME
+  `gifs` → `xpr-gifs.pages.dev` in **Cloudflare** (the domain is registered at
+  Namecheap but DNS is delegated to Cloudflare, so Namecheap records are ignored).
   Zone id `7212c6a9bc34d429969d0d54cc6e6470`.
-- **`SUBMIT_URL` in `site/app.js` is a placeholder** (`https://t.me/cerebro_ai`) —
-  point it at the real community channel before launch.
+- **Worker request ceiling**: free tier 100k/day ≈ ~1,200 page views/day. Fix when
+  hit: $5/mo Workers Paid, or activate the subdomain above.
 - Platform claims were removed from the UI entirely (never verified; the earlier
   LAN-URL test was invalid because Telegram/Signal unfurl server-side and could not
   reach 192.168.1.123). Now testable for real against a public URL:
   https://xpr-gifs.pages.dev/assets/gif/pepe-take-my-money.gif
-- Sitejet nav link from cerebro.host → gifs.cerebro.host not yet added.
+- Sitejet hero button deferred by choice, not blocked. See `site/ADD-GIFS-BUTTON.md`.
 
 ### Conversion backlog — 28 wave MP4s with no GIF
 Highest value first (branded): `wave1/3-Do It! $XPR`, `wave5/93-napoleon dynamite yes xpr`,
