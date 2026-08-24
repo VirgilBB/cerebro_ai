@@ -56,7 +56,10 @@ DNS note: domain is **registered at Namecheap but DNS is delegated to Cloudflare
   initial load. Motion attaches on hover/tap, IntersectionObserver-gated. Without this
   the page is a 340MB scroll. **Do not relax this for any feature.**
 - **Branding audited from rendered frames, not filenames.** Filename guesses were
-  badly wrong — actual split is 63 $XPR / 5 $MTL / 10 unbranded.
+  badly wrong — actual split is 73 $XPR / 5 $MTL. Nothing is unbranded -- rule from the user:
+  when in doubt it is XPR. A first pass wrongly marked 10 as unbranded; 3 of those
+  genuinely carried a watermark that was unreadable at the tile size used, so ALWAYS
+  audit branding at full frame size, not from a small contact sheet.
 - **MP4 download kept alongside GIF** (user decision, 2026-08-24). All 78 have one:
   64 from pristine `wave*` originals, 14 transcoded from the GIF (softer, still fine).
 - **No submission CTA.** Removed entirely — this library is for *taking* gifs, not

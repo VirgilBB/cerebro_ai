@@ -124,7 +124,7 @@
    "title": "Let Him Cook — Patriot",
    "reaction": "let-him-cook",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "cook",
     "chef",
@@ -382,7 +382,7 @@
    "title": "Pointing Finger",
    "reaction": "approval",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "point",
     "this",
@@ -686,7 +686,7 @@
    "title": "Back At It Again",
    "reaction": "hype",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "back at it",
     "again",
@@ -793,7 +793,7 @@
    "title": "Luffy Laughing",
    "reaction": "hype",
    "source": "one-piece",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "one piece",
     "luffy",
@@ -809,7 +809,7 @@
    "title": "One Piece — Conqueror's Haki",
    "reaction": "hype",
    "source": "one-piece",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "one piece",
     "haki",
@@ -825,7 +825,7 @@
    "title": "One Piece — Laughing",
    "reaction": "hype",
    "source": "one-piece",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "one piece",
     "laugh",
@@ -904,7 +904,7 @@
    "title": "Bob's Burgers — Dance",
    "reaction": "celebration",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "dance",
     "bobs burgers",
@@ -1177,7 +1177,7 @@
    "title": "Popcorn Guy",
    "reaction": "popcorn",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "popcorn",
     "watching",
@@ -1193,7 +1193,7 @@
    "title": "Popcorn — Michael Jackson",
    "reaction": "popcorn",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "popcorn",
     "michael jackson",
@@ -1210,7 +1210,7 @@
    "title": "Popcorn — SNL",
    "reaction": "popcorn",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "popcorn",
     "snl",

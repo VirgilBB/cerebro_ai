@@ -118,7 +118,7 @@
    "alt": "A patriot-themed let him cook reaction",
    "reaction": "let-him-cook",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "cook",
     "chef",
@@ -427,7 +427,7 @@
    "alt": "A finger pointing decisively at something",
    "reaction": "approval",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "point",
     "this",
@@ -790,7 +790,7 @@
    "alt": "A back at it again reaction",
    "reaction": "hype",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "back at it",
     "again",
@@ -918,7 +918,7 @@
    "alt": "Monkey D. Luffy laughing openly",
    "reaction": "hype",
    "source": "one-piece",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "one piece",
     "luffy",
@@ -936,7 +936,7 @@
    "alt": "A burst of Conqueror's Haki from One Piece",
    "reaction": "hype",
    "source": "one-piece",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "one piece",
     "haki",
@@ -954,7 +954,7 @@
    "alt": "One Piece characters laughing together",
    "reaction": "hype",
    "source": "one-piece",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "one piece",
     "laugh",
@@ -1046,7 +1046,7 @@
    "alt": "A Bob's Burgers character doing a happy dance",
    "reaction": "celebration",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "dance",
     "bobs burgers",
@@ -1373,7 +1373,7 @@
    "alt": "A man eating popcorn while watching something unfold",
    "reaction": "popcorn",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "popcorn",
     "watching",
@@ -1391,7 +1391,7 @@
    "alt": "Michael Jackson eating popcorn in the Thriller theatre scene",
    "reaction": "popcorn",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "popcorn",
     "michael jackson",
@@ -1410,7 +1410,7 @@
    "alt": "An SNL cast member eating popcorn while watching drama unfold",
    "reaction": "popcorn",
    "source": "other",
-   "branded": "none",
+   "branded": "xpr",
    "tags": [
     "popcorn",
     "snl",

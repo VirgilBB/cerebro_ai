@@ -17,8 +17,9 @@ community to reach these GIFs.
   - 8 reactions: take-my-money, let-him-cook, approval, hype, celebration, confused,
     popcorn, cope. (`cat-chaos` was dropped as redundant with the `cats` source facet;
     `popcorn` earned the slot with 4 members.)
-  - Network split audited **from the rendered frames, not filenames**: 63 $XPR,
-    6 $MTL/Metallicus, 10 unbranded. Initial filename-based guesses were badly wrong.
+  - Network split audited **from the rendered frames, not filenames**: 73 $XPR,
+    5 $MTL/Metallicus, none unbranded. Filename guesses were badly wrong, and a first
+    frame-audit at 240px tiles was still too small to read some watermarks.
   - Content fixes found in the same audit: `32-smart brain` is Roll Safe, not a galaxy
     brain; `69-austin-powers-come here` is Dr. Evil (reslugged `dr-evil-come-here`);
     `80-simpsons barney` is a take-my-money, not a cope.

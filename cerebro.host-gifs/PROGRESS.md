@@ -65,7 +65,7 @@ and the Giphy creator account was denied.
 | GIFs published | 79 |
 | — from `live gifs/` | 72 (one dupe dropped: `leo toast.gif`) |
 | — from `1new/` | 7 (flagged `new`) |
-| Network: $XPR / $MTL / unbranded | 63 / 6 / 10 |
+| Network: $XPR / $MTL | 73 / 5 |
 | GIFs needing a <5MB mobile variant | 14 |
 | Deep-link pages generated | 79 |
 | Initial page load | 0 gif + 0 mp4 requests (verified via netlog) |

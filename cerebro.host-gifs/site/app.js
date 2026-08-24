@@ -51,8 +51,7 @@ function copyLink(url, btn) {
    the branded gifs -- the network is a chip facet, but people type it too. */
 var NETWORK_WORDS = {
   xpr: 'xpr $xpr xpr network proton',
-  mtl: 'mtl $mtl metal metallicus metal blockchain',
-  none: 'unbranded plain generic no branding'
+  mtl: 'mtl $mtl metal metallicus metal blockchain'
 };
 
 function haystack(g) {
