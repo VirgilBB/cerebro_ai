@@ -22,7 +22,9 @@ import json, os, shutil, subprocess, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SITE = os.path.join(ROOT, "site")
 ASSETS = os.path.join(SITE, "assets")
-WAVES = ["wave1", "wave2", "wave3", "wave4", "wave5"]
+# Every pristine source mp4 lives here, flattened out of the old wave1..wave5 dirs
+# so a GIF's motion source is found by basename in one place.
+MP4S = "live mp4s"
 MOBILE_CAP = 5 * 1024 * 1024      # X mobile upload cap
 DESKTOP_CAP = 15 * 1024 * 1024    # X desktop upload cap
 FORCE = "--force" in sys.argv
@@ -35,13 +37,15 @@ def ffmpeg(args):
     return run(["ffmpeg", "-y", "-loglevel", "error"] + args)
 
 def find_source_mp4(src):
-    """The wave/*.mp4 this GIF was converted from, if it still exists."""
+    """The pristine mp4 this GIF was converted from, if we still have it.
+
+    Basename match only -- never fuzzy. Several near-name-matches are the same
+    scene carrying a *different* brand watermark, so a loose match ships an
+    off-brand mp4. Where the names genuinely differ, use an explicit `mp4src`.
+    """
     base = os.path.splitext(os.path.basename(src))[0]
-    for w in WAVES:
-        p = os.path.join(ROOT, w, base + ".mp4")
-        if os.path.exists(p):
-            return p
-    return None
+    p = os.path.join(ROOT, MP4S, base + ".mp4")
+    return p if os.path.exists(p) else None
 
 def probe_duration(path):
     ok, _ = run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -175,6 +179,7 @@ def main():
             problems.append(f"{slug}: source missing -> {it['src']}")
             continue
 
+        is_mp4 = src.lower().endswith(".mp4")
         p_gif    = os.path.join(ASSETS, "gif", slug + ".gif")
         p_mobile = os.path.join(ASSETS, "gif-mobile", slug + ".gif")
         p_poster = os.path.join(ASSETS, "poster", slug + ".jpg")
@@ -184,7 +189,6 @@ def main():
         # 1. The download. A .gif source is copied byte-identically -- that file IS
         # the product. A .mp4 source is encoded here instead, so a clip that was
         # never converted by hand can still be published.
-        is_mp4 = src.lower().endswith(".mp4")
         if FORCE or not os.path.exists(p_gif):
             if is_mp4:
                 if not gif_from_mp4(src, p_gif):
@@ -218,7 +222,7 @@ def main():
         override = it.get("mp4src")
         motion_src = (os.path.join(ROOT, override) if override
                       else find_source_mp4(it["src"])) or src
-        from_gif = motion_src == src
+        from_gif = motion_src == src and not is_mp4
         if FORCE or not os.path.exists(p_prev):
             ok, err = make_mp4(motion_src, p_prev, 480, 30)
             if not ok:

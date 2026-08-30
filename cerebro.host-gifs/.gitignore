@@ -2,11 +2,7 @@
 # Source GIFs/MP4s live on disk (and in Syncthing); derivatives are reproducible
 # from them with: python3 site/build/build-assets.py
 live gifs/
-wave1/
-wave2/
-wave3/
-wave4/
-wave5/
+live mp4s/
 1new/
 0cerebro-related/
 .__capcut_export_temp_folder_*/

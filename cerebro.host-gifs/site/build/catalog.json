@@ -40,7 +40,7 @@
     "cash"
    ],
    "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $XPR branded",
-   "num": "1.1"
+   "num": "1"
   },
   {
    "src": "live gifs/86-fry take my money metal.gif",
@@ -57,7 +57,7 @@
     "cash"
    ],
    "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $MTL branded",
-   "num": "86"
+   "num": "1.1"
   },
   {
    "src": "live gifs/67-pepe take my money.gif",
@@ -821,7 +821,7 @@
    "num": "88"
   },
   {
-   "src": "live gifs/100-one piece luffy-laughing xpr.mp4",
+   "src": "live mp4s/100-one piece luffy-laughing xpr.mp4",
    "slug": "luffy-laughing",
    "title": "Luffy — Laughing",
    "reaction": "hype",
@@ -1587,7 +1587,7 @@
    ],
    "alt": "Napoleon Dynamite nodding yes, Metallicus branded",
    "new": true,
-   "num": "94"
+   "num": "93.1"
   },
   {
    "src": "live gifs/95-One Piece Ace.gif",
@@ -1644,7 +1644,7 @@
   {
    "src": "live gifs/98-fight bear mtl.gif",
    "slug": "fight-bear-mtl",
-   "num": "98",
+   "num": "97.1",
    "title": "Fight the Bear",
    "reaction": "hype",
    "source": "other",
@@ -1663,7 +1663,6 @@
    "src": "live gifs/99-one piece garf laugh2 xpr.gif",
    "slug": "one-piece-garp-laugh",
    "num": "99",
-   "mp4src": "live gifs/99-one piece garf laugh2 xpr.mp4",
    "title": "Garp — Belly Laugh",
    "reaction": "hype",
    "source": "one-piece",

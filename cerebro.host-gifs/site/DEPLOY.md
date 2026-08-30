@@ -108,5 +108,15 @@ rerun both build scripts and redeploy. No page changes.
 
 The source may be a **`.gif` or a `.mp4`** — an mp4 is encoded to a 480px GIF by
 `build-assets.py`. `num`, `reaction`, `source` and `alt` are mandatory; the build
-rejects a record without them. `num` is the numeric prefix of the source filename and
-is what the card badge shows.
+rejects a record without them.
+
+**Layout.** GIFs go in `live gifs/`, pristine source mp4s in `live mp4s/` (the old
+`wave1`–`wave5` split is gone). `find_source_mp4` matches a GIF to its mp4 by
+**basename only** — never fuzzily, because several near-name-matches are the same
+scene with a different brand watermark. Where the names genuinely differ, set an
+explicit, frame-verified `mp4src`.
+
+**Numbering.** `num` is what the card badge shows and defaults to the numeric prefix
+of the source filename, but the catalog value is authoritative. Convention: an XPR
+cut takes the whole number and its Metal twin takes the `.1` — `#13` / `#13.1`,
+`#97` / `#97.1`. Standalone Metal items (no XPR counterpart) keep a whole number.

@@ -3,7 +3,7 @@
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
-   "num": "1.1",
+   "num": "1",
    "title": "Fry \u2014 Take My Money ($XPR)",
    "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $XPR branded",
    "reaction": "take-my-money",
@@ -18,12 +18,12 @@
    ],
    "sizeBytes": 423818,
    "hasMobile": false,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {
    "slug": "fry-take-my-money-mtl",
-   "num": "86",
+   "num": "1.1",
    "title": "Fry \u2014 Take My Money ($MTL)",
    "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $MTL branded",
    "reaction": "take-my-money",
@@ -959,7 +959,7 @@
    ],
    "sizeBytes": 347952,
    "hasMobile": false,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": true
   },
   {
@@ -1808,7 +1808,7 @@
   },
   {
    "slug": "napoleon-dynamite-yes-mtl",
-   "num": "94",
+   "num": "93.1",
    "title": "Napoleon Dynamite \u2014 Yes ($MTL)",
    "alt": "Napoleon Dynamite nodding yes, Metallicus branded",
    "reaction": "approval",
@@ -1881,12 +1881,12 @@
    ],
    "sizeBytes": 10886709,
    "hasMobile": true,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {
    "slug": "fight-bear-mtl",
-   "num": "98",
+   "num": "97.1",
    "title": "Fight the Bear",
    "alt": "A man in an orange jumpsuit squaring up to a grizzly bear on a riverbank",
    "reaction": "hype",
@@ -1902,7 +1902,7 @@
    ],
    "sizeBytes": 10696710,
    "hasMobile": true,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {
