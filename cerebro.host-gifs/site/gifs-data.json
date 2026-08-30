@@ -1,8 +1,9 @@
 {
- "count": 103,
+ "count": 100,
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
+   "num": "1.1",
    "title": "Fry \u2014 Take My Money ($XPR)",
    "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $XPR branded",
    "reaction": "take-my-money",
@@ -22,6 +23,7 @@
   },
   {
    "slug": "fry-take-my-money-mtl",
+   "num": "86",
    "title": "Fry \u2014 Take My Money ($MTL)",
    "alt": "Fry from Futurama squinting and thrusting a fistful of cash forward, $MTL branded",
    "reaction": "take-my-money",
@@ -41,6 +43,7 @@
   },
   {
    "slug": "pepe-take-my-money",
+   "num": "67",
    "title": "Pepe \u2014 Take My Money",
    "alt": "Pepe the Frog shoving handfuls of cash toward the screen",
    "reaction": "take-my-money",
@@ -60,6 +63,7 @@
   },
   {
    "slug": "donald-duck-money",
+   "num": "44",
    "title": "Donald Duck \u2014 Money",
    "alt": "Donald Duck gleefully throwing money into the air",
    "reaction": "take-my-money",
@@ -78,6 +82,7 @@
   },
   {
    "slug": "colbert-give-it-to-me",
+   "num": "78",
    "title": "Colbert \u2014 Give It To Me",
    "alt": "Stephen Colbert beckoning with both hands, wanting something badly",
    "reaction": "take-my-money",
@@ -96,6 +101,7 @@
   },
   {
    "slug": "let-him-cook-marmot",
+   "num": "49",
    "title": "Let Him Cook \u2014 Marmot",
    "alt": "A marmot at a stove, captioned let him cook",
    "reaction": "let-him-cook",
@@ -114,6 +120,7 @@
   },
   {
    "slug": "let-him-cook-patriot",
+   "num": "50",
    "title": "Let Him Cook \u2014 Patriot",
    "alt": "A patriot-themed let him cook reaction",
    "reaction": "let-him-cook",
@@ -132,6 +139,7 @@
   },
   {
    "slug": "let-him-cook-toy-story",
+   "num": "51",
    "title": "Let Him Cook \u2014 Toy Story",
    "alt": "Toy Story characters captioned let him cook",
    "reaction": "let-him-cook",
@@ -150,6 +158,7 @@
   },
   {
    "slug": "let-him-cook-goku",
+   "num": "52",
    "title": "Let Him Cook \u2014 Goku",
    "alt": "Goku from Dragon Ball captioned let him cook",
    "reaction": "let-him-cook",
@@ -168,6 +177,7 @@
   },
   {
    "slug": "let-him-cook-mouse",
+   "num": "53",
    "title": "Let Him Cook \u2014 Mouse",
    "alt": "A mouse at a stove captioned let him cook",
    "reaction": "let-him-cook",
@@ -186,6 +196,7 @@
   },
   {
    "slug": "let-him-cook-monkey",
+   "num": "54",
    "title": "Let Him Cook \u2014 Monkey",
    "alt": "A monkey at a stove captioned let him cook",
    "reaction": "let-him-cook",
@@ -204,6 +215,7 @@
   },
   {
    "slug": "pepe-ok-sign",
+   "num": "57",
    "title": "Pepe \u2014 OK Sign",
    "alt": "Pepe the Frog making an OK hand sign",
    "reaction": "approval",
@@ -223,6 +235,7 @@
   },
   {
    "slug": "pepe-winking",
+   "num": "58",
    "title": "Pepe \u2014 Winking",
    "alt": "Pepe the Frog winking knowingly at the viewer",
    "reaction": "approval",
@@ -241,6 +254,7 @@
   },
   {
    "slug": "pepe-sounds-good",
+   "num": "64",
    "title": "Pepe \u2014 Sounds Good",
    "alt": "Pepe the Frog nodding in approval",
    "reaction": "approval",
@@ -259,6 +273,7 @@
   },
   {
    "slug": "man-nodding",
+   "num": "4",
    "title": "Man Nodding",
    "alt": "A man nodding emphatically in agreement",
    "reaction": "approval",
@@ -277,6 +292,7 @@
   },
   {
    "slug": "ryan-reynolds-smiling",
+   "num": "14",
    "title": "Ryan Reynolds \u2014 Smiling",
    "alt": "Ryan Reynolds breaking into a satisfied smile",
    "reaction": "approval",
@@ -295,6 +311,7 @@
   },
   {
    "slug": "jesus-bless",
+   "num": "12",
    "title": "Jesus Blessing",
    "alt": "A depiction of Jesus raising a hand in blessing",
    "reaction": "approval",
@@ -313,6 +330,7 @@
   },
   {
    "slug": "smart-brain",
+   "num": "32",
    "title": "Roll Safe \u2014 Think About It",
    "alt": "Roll Safe tapping his temple in the think about it meme",
    "reaction": "approval",
@@ -332,6 +350,7 @@
   },
   {
    "slug": "rick-and-morty-point",
+   "num": "35",
    "title": "Rick and Morty \u2014 Pointing",
    "alt": "Rick and Morty pointing at something approvingly",
    "reaction": "approval",
@@ -351,6 +370,7 @@
   },
   {
    "slug": "cat-excellent",
+   "num": "38",
    "title": "Cat \u2014 Excellent",
    "alt": "A cat steepling its paws in an excellent, scheming gesture",
    "reaction": "approval",
@@ -369,6 +389,7 @@
   },
   {
    "slug": "archer",
+   "num": "68",
    "title": "Archer \u2014 My Body Is Ready",
    "alt": "A character from Archer declaring my body is ready",
    "reaction": "hype",
@@ -387,6 +408,7 @@
   },
   {
    "slug": "ted-lasso-i-like",
+   "num": "75",
    "title": "Ted Lasso \u2014 I Like It",
    "alt": "Ted Lasso grinning with clear approval",
    "reaction": "approval",
@@ -405,6 +427,7 @@
   },
   {
    "slug": "tombstone-wink",
+   "num": "84",
    "title": "Tombstone \u2014 Wink",
    "alt": "Doc Holliday from Tombstone winking",
    "reaction": "approval",
@@ -422,25 +445,8 @@
    "new": false
   },
   {
-   "slug": "point-finger",
-   "title": "Pointing Finger",
-   "alt": "A finger pointing decisively at something",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "point",
-    "this",
-    "that",
-    "agree"
-   ],
-   "sizeBytes": 2695433,
-   "hasMobile": false,
-   "mp4FromGif": true,
-   "new": true
-  },
-  {
    "slug": "wojak-hugs",
+   "num": "21",
    "title": "Wojak Hugs",
    "alt": "Two Wojak figures embracing in consolation",
    "reaction": "cope",
@@ -460,6 +466,7 @@
   },
   {
    "slug": "pepe-smile-cry",
+   "num": "65",
    "title": "Pepe \u2014 Smiling Through Tears",
    "alt": "Pepe the Frog smiling while tears stream down his face",
    "reaction": "cope",
@@ -479,6 +486,7 @@
   },
   {
    "slug": "simpsons-barney",
+   "num": "80",
    "title": "Simpsons \u2014 Hook It To My Veins",
    "alt": "A Simpsons character demanding it be hooked straight to his veins",
    "reaction": "take-my-money",
@@ -498,6 +506,7 @@
   },
   {
    "slug": "lock-in",
+   "num": "2",
    "title": "Lock In",
    "alt": "A lock-in reaction, signalling total focus",
    "reaction": "hype",
@@ -516,6 +525,7 @@
   },
   {
    "slug": "tigger-gm",
+   "num": "18",
    "title": "Tigger \u2014 GM",
    "alt": "Tigger bouncing energetically, captioned GM",
    "reaction": "hype",
@@ -535,6 +545,7 @@
   },
   {
    "slug": "chappelle-cant-stop",
+   "num": "22",
    "title": "Chappelle \u2014 Can't Stop",
    "alt": "Dave Chappelle in an unstoppable, hyped-up moment",
    "reaction": "hype",
@@ -553,6 +564,7 @@
   },
   {
    "slug": "sugar-rush",
+   "num": "27",
    "title": "Sugar Rush",
    "alt": "A frantic sugar-rush burst of energy",
    "reaction": "hype",
@@ -571,6 +583,7 @@
   },
   {
    "slug": "vegeta",
+   "num": "28",
    "title": "Vegeta",
    "alt": "Vegeta from Dragon Ball powering up",
    "reaction": "hype",
@@ -589,6 +602,7 @@
   },
   {
    "slug": "goku-super-saiyan",
+   "num": "31",
    "title": "Goku \u2014 Super Saiyan",
    "alt": "Goku transforming into Super Saiyan with an aura of energy",
    "reaction": "hype",
@@ -607,6 +621,7 @@
   },
   {
    "slug": "its-alive",
+   "num": "30",
    "title": "It's Alive!",
    "alt": "A mad scientist declaring it's alive",
    "reaction": "hype",
@@ -625,6 +640,7 @@
   },
   {
    "slug": "the-wire-webay",
+   "num": "33",
    "title": "The Wire \u2014 WeBay",
    "alt": "A scene from The Wire captioned WeBay",
    "reaction": "hype",
@@ -643,6 +659,7 @@
   },
   {
    "slug": "dlow",
+   "num": "42",
    "title": "DLow",
    "alt": "A DLow dance reaction",
    "reaction": "hype",
@@ -661,6 +678,7 @@
   },
   {
    "slug": "stickman-thrust",
+   "num": "43",
    "title": "Stickman Thrust",
    "alt": "An animated stick figure thrusting in a dance loop",
    "reaction": "hype",
@@ -679,6 +697,7 @@
   },
   {
    "slug": "wolf-of-wall-street",
+   "num": "47",
    "title": "Wolf of Wall Street",
    "alt": "Jordan Belfort riling up a trading floor in The Wolf of Wall Street",
    "reaction": "hype",
@@ -697,6 +716,7 @@
   },
   {
    "slug": "dr-evil-come-here",
+   "num": "69",
    "title": "Dr. Evil \u2014 Come Here",
    "alt": "Dr. Evil from Austin Powers beckoning with both hands",
    "reaction": "hype",
@@ -715,6 +735,7 @@
   },
   {
    "slug": "margharetti",
+   "num": "7",
    "title": "Margharetti",
    "alt": "A Margharetti hype reaction",
    "reaction": "hype",
@@ -732,6 +753,7 @@
   },
   {
    "slug": "metal-hand-fire",
+   "num": "70",
    "title": "Metal Hand \u2014 Fire",
    "alt": "A hand throwing metal horns wreathed in fire, $MTL branded",
    "reaction": "hype",
@@ -750,6 +772,7 @@
   },
   {
    "slug": "halo-ship",
+   "num": "74",
    "title": "Halo \u2014 Ship",
    "alt": "A Halo ship launching dramatically",
    "reaction": "hype",
@@ -768,6 +791,7 @@
   },
   {
    "slug": "cage-lets-go",
+   "num": "77",
    "title": "Nicolas Cage \u2014 Let's Go",
    "alt": "Nicolas Cage psyched up and shouting let's go",
    "reaction": "hype",
@@ -786,6 +810,7 @@
   },
   {
    "slug": "back-at-it-again",
+   "num": "85",
    "title": "Back At It Again",
    "alt": "A back at it again reaction",
    "reaction": "hype",
@@ -804,6 +829,7 @@
   },
   {
    "slug": "pepe-laughing-purple",
+   "num": "63",
    "title": "Pepe \u2014 Laughing (Purple)",
    "alt": "Pepe the Frog laughing hard against a purple background",
    "reaction": "hype",
@@ -822,6 +848,7 @@
   },
   {
    "slug": "pepe-purple-fire",
+   "num": "66",
    "title": "Pepe \u2014 Purple Fire",
    "alt": "Pepe the Frog surrounded by purple flames",
    "reaction": "hype",
@@ -841,6 +868,7 @@
   },
   {
    "slug": "cat-typing",
+   "num": "36",
    "title": "Cat \u2014 Typing",
    "alt": "A cat furiously typing at a keyboard",
    "reaction": "hype",
@@ -860,6 +888,7 @@
   },
   {
    "slug": "cat-gang",
+   "num": "37",
    "title": "Cat Gang",
    "alt": "A group of cats moving together like a gang",
    "reaction": "hype",
@@ -878,6 +907,7 @@
   },
   {
    "slug": "one-piece-joyboy-eyes",
+   "num": "87",
    "title": "One Piece \u2014 Joyboy Eyes",
    "alt": "Luffy's eyes glowing in the Joyboy awakening from One Piece",
    "reaction": "hype",
@@ -896,6 +926,7 @@
   },
   {
    "slug": "one-piece-gear-5-laugh",
+   "num": "88",
    "title": "One Piece \u2014 Gear 5 Laugh",
    "alt": "Luffy laughing in Gear 5 form from One Piece",
    "reaction": "hype",
@@ -914,8 +945,9 @@
   },
   {
    "slug": "luffy-laughing",
-   "title": "Luffy Laughing",
-   "alt": "Monkey D. Luffy laughing openly",
+   "num": "100",
+   "title": "Luffy \u2014 Laughing",
+   "alt": "Monkey D. Luffy from One Piece throwing his head back laughing",
    "reaction": "hype",
    "source": "one-piece",
    "branded": "xpr",
@@ -925,49 +957,14 @@
     "laugh",
     "lol"
    ],
-   "sizeBytes": 28525,
-   "hasMobile": false,
-   "mp4FromGif": true,
-   "new": true
-  },
-  {
-   "slug": "one-piece-conquerors-haki",
-   "title": "One Piece \u2014 Conqueror's Haki",
-   "alt": "A burst of Conqueror's Haki from One Piece",
-   "reaction": "hype",
-   "source": "one-piece",
-   "branded": "xpr",
-   "tags": [
-    "one piece",
-    "haki",
-    "conqueror",
-    "power"
-   ],
-   "sizeBytes": 3059918,
-   "hasMobile": false,
-   "mp4FromGif": true,
-   "new": true
-  },
-  {
-   "slug": "one-piece-laughing",
-   "title": "One Piece \u2014 Laughing",
-   "alt": "One Piece characters laughing together",
-   "reaction": "hype",
-   "source": "one-piece",
-   "branded": "xpr",
-   "tags": [
-    "one piece",
-    "laugh",
-    "lol",
-    "crew"
-   ],
-   "sizeBytes": 696450,
+   "sizeBytes": 347952,
    "hasMobile": false,
    "mp4FromGif": true,
    "new": true
   },
   {
    "slug": "leo-toast-xpr",
+   "num": "13",
    "title": "Leo Toast ($XPR)",
    "alt": "Leonardo DiCaprio raising a glass in a toast, $XPR branded",
    "reaction": "celebration",
@@ -987,6 +984,7 @@
   },
   {
    "slug": "leo-toast-mtl",
+   "num": "13.1",
    "title": "Leo Toast ($MTL)",
    "alt": "Leonardo DiCaprio raising a glass in a toast, $MTL branded",
    "reaction": "celebration",
@@ -1006,6 +1004,7 @@
   },
   {
    "slug": "xpr-celebrate",
+   "num": "46",
    "title": "XPR Celebrate",
    "alt": "An $XPR-branded celebration animation",
    "reaction": "celebration",
@@ -1024,6 +1023,7 @@
   },
   {
    "slug": "drake-dance",
+   "num": "20",
    "title": "Drake Dance",
    "alt": "Drake dancing in the Hotline Bling style",
    "reaction": "celebration",
@@ -1042,6 +1042,7 @@
   },
   {
    "slug": "bobs-burgers-dance",
+   "num": "34",
    "title": "Bob's Burgers \u2014 Dance",
    "alt": "A Bob's Burgers character doing a happy dance",
    "reaction": "celebration",
@@ -1060,6 +1061,7 @@
   },
   {
    "slug": "booyah",
+   "num": "39",
    "title": "Booyah",
    "alt": "A triumphant booyah celebration",
    "reaction": "celebration",
@@ -1078,6 +1080,7 @@
   },
   {
    "slug": "ric-flair-woo",
+   "num": "41",
    "title": "Ric Flair \u2014 Woo",
    "alt": "Ric Flair strutting and shouting Woo",
    "reaction": "celebration",
@@ -1096,6 +1099,7 @@
   },
   {
    "slug": "snoopy-dance",
+   "num": "45",
    "title": "Snoopy Dance",
    "alt": "Snoopy doing his signature happy dance",
    "reaction": "celebration",
@@ -1114,6 +1118,7 @@
   },
   {
    "slug": "pepe-dance-jamming",
+   "num": "55",
    "title": "Pepe \u2014 Dancing",
    "alt": "Pepe the Frog dancing and jamming to music",
    "reaction": "celebration",
@@ -1132,6 +1137,7 @@
   },
   {
    "slug": "pepe-cat-dance",
+   "num": "60",
    "title": "Pepe and Cat Dancing",
    "alt": "Pepe the Frog dancing alongside a cat",
    "reaction": "celebration",
@@ -1150,6 +1156,7 @@
   },
   {
    "slug": "cat-dance",
+   "num": "6",
    "title": "Cat Dance",
    "alt": "A cat dancing on its hind legs",
    "reaction": "celebration",
@@ -1168,6 +1175,7 @@
   },
   {
    "slug": "lasso-dance",
+   "num": "71",
    "title": "Lasso Dance",
    "alt": "A lasso-swinging dance celebration",
    "reaction": "celebration",
@@ -1186,6 +1194,7 @@
   },
   {
    "slug": "halo-dance",
+   "num": "73",
    "title": "Halo \u2014 Dance",
    "alt": "A Halo Spartan doing a victory dance",
    "reaction": "celebration",
@@ -1204,6 +1213,7 @@
   },
   {
    "slug": "kid-yes",
+   "num": "79",
    "title": "Success Kid \u2014 Yes",
    "alt": "The success kid clenching a fist in triumph",
    "reaction": "celebration",
@@ -1223,6 +1233,7 @@
   },
   {
    "slug": "happy-gilmore-shooter",
+   "num": "91",
    "title": "Happy Gilmore \u2014 Shooter",
    "alt": "Shooter McGavin from Happy Gilmore doing his finger-guns gesture",
    "reaction": "celebration",
@@ -1241,6 +1252,7 @@
   },
   {
    "slug": "mario-level-up",
+   "num": "92",
    "title": "Mario \u2014 Level Up",
    "alt": "Mario powering up and levelling up",
    "reaction": "celebration",
@@ -1260,6 +1272,7 @@
   },
   {
    "slug": "hangover-math",
+   "num": "26",
    "title": "Hangover Math",
    "alt": "The confused math lady meme with equations floating over her face",
    "reaction": "confused",
@@ -1279,6 +1292,7 @@
   },
   {
    "slug": "always-sunny",
+   "num": "48",
    "title": "Always Sunny \u2014 Conspiracy",
    "alt": "Charlie from Always Sunny frantically explaining a conspiracy board",
    "reaction": "confused",
@@ -1297,6 +1311,7 @@
   },
   {
    "slug": "cat-shocked",
+   "num": "61",
    "title": "Cat \u2014 Shocked",
    "alt": "A cat with wide shocked eyes",
    "reaction": "confused",
@@ -1315,6 +1330,7 @@
   },
   {
    "slug": "marmot-surprised",
+   "num": "9",
    "title": "Marmot \u2014 Surprised",
    "alt": "A marmot rearing back in surprise",
    "reaction": "confused",
@@ -1333,6 +1349,7 @@
   },
   {
    "slug": "decocco",
+   "num": "29",
    "title": "Decocco",
    "alt": "A Decocco reaction",
    "reaction": "confused",
@@ -1350,6 +1367,7 @@
   },
   {
    "slug": "popcorn-murder-she-wrote",
+   "num": "89",
    "title": "Popcorn \u2014 Murder She Wrote",
    "alt": "Jessica Fletcher from Murder She Wrote eating popcorn while watching intently",
    "reaction": "popcorn",
@@ -1368,62 +1386,8 @@
    "new": false
   },
   {
-   "slug": "popcorn-guy",
-   "title": "Popcorn Guy",
-   "alt": "A man eating popcorn while watching something unfold",
-   "reaction": "popcorn",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "popcorn",
-    "watching",
-    "drama",
-    "tea"
-   ],
-   "sizeBytes": 3021848,
-   "hasMobile": false,
-   "mp4FromGif": true,
-   "new": true
-  },
-  {
-   "slug": "popcorn-michael-jackson",
-   "title": "Popcorn \u2014 Michael Jackson",
-   "alt": "Michael Jackson eating popcorn in the Thriller theatre scene",
-   "reaction": "popcorn",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "popcorn",
-    "michael jackson",
-    "thriller",
-    "watching",
-    "drama"
-   ],
-   "sizeBytes": 269455,
-   "hasMobile": false,
-   "mp4FromGif": true,
-   "new": true
-  },
-  {
-   "slug": "popcorn-snl",
-   "title": "Popcorn \u2014 SNL",
-   "alt": "An SNL cast member eating popcorn while watching drama unfold",
-   "reaction": "popcorn",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "popcorn",
-    "snl",
-    "watching",
-    "drama"
-   ],
-   "sizeBytes": 503908,
-   "hasMobile": false,
-   "mp4FromGif": true,
-   "new": true
-  },
-  {
    "slug": "do-it-xpr",
+   "num": "3",
    "title": "Do It! ($XPR)",
    "alt": "A man in sunglasses urging DO IT, $XPR branded",
    "reaction": "hype",
@@ -1442,6 +1406,7 @@
   },
   {
    "slug": "happy-gilmore-swing",
+   "num": "10",
    "title": "Happy Gilmore \u2014 The Swing",
    "alt": "Happy Gilmore taking his running golf swing before a crowd",
    "reaction": "celebration",
@@ -1460,6 +1425,7 @@
   },
   {
    "slug": "jack-nicholson-yes",
+   "num": "11",
    "title": "Jack Nicholson \u2014 Yes",
    "alt": "Jack Nicholson grinning and nodding in approval",
    "reaction": "approval",
@@ -1479,6 +1445,7 @@
   },
   {
    "slug": "shaq-shimmy",
+   "num": "15",
    "title": "Shaq Shimmy",
    "alt": "Shaquille O'Neal doing a shoulder shimmy",
    "reaction": "celebration",
@@ -1497,6 +1464,7 @@
   },
   {
    "slug": "so-cool-face",
+   "num": "16",
    "title": "So Cool",
    "alt": "A group reacting with amazement",
    "reaction": "hype",
@@ -1515,6 +1483,7 @@
   },
   {
    "slug": "chris-pratt-surprise",
+   "num": "17",
    "title": "Chris Pratt \u2014 Surprise",
    "alt": "Chris Pratt reacting with wide-eyed surprise",
    "reaction": "confused",
@@ -1533,6 +1502,7 @@
   },
   {
    "slug": "tom-jerry-love",
+   "num": "19",
    "title": "Tom and Jerry \u2014 Heart Eyes",
    "alt": "Tom from Tom and Jerry with heart-shaped eyes",
    "reaction": "hype",
@@ -1551,6 +1521,7 @@
   },
   {
    "slug": "im-in",
+   "num": "5",
    "title": "I'm In",
    "alt": "A character leaning out of a window declaring I'm in",
    "reaction": "approval",
@@ -1569,6 +1540,7 @@
   },
   {
    "slug": "dog-smile",
+   "num": "8",
    "title": "Dog Smile",
    "alt": "A dog smiling contentedly at the camera",
    "reaction": "approval",
@@ -1587,6 +1559,7 @@
   },
   {
    "slug": "charlie-murphy",
+   "num": "23",
    "title": "Charlie Murphy",
    "alt": "Charlie Murphy giving a skeptical sideways look",
    "reaction": "confused",
@@ -1605,6 +1578,7 @@
   },
   {
    "slug": "chappelle-rick-james",
+   "num": "24",
    "title": "Chappelle \u2014 Rick James",
    "alt": "Dave Chappelle as Rick James gesturing wildly",
    "reaction": "hype",
@@ -1623,6 +1597,7 @@
   },
   {
    "slug": "fry-shocked",
+   "num": "25",
    "title": "Fry \u2014 Shocked",
    "alt": "Fry from Futurama reacting with shock",
    "reaction": "confused",
@@ -1641,6 +1616,7 @@
   },
   {
    "slug": "arnold-terminator",
+   "num": "40",
    "title": "Arnold \u2014 Terminator Nod",
    "alt": "Arnold Schwarzenegger as the Terminator nodding",
    "reaction": "approval",
@@ -1659,6 +1635,7 @@
   },
   {
    "slug": "pepe-crazy",
+   "num": "56",
    "title": "Pepe \u2014 Crazy",
    "alt": "Pepe the Frog waving arms in a manic pose",
    "reaction": "hype",
@@ -1677,6 +1654,7 @@
   },
   {
    "slug": "pepe-thinking",
+   "num": "59",
    "title": "Pepe \u2014 Thinking",
    "alt": "Pepe the Frog resting his chin on his hands, thinking",
    "reaction": "confused",
@@ -1695,6 +1673,7 @@
   },
   {
    "slug": "pepe-money",
+   "num": "62",
    "title": "Pepe \u2014 Money",
    "alt": "Pepe the Frog with money",
    "reaction": "take-my-money",
@@ -1713,6 +1692,7 @@
   },
   {
    "slug": "ted-lasso-yes",
+   "num": "72",
    "title": "Ted Lasso \u2014 Yes",
    "alt": "Ted Lasso pointing and saying yes",
    "reaction": "approval",
@@ -1731,6 +1711,7 @@
   },
   {
    "slug": "picard-make-it-so",
+   "num": "76",
    "title": "Picard \u2014 Make It So",
    "alt": "Captain Picard gesturing make it so",
    "reaction": "approval",
@@ -1750,6 +1731,7 @@
   },
   {
    "slug": "joe-rogan-omg",
+   "num": "81",
    "title": "Joe Rogan \u2014 OMG",
    "alt": "A commentator throwing his arms up in disbelief",
    "reaction": "hype",
@@ -1768,6 +1750,7 @@
   },
   {
    "slug": "blinking-white-guy",
+   "num": "83",
    "title": "Blinking White Guy",
    "alt": "The blinking white guy reaction",
    "reaction": "confused",
@@ -1786,6 +1769,7 @@
   },
   {
    "slug": "spongebob-learning",
+   "num": "90",
    "title": "SpongeBob \u2014 Learning",
    "alt": "SpongeBob SquarePants reading a book attentively",
    "reaction": "approval",
@@ -1805,6 +1789,7 @@
   },
   {
    "slug": "napoleon-dynamite-yes-xpr",
+   "num": "93",
    "title": "Napoleon Dynamite \u2014 Yes ($XPR)",
    "alt": "Napoleon Dynamite nodding yes, $XPR branded",
    "reaction": "approval",
@@ -1823,6 +1808,7 @@
   },
   {
    "slug": "napoleon-dynamite-yes-mtl",
+   "num": "94",
    "title": "Napoleon Dynamite \u2014 Yes ($MTL)",
    "alt": "Napoleon Dynamite nodding yes, Metallicus branded",
    "reaction": "approval",
@@ -1841,6 +1827,7 @@
   },
   {
    "slug": "one-piece-ace",
+   "num": "95",
    "title": "One Piece \u2014 Ace",
    "alt": "Ace from One Piece surrounded by flame",
    "reaction": "hype",
@@ -1859,6 +1846,7 @@
   },
   {
    "slug": "wolf-of-wall-street-dance",
+   "num": "96",
    "title": "Wolf of Wall Street \u2014 Dance",
    "alt": "Jordan Belfort dancing on the trading floor",
    "reaction": "celebration",
@@ -1874,6 +1862,69 @@
    "hasMobile": true,
    "mp4FromGif": false,
    "new": true
+  },
+  {
+   "slug": "fight-bear-xpr",
+   "num": "97",
+   "title": "Fight the Bear",
+   "alt": "A man in an orange jumpsuit squaring up to a grizzly bear on a riverbank",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "bear",
+    "fight",
+    "brawl",
+    "send it",
+    "brave",
+    "wild"
+   ],
+   "sizeBytes": 10886709,
+   "hasMobile": true,
+   "mp4FromGif": true,
+   "new": false
+  },
+  {
+   "slug": "fight-bear-mtl",
+   "num": "98",
+   "title": "Fight the Bear",
+   "alt": "A man in an orange jumpsuit squaring up to a grizzly bear on a riverbank",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "bear",
+    "fight",
+    "brawl",
+    "send it",
+    "brave",
+    "wild"
+   ],
+   "sizeBytes": 10696710,
+   "hasMobile": true,
+   "mp4FromGif": true,
+   "new": false
+  },
+  {
+   "slug": "one-piece-garp-laugh",
+   "num": "99",
+   "title": "Garp \u2014 Belly Laugh",
+   "alt": "Garp from One Piece throwing his head back in a huge open-mouthed laugh",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "xpr",
+   "tags": [
+    "laugh",
+    "lol",
+    "funny",
+    "cackle",
+    "garp",
+    "anime"
+   ],
+   "sizeBytes": 3299399,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
   }
  ]
 }

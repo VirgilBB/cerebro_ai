@@ -1,0 +1,897 @@
+<!-- Paste this entire block into Sitejet's Custom HTML or Code block -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .cerebro-page {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        line-height: 1.6;
+        color: #64748B;
+        background: #FFFFFF;
+    }
+
+    .contact-container {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    /* --- HERO SECTION: ENLARGED & IMPROVED GLASS --- */
+    .hero {
+        background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+        color: white;
+        padding: 60px 0; /* More height */
+        min-height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .hero-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    .hero-logo img {
+        width: 148px;
+        height: 148px;
+        object-fit: contain;
+    }
+
+    .hero-content {
+        flex: 1;
+        text-align: center;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .hero h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    .hero h2 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 28px;
+        font-weight: 500;
+        color: #E2E8F0;
+        margin-bottom: 12px;
+    }
+
+    .hero p {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 18px;
+        color: #CBD5E1;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .network-badges {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        color: #10B981;
+    }
+
+    /* News button: previous size, green, with green dot before N */
+    .hero-articles-button {
+        font-family: 'Space Grotesk', sans-serif;
+        flex-shrink: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.15);
+        color: #10B981;
+        padding: 15px 45px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        animation: pulse-button 2s ease-in-out infinite;
+    }
+
+    .hero-articles-button::before {
+        content: '•';
+        color: #10B981;
+        font-size: 20px;
+        animation: pulse 2s infinite;
+        line-height: 1;
+    }
+
+    .hero-articles-button:hover {
+        background: rgba(16, 185, 129, 0.25);
+        border-color: rgba(16, 185, 129, 0.5);
+        transform: translateY(-2px) scale(1.05);
+        animation: none;
+    }
+
+    .hero-articles-button-icon {
+        font-size: 16px;
+        transition: transform 0.3s ease;
+    }
+
+    .hero-articles-button:hover .hero-articles-button-icon {
+        transform: translateX(4px);
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
+    @keyframes pulse-button {
+        0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+        50% { transform: scale(1.02); box-shadow: 0 0 0 4px rgba(16, 185, 129, 0); }
+    }
+
+    /* --- GLOBAL UTILITIES (JetBrains Mono for all content below hero) --- */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 24px;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .section-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #0F172A;
+        margin-bottom: 32px;
+        text-align: center;
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .github-section {
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .achievements {
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    .articles-bottom-section {
+        font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* --- SERVICE CARDS (Full 6-Card Grid restored) --- */
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 24px;
+        margin-bottom: 0; 
+    }
+
+    .service-card {
+        background: white;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 32px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s ease;
+        min-height: 450px;
+        min-width: 0;
+    }
+
+    .service-card:hover { transform: translateY(-4px); }
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 16px;
+        position: relative;
+    }
+
+    .logo-container {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .logo-container img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+    .status-indicator {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .status-active { color: #10B981; }
+    .status-inactive { color: #94A3B8; }
+
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-active { background: #10B981; box-shadow: 0 0 8px #10B981; }
+    .dot-inactive { background: #94A3B8; }
+
+    .card-title { font-size: 24px; color: #0F172A; margin-bottom: 8px; }
+
+    .card-subtitle {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        color: #1E3A8A;
+        margin-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        min-height: 48px;
+    }
+
+    .card-subtitle a { color: #1E3A8A; text-decoration: underline; line-height: 1.6; }
+
+    .card-metric {
+        background: #EFF6FF;
+        color: #1E3A8A;
+        padding: 10px 12px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 14px;
+        margin-bottom: 16px;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-description { font-size: 15px; flex-grow: 1; margin-bottom: 20px; }
+
+    .service-card .cta-button {
+        margin-top: auto;
+    }
+
+    .cta-button {
+        background: #1E3A8A;
+        color: white;
+        text-align: center;
+        padding: 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .cta-pill {
+        border-radius: 9999px;
+        padding: 12px 28px;
+    }
+
+    .tdbn-box {
+        font-family: 'JetBrains Mono', monospace;
+        width: 100%;
+        box-sizing: border-box;
+        background: #E5E7EB;
+        color: #374151;
+        padding: 10px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        border: 1px solid #D1D5DB;
+    }
+
+    /* --- FEATURED TEMPLATES (github-card layout + status dots) --- */
+    .github-section {
+        padding: 40px 24px;
+        background: #F8FAFC;
+    }
+
+    .github-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .github-card {
+        display: flex;
+        flex-direction: column;
+        background: white;
+        border: 1px solid #E2E8F0;
+        border-radius: 12px;
+        padding: 36px;
+        min-width: 0;
+        min-height: 450px;
+    }
+
+    .github-card .card-header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .github-card .card-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 110px;
+        margin-bottom: 18px;
+    }
+
+    .github-card .card-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .github-card h3 {
+        font-size: 24px;
+        color: #0F172A;
+        margin-bottom: 12px;
+        line-height: 1.25;
+        min-height: 2.6em;
+    }
+
+    .github-card .repo-name {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        color: #1E3A8A;
+        margin-bottom: 16px;
+        min-height: 1.5em;
+    }
+
+    .github-card > p {
+        margin-bottom: 14px;
+        line-height: 1.5;
+    }
+
+    .github-card > p:not(.repo-name) {
+        min-height: 2.8em;
+    }
+
+    .github-card .repo-name a {
+        color: #1E3A8A;
+        text-decoration: underline;
+        transition: color 0.2s ease;
+    }
+
+    .github-card .repo-name a:hover {
+        color: #1E40AF;
+    }
+
+    .github-card ul {
+        list-style: none;
+        margin: 0 0 20px 0;
+    }
+
+    .github-card li {
+        padding: 6px 0;
+        padding-left: 24px;
+        position: relative;
+    }
+
+    .github-card li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #10B981;
+        font-weight: 700;
+    }
+
+    .github-card > a.cta-button,
+    .github-card > span.cta-button {
+        margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+        .github-card .card-icon {
+            width: 50px !important;
+            height: 90px !important;
+        }
+        .github-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* --- ACHIEVEMENTS / HIGHLIGHTS --- */
+    .achievements {
+        background: white;
+        padding: 28px 24px;
+    }
+
+    .achievements .section-title {
+        margin-bottom: 24px;
+    }
+
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 32px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .achievement-item {
+        text-align: center;
+    }
+
+    .achievement-number {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1E3A8A;
+        margin-bottom: 8px;
+    }
+
+    .achievement-label {
+        font-size: 16px;
+        color: #64748B;
+    }
+
+    /* --- ARTICLES BOTTOM (modern card) --- */
+    .articles-bottom-section {
+        padding: 32px 24px 40px;
+        background: #F8FAFC;
+    }
+
+    .articles-bottom-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .articles-modern-card {
+        background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 100%);
+        border-radius: 24px;
+        padding: 28px 36px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 28px;
+        align-items: center;
+        box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .articles-modern-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+        border-radius: 50%;
+    }
+
+    .articles-content-left {
+        position: relative;
+        z-index: 1;
+    }
+
+    .articles-badge-modern {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(16, 185, 129, 0.15);
+        color: #10B981;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-bottom: 16px;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .articles-badge-modern::before {
+        content: '•';
+        color: #10B981;
+        font-size: 20px;
+        animation: pulse 2s infinite;
+    }
+
+    .articles-title-modern {
+        font-size: 32px;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin-bottom: 12px;
+        line-height: 1.2;
+    }
+
+    .articles-description-modern {
+        font-size: 16px;
+        color: #CBD5E1;
+        line-height: 1.6;
+        max-width: 600px;
+    }
+
+    .articles-stats {
+        display: flex;
+        gap: 32px;
+        margin-top: 20px;
+    }
+
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-number {
+        font-size: 28px;
+        font-weight: 700;
+        color: #10B981;
+        line-height: 1;
+    }
+
+    .stat-label {
+        font-size: 13px;
+        color: #94A3B8;
+        margin-top: 4px;
+    }
+
+    .articles-cta-right {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        justify-self: start;
+        justify-content: center;
+    }
+
+    .articles-button-modern {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: #FFFFFF;
+        color: #1E3A8A;
+        padding: 16px 32px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        transition: all 0.3s ease;
+        white-space: nowrap;
+    }
+
+    /* Primary Articles button: match hero News (green, pill, dot) */
+    .articles-button-modern.articles-button-news {
+        background: rgba(16, 185, 129, 0.15);
+        color: #10B981;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+        border-radius: 20px;
+        padding: 15px 40px;
+        font-size: 14px;
+        box-shadow: none;
+        animation: pulse-button 2s ease-in-out infinite;
+    }
+
+    .articles-button-modern.articles-button-news::before {
+        content: '•';
+        color: #10B981;
+        font-size: 20px;
+        animation: pulse 2s infinite;
+        line-height: 1;
+    }
+
+    .articles-button-modern.articles-button-news:hover {
+        background: rgba(16, 185, 129, 0.25);
+        border-color: rgba(16, 185, 129, 0.5);
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        animation: none;
+    }
+
+    .articles-button-modern:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+        background: #F8FAFC;
+    }
+
+    .articles-button-icon {
+        font-size: 20px;
+        transition: transform 0.3s ease;
+    }
+
+    .articles-button-modern:hover .articles-button-icon {
+        transform: translateX(4px);
+    }
+
+    @media (max-width: 768px) {
+        .hero-inner { flex-direction: column; text-align: center; padding: 40px 24px; gap: 24px; }
+        .hero h1 { font-size: 42px; }
+        .hero h2 { font-size: 22px; }
+        .hero p { font-size: 16px; }
+        .network-badges { font-size: 18px; }
+        .hero-articles-button { width: 100%; padding: 12px 24px; }
+        .articles-modern-card { grid-template-columns: 1fr; padding: 24px 20px; gap: 20px; }
+        .articles-content-left { text-align: center; }
+        .articles-description-modern { margin: 0 auto; }
+        .articles-stats { justify-content: center; }
+        .articles-cta-right { align-items: stretch; }
+        .articles-button-modern { width: 100%; }
+    }
+</style>
+
+<div class="cerebro-page">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-logo">
+                <img src="https://cdn1.site-media.eu/images/0/22044253/cerebro-1024-S8v6M2RdR5mifrTZJd2pNQ.png" alt="Cerebro">
+            </div>
+            <div class="hero-content">
+                <h1>Cerebro</h1>
+                <h2>Multi-Network Blockchain Infrastructure</h2>
+                <p>Enterprise-grade blockchain infrastructure across four networks.</p>
+                <div class="network-badges">XPR • METAL • AKASH • DECRED</div>
+            </div>
+            <a href="https://cerebro.host/articles" class="hero-articles-button">
+                <span>News</span>
+                <span class="hero-articles-button-icon">→</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="container">
+        <h2 class="section-title">Our Infrastructure</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-header">
+                    <div class="logo-container">
+                        <img src="https://cdn1.site-media.eu/images/0/22044250/512-xpr-transparant-logo-fjWTkU48JdqPZnsPpCPfpQ.png" alt="XPR Network" style="width: 80px; height: 80px;">
+                    </div>
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>Active</div>
+                </div>
+                <h3 class="card-title">XPR Network</h3>
+                <p class="card-subtitle"><a href="https://explorer.xprnetwork.org/account/cerebroai" target="_blank" rel="noopener noreferrer" style="color: #1E3A8A; text-decoration: underline;">Block Producer: cerebroai</a></p>
+                <div class="card-metric">Top 21 Active Block Producer</div>
+                <p class="card-description">Production mainnet validator with security hardening and automated operations.</p>
+                <a href="https://explorer.xprnetwork.org/" class="cta-button" target="_blank" rel="noopener noreferrer">View Producers</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <div class="logo-container">
+                        <img src="https://cdn1.site-media.eu/images/0/22044244/512-round-metalblockchain-logo-qPv9rm6aNYPk6_jXcnihJw.png" alt="Metal Blockchain" style="width: 80px; height: 80px;">
+                    </div>
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>2 Validators</div>
+                </div>
+                <h3 class="card-title">Metal Blockchain</h3>
+                <p class="card-subtitle"><a href="https://explorer.metalblockchain.org/validators/NodeID-HDdohvYFYmiQYN44aX9KC1pdg5hQTEeaU" target="_blank" rel="noopener noreferrer" style="color: #1E3A8A; text-decoration: underline;">Validator: Cerebro 🚀</a></p>
+                <div class="card-metric">Dual Validator Setup</div>
+                <p class="card-description">Primary validator on dedicated hardware plus Akash-deployed validator for redundancy.</p>
+                <a href="https://explorer.metalblockchain.org/validators" class="cta-button" target="_blank" rel="noopener noreferrer">View Validators</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <div class="logo-container">
+                        <img src="https://cdn1.site-media.eu/images/0/22044240/512-roundakash-za0XViWsZC7zBOWmbpHcsQ.png" alt="Akash Network" style="width: 80px; height: 80px;">
+                    </div>
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>Multi-Service</div>
+                </div>
+                <h3 class="card-title">Akash Network</h3>
+                <p class="card-subtitle">
+                    <a href="https://stats.akash.network/validators/akashvaloper163zp6lyavlg7r2cru8djmv6d8qnpvlm0nsnr6s?network=mainnet" target="_blank" rel="noopener noreferrer" style="color: #1E3A8A; text-decoration: underline;">Validator: Cerebro 🚀</a>
+                    <a href="https://console.akash.network/providers/akash1nj6ygd4ggz589ldtt4e7yklazxm9zpp8cf7yh7/raw" target="_blank" rel="noopener noreferrer" style="color: #1E3A8A; text-decoration: underline;">Provider: provider.cerebro.host</a>
+                </p>
+                <div class="card-metric">112 CPU cores, 1TB RAM</div>
+                <p class="card-description">Provider, validator, and template developer for decentralized cloud infrastructure.</p>
+                <a href="https://stats.akash.network/validators" class="cta-button" target="_blank" rel="noopener noreferrer">View Validators</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <div class="logo-container">
+                        <img src="https://cdn1.site-media.eu/images/0/22044232/512-dcr-gardient-6gtUi38FE7ypKQzRiqFNPg.png" alt="Decred" style="width: 80px; height: 80px;">
+                    </div>
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>Production VSP</div>
+                </div>
+                <h3 class="card-title">Decred Network</h3>
+                <p class="card-subtitle"><a href="https://dcr.cerebro.host/" target="_blank" rel="noopener noreferrer" style="color: #1E3A8A; text-decoration: underline;">VSP: dcr.cerebro.host</a></p>
+                <div class="card-metric">0.888% fee • 9 live tickets</div>
+                <p class="card-description">Multi-cloud Voting Service Provider with 5 voting wallets for redundancy.</p>
+                <a href="https://decred.org/vsp/" class="cta-button" target="_blank" rel="noopener noreferrer">View VSPs</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <div class="logo-container">
+                        <img src="https://cdn1.site-media.eu/images/0/22044241/512-round-grafana-hlRVrzCnJaCcJQv0tyQmHw.png" alt="Grafana" style="width: 90px; height: 90px;">
+                    </div>
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>Active</div>
+                </div>
+                <h3 class="card-title">Validator Monitoring</h3>
+                <p class="card-subtitle">Prometheus + Grafana</p>
+                <div class="card-metric">Real-time Metrics</div>
+                <p class="card-description">24/7 monitoring dashboards for Metal blockchain validators on Akash Network.</p>
+                <a href="https://github.com/VirgilBB/Metal-Grafana" class="cta-button" target="_blank" rel="noopener noreferrer">View Monitoring</a>
+            </div>
+
+            <div class="service-card">
+                <div class="card-header">
+                    <div class="logo-container">
+                        <img src="https://cdn1.site-media.eu/images/0/22069714/512-metalx-logo-aNtdi03m9t8N2lUiksd-tw.png" alt="Metal X" style="width: 120px; height: 120px;">
+                    </div>
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>Active</div>
+                </div>
+                <h3 class="card-title">Metal X</h3>
+                <p class="card-subtitle">Blockchain Trading Platform</p>
+                <div class="card-metric">METAL • XPR Trading</div>
+                <p class="card-description">Decentralized exchange for Metal blockchain and XPR Network token trading.</p>
+                <a href="https://app.metalx.com/dex/XPR_XMD" class="cta-button" target="_blank" rel="noopener noreferrer">Visit Metal X</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Templates (Active green dots on 1 & 3, grey Reviewing on 2) -->
+    <section class="github-section">
+        <h2 class="section-title">Featured Templates</h2>
+        <div class="github-grid">
+            <div class="github-card">
+                <div class="card-header">
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>Active</div>
+                </div>
+                <div class="card-icon">
+                    <img src="https://cdn1.site-media.eu/images/0/22044244/512-round-metalblockchain-logo-qPv9rm6aNYPk6_jXcnihJw.png" alt="Metal">
+                </div>
+                <h3>Metal Blockchain Validator</h3>
+                <p class="repo-name"><a href="https://github.com/VirgilBB/Metal-Validator" target="_blank" rel="noopener noreferrer">VirgilBB/Metal-Validator</a></p>
+                <p>Deploy Metal blockchain validator node in minutes on Akash's decentralized cloud</p>
+                <ul>
+                    <li>Cost: ~$5-15/month</li>
+                </ul>
+                <a href="https://console.akash.network/templates/akash-network-awesome-akash-metal-validator" class="cta-button" target="_blank" rel="noopener noreferrer">Deploy Now</a>
+            </div>
+
+            <div class="github-card">
+                <div class="card-header">
+                    <div class="status-indicator status-inactive"><span class="status-dot dot-inactive"></span>Reviewing</div>
+                </div>
+                <div class="card-icon" style="width: 80px; display: flex; justify-content: center;">
+                    <img src="https://cdn1.site-media.eu/images/0/22044238/512-metal-grafana-transparant-onpl0u3QPek3wZuzyokOTw.png" alt="Metal Grafana" style="width: 138px; height: 138px;">
+                </div>
+                <h3>Metal Validator Monitoring</h3>
+                <p class="repo-name"><a href="https://github.com/VirgilBB/Metal-Grafana" target="_blank" rel="noopener noreferrer">VirgilBB/Metal-Grafana</a></p>
+                <p>Monitor Metal blockchain validators with Prometheus &amp; Grafana on Akash</p>
+                <ul>
+                    <li>Cost: ~$3.50-9/month</li>
+                </ul>
+                <span class="cta-button" style="opacity: 0.7; cursor: not-allowed;">Under Review</span>
+            </div>
+
+            <div class="github-card">
+                <div class="card-header">
+                    <div class="status-indicator status-active"><span class="status-dot dot-active"></span>Active</div>
+                </div>
+                <div class="card-icon">
+                    <img src="https://cdn1.site-media.eu/images/0/22044232/512-dcr-gardient-6gtUi38FE7ypKQzRiqFNPg.png" alt="Decred" style="width: 100px; height: 100px;">
+                </div>
+                <h3>Decred GUI Dashboard</h3>
+                <p class="repo-name"><a href="https://github.com/VirgilBB/dcrpulse" target="_blank" rel="noopener noreferrer">VirgilBB/dcrpulse</a></p>
+                <p>Decred full node + web dashboard deployment on Akash Network</p>
+                <ul>
+                    <li>Cost: ~$5/month</li>
+                </ul>
+                <a href="https://console.akash.network/templates/akash-network-awesome-akash-dcrpulse" class="cta-button" target="_blank" rel="noopener noreferrer">Deploy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Highlights -->
+    <section class="achievements">
+        <h2 class="section-title">Infrastructure Highlights</h2>
+        <div class="achievements-grid">
+            <div class="achievement-item">
+                <div class="achievement-number">7</div>
+                <div class="achievement-label">Infrastructure Services</div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-number">8+</div>
+                <div class="achievement-label">Server Locations</div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-number">99.9%+</div>
+                <div class="achievement-label">Uptime</div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-number">3</div>
+                <div class="achievement-label">Open Source Templates</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metallicus / Ecosystem Contributions: logo top-left, all text below at full width -->
+    <section class="container" style="background: #F8FAFC;">
+        <h2 class="section-title">Ecosystem Contributions</h2>
+        <div style="max-width: 880px; margin: 0 auto;">
+            <div class="service-card metallicus-card" style="min-height: 10px; padding: 32px; display: flex; flex-direction: column; gap: 0; align-items: stretch;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px;">
+                    <div class="metallicus-logo-wrap" style="flex-shrink: 0; width: 140px;">
+                        <img src="https://cdn1.site-media.eu/images/0/22044705/512-Metallicus-logo-IP9e5m0V7C3lMhEOd1JZeQ.jpg" alt="Metallicus Ecosystem" style="width: 100%; height: auto; max-height: 100px; object-fit: contain;">
+                    </div>
+                    <div class="status-indicator status-active" style="flex-shrink: 0;"><span class="status-dot dot-active"></span>Active Contributor</div>
+                </div>
+                <h3 class="card-title" style="margin: 0 0 8px 0; text-align: left; width: 100%;">Metallicus Ecosystem</h3>
+                <p class="card-subtitle" style="display: block; width: 100%; min-height: auto; margin: 0 0 8px 0;">The Digital Banking Network</p>
+                <div class="tdbn-box">The Digital Banking Network · TDBN Infrastructure</div>
+                <p class="card-description metallicus-description" style="text-align: left; margin: 0 0 20px 0; font-size: 15px; color: #64748B; line-height: 1.7; width: 100%; max-width: 100%; box-sizing: border-box;">Metallicus powers a comprehensive blockchain ecosystem, including XPR Network, Metal Blockchain, Metal Pay, Metal X DEX, WebAuth authentication, and ecosystem tokens for DeFi, governance, and payments.</p>
+                <a href="https://metallicus.com/" class="cta-button cta-pill" target="_blank" rel="noopener noreferrer" style="align-self: flex-start;">Explore the Ecosystem</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Services / Contact -->
+    <section class="achievements">
+        <h2 class="section-title">Professional Services</h2>
+        <div class="contact-container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 18px; margin-bottom: 16px;">Professional consulting for Metal blockchain validator deployment, Grafana monitoring setup, Decred VSP configuration, and Akash Network operations.</p>
+            <div style="background: #F8FAFC; padding: 20px 24px; border-radius: 12px; border: 1px solid #E2E8F0;">
+                <p style="font-size: 16px; margin-bottom: 12px;"><strong>Email:</strong> cerebro@cerebro.host</p>
+                <p style="font-size: 16px; margin-bottom: 12px;"><strong>Response Time:</strong> &lt;24 hours</p>
+                <p style="font-size: 16px; margin-bottom: 0;"><strong>Support:</strong> 24/7 automated monitoring and alerting</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles & Insights (modern card) -->
+    <section class="articles-bottom-section">
+        <div class="articles-bottom-container">
+            <div class="articles-modern-card">
+                <div class="articles-content-left">
+                    <span class="articles-badge-modern">Fresh Insights</span>
+                    <h2 class="articles-title-modern">Articles &amp; Insights</h2>
+                    <p class="articles-description-modern">Deep-dive blockchain infrastructure analysis, market updates, and technical insights from the Orbital Assets newsletter.</p>
+                    <div class="articles-stats">
+                        <div class="stat-item"><span class="stat-number">100+</span><span class="stat-label">Articles</span></div>
+                        <div class="stat-item"><span class="stat-number">5</span><span class="stat-label">Networks</span></div>
+                        <div class="stat-item"><span class="stat-number">Daily</span><span class="stat-label">Updates</span></div>
+                    </div>
+                </div>
+                <div class="articles-cta-right">
+                    <a href="https://cerebro.host/articles" class="articles-button-modern articles-button-news" target="_blank" rel="noopener noreferrer"><span>Latest Articles</span><span class="articles-button-icon">→</span></a>
+                    <a href="https://www.linkedin.com/newsletters/orbital-assets-7347506734581600256/" target="_blank" rel="noopener noreferrer" class="articles-button-modern articles-button-news"><span>Subscribe on LinkedIn</span><span class="articles-button-icon">↗</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="achievements" style="padding-top: 0;">
+        <div style="text-align: center; padding-top: 24px; border-top: 1px solid #E2E8F0; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 14px; color: #94A3B8; margin-bottom: 12px; line-height: 1.5;">
+                <a href="/conduct" target="_blank" rel="noopener noreferrer" style="color: #64748B; text-decoration: none; margin: 0 12px;">Code of Conduct</a>
+                <span style="color: #CBD5E1; margin: 0 8px;">•</span>
+                <a href="https://x.com/Cerebro_Agent" target="_blank" rel="noopener noreferrer" style="color: #64748B; text-decoration: none; margin: 0 10px;">
+                    <img src="https://cdn1.site-media.eu/images/0/22057876/logo-black-ugCRNQ7_FluxbNIrJgjLQQ.png" alt="X" style="width: 18px; height: 18px; vertical-align: middle;">
+                </a>
+                <span style="color: #CBD5E1; margin: 0 14px;">•</span>
+                <a href="/ownership" target="_blank" rel="noopener noreferrer" style="color: #64748B; text-decoration: none; margin: 0 12px;">Ownership</a>
+            </p>
+            <p style="font-size: 12px; color: #94A3B8; margin-top: 16px;">© 2026 Cerebro. All rights reserved.</p>
+        </div>
+    </section>
+</div>

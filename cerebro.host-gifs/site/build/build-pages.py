@@ -2,7 +2,7 @@
 """Generate site/g/<slug>/index.html -- one shareable page per GIF, carrying OG /
 twitter:card tags so a pasted link unfurls with the poster and a real title.
 Also writes site/_headers for Cloudflare Pages caching."""
-import html, json, os
+import html, json, os, shutil
 
 SITE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE = "https://cerebro.host/gifs"
@@ -12,7 +12,7 @@ TPL = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} — XPR Gifs</title>
+<title>#{num} {title} — XPR Gifs</title>
 <meta name="description" content="{alt}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{alt}">
@@ -34,7 +34,7 @@ TPL = """<!doctype html>
 <header>
   <div class="wrap">
     <p class="eyebrow"><a href="../../">← XPR Gifs</a></p>
-    <h1>{title}</h1>
+    <h1>#{num} · {title}</h1>
     <p class="lede">{alt}</p>
   </div>
 </header>
@@ -84,10 +84,22 @@ def main():
         with open(os.path.join(d, "index.html"), "w") as f:
             f.write(TPL.format(
                 title=html.escape(g["title"]), alt=html.escape(g["alt"]),
-                slug=g["slug"], base=BASE, count=n))
+                slug=g["slug"], num=html.escape(g.get("num", "")), base=BASE, count=n))
+    # Drop pages for slugs that left the catalog, or a removed GIF keeps a live,
+    # indexable page pointing at assets that no longer exist.
+    live = {g["slug"] for g in data["gifs"]}
+    gdir = os.path.join(SITE, "g")
+    for slug in os.listdir(gdir):
+        d = os.path.join(gdir, slug)
+        if os.path.isdir(d) and slug not in live:
+            shutil.rmtree(d)
+            print(f"pruned g/{slug}/")
+
     with open(os.path.join(SITE, "_headers"), "w") as f:
         f.write(HEADERS)
     print(f"wrote {n} deep-link pages + _headers")
+    if not os.path.exists(os.path.join(SITE, "404.html")):
+        print("  ! 404.html missing -- Pages will soft-200 unknown paths with index.html")
 
 if __name__ == "__main__":
     main()

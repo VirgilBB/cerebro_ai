@@ -1,4 +1,4 @@
-# Deploying XPR Gifs → gifs.cerebro.host
+# Deploying XPR Gifs → cerebro.host/gifs
 
 Target: **Cloudflare Pages**. Chosen because `cerebro.host` nameservers are already
 Cloudflare (`magali.ns.cloudflare.com` / `tosana.ns.cloudflare.com`), egress is free,
@@ -26,8 +26,9 @@ python3 site/build/build-assets.py     # ~40s, writes site/assets/ + site/gifs-d
 python3 site/build/build-pages.py      # writes site/g/<slug>/ + site/_headers
 ```
 
-Expected: 79 gif / 79 poster / 79 preview / 79 mp4 / 14 gif-mobile, ~338MB total.
-The script exits non-zero and lists problems if anything failed.
+Expected: 100 gif / 100 poster / 100 preview / 100 mp4 / 20 gif-mobile.
+The script exits non-zero and lists problems if anything failed. Both scripts
+prune derivatives and pages for slugs that have left the catalog.
 
 ## 2. Authenticate (interactive — run this yourself)
 
@@ -44,8 +45,13 @@ bumping.
 ```bash
 cd cerebro.host-gifs
 npx wrangler@4.123.0 pages project create xpr-gifs --production-branch main   # first time only
-npx wrangler@4.123.0 pages deploy site --project-name xpr-gifs
+npx wrangler@4.123.0 pages deploy site --project-name xpr-gifs --branch main
 ```
+
+**`--branch main` is not optional.** Wrangler infers the branch from git, and this
+repo's working branch is `xpr-gifs`, so omitting it publishes a preview deployment
+that `xpr-gifs.pages.dev` (and therefore `cerebro.host/gifs`) never serves. The
+deploy "succeeds" and the live site does not change.
 
 ## 4. Custom domain
 
@@ -75,8 +81,32 @@ Then by hand, in a real browser (none of this was confirmable headlessly):
 
 Add a nav item "XPR Gifs" → `https://cerebro.host/gifs` in the Sitejet editor.
 
+## Removing a GIF: purge the edge cache
+
+`_headers` caches `/assets/*` as `immutable, max-age=31536000`. Deleting an item
+removes it from the origin (both build scripts prune, and `404.html` makes unknown
+paths return a real 404), **but the bytes stay served from Cloudflare's cache for up
+to a year.** The Worker fetches from `xpr-gifs.pages.dev`, so that is the hostname to
+purge, not `cerebro.host`:
+
+Cloudflare dashboard → Caching → Configuration → Purge Custom URLs, e.g.
+
+```
+https://xpr-gifs.pages.dev/assets/gif/<slug>.gif
+https://xpr-gifs.pages.dev/assets/mp4/<slug>.mp4
+https://xpr-gifs.pages.dev/assets/poster/<slug>.jpg
+https://xpr-gifs.pages.dev/assets/preview/<slug>.mp4
+```
+
+The wrangler OAuth token cannot do this — it has no `cache_purge` scope, so the API
+route needs a token created for it.
+
 ## Adding GIFs later
 
-Drop the `.gif` into `live gifs/`, add a record to `site/build/catalog.json`
-(`reaction`, `source` and `alt` are mandatory — the build rejects a record without
-them), rerun both build scripts, redeploy. No page changes.
+Drop the file into `live gifs/` and add a record to `site/build/catalog.json`, then
+rerun both build scripts and redeploy. No page changes.
+
+The source may be a **`.gif` or a `.mp4`** — an mp4 is encoded to a 480px GIF by
+`build-assets.py`. `num`, `reaction`, `source` and `alt` are mandatory; the build
+rejects a record without them. `num` is the numeric prefix of the source filename and
+is what the card badge shows.

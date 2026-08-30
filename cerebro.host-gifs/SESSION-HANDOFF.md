@@ -4,14 +4,87 @@
 > fresh session can orient in under 60 seconds with zero prior context.
 
 ## Last Updated
-2026-08-24
+2026-08-30
 
 ## Latest Commit
 `0533412` Keep cerebro.host/gifs as canonical; footer links open in new tab
 
 ## Status: SHIPPED ✅
 
-**Live at https://cerebro.host/gifs** — 78 gifs, browsable, downloadable.
+**Live at https://cerebro.host/gifs** — 100 gifs, browsable, downloadable.
+Every item is watermarked and numbered.
+
+---
+
+## What Shipped This Session (2026-08-30)
+
+### MP4 sources, numbering, unbranded cleanup — 103 → 100 items
+
+**The build now accepts a `.mp4` as a catalog `src`** and encodes the GIF itself at
+480px (`gif_from_mp4`). Previously only a GIF could be a source, so `100-one piece
+luffy-laughing xpr.mp4` could not be published. The GIF→MP4 direction already
+existed; this is the reverse.
+
+Three landmines found while wiring it up, all fixed:
+
+- **`make_poster` silently wrote a 0-byte file for any mp4 input.** `mjpeg` rejects
+  limited-range `yuv420p` (`Non full-range YUV is non-standard`). Needs
+  `format=yuvj420p` in the filter chain. GIF sources decode to RGB and never hit it.
+- **Short clips were being decimated.** Capping at 20fps turned a 5-frame reaction
+  loop into 3 frames. `encode_gif` now keeps source fps when the clip is ≤30 frames.
+- **Neither build script pruned.** Removing a catalog record left its derivatives and
+  its `g/<slug>/` page live. Both now delete orphans, and `404.html` was added —
+  without it Pages soft-200s every unknown path with `index.html`, so a deleted GIF
+  looked like it was still there.
+
+### Branding audit — the definitive answer
+
+Audited all 103 at **full frame**. Exactly **7 carried no XPR/Metallicus mark**, and
+they were exactly the 7 with no numeric filename prefix — the whole `1new/` set.
+Everything from `live gifs/` is branded.
+
+The mark is often at the **top**, not the bottom: `1.1`, `3`, `25`, `50`, `55`, `66`,
+`67`, `80`, `85`, `90`, `91`, `92` all read as bare from a bottom-crop and are not.
+Crop the content bbox and check top and bottom, or you will re-run the same mistake
+the 2026-08-24 session made from a too-small contact sheet.
+
+`luffy-laughing` was repointed to the watermarked **#100** (slug kept, so the existing
+deep link still resolves). The other 6 were **pulled**, pending re-export with a logo
+— listed at the bottom of this file. One of them, `one-piece-conquerors-haki`, also
+carries a third-party creator watermark (`@mod515`); it needs a clean source, not just
+a logo, and would have been a problem for the Giphy Brand application too.
+
+### Numbering
+
+Every record now carries `num`, taken from the source filename prefix, and it is a
+**publish gate** — a record without one fails the build. That is what stops the
+unnumbered/unbranded class reappearing silently. It shows as a chip top-left on each
+card (the `New` badge moved to top-right to make room), in the lightbox title, in the
+`g/<slug>/` page title, and it is searchable, so typing `67` finds #67.
+
+`fry-take-my-money-mtl` was repointed from `1.1-fry take my money mtl.gif` to
+`86-fry take my money metal.gif` — sha256-identical bytes, but a unique number, which
+resolved the only numbering collision.
+
+### Added from the backlog
+
+`97-fight bear xpr`, `98-fight bear mtl`, `99-one piece garf laugh2 xpr` were finished
+and watermarked but had never been catalogued — invisible on the site since Aug 26.
+#99's mp4 lives in `live gifs/`, not `wave*/`, so it needs an explicit `mp4src`;
+`find_source_mp4` only scans the wave folders and that is deliberate.
+
+### Deploy gotcha that cost a cycle
+
+`wrangler pages deploy` infers the branch from git. This repo's working branch is
+`xpr-gifs`, so the first deploy went to a **preview** URL and the live site did not
+change, while the command reported success. **Always pass `--branch main`.**
+
+### Still open
+
+The 6 pulled GIFs are gone from the origin but their `.gif` bytes remain in
+Cloudflare's cache (`immutable, max-age=31536000`). Purge
+`https://xpr-gifs.pages.dev/assets/{gif,mp4,poster,preview}/<slug>.*` in the
+dashboard — the wrangler OAuth token has no `cache_purge` scope. See DEPLOY.md.
 
 ---
 
@@ -108,3 +181,20 @@ python3 site/build/build-pages.py
 npx wrangler@4.123.0 pages deploy site --project-name xpr-gifs --branch main
 ```
 No page changes needed. Media (~580MB) is gitignored; derivatives rebuild from source.
+
+
+---
+
+## Pending: 6 GIFs pulled 2026-08-30, awaiting a logo
+
+Re-export with an XPR Network or Metallicus watermark **and a number**, then drop the
+file in and add a catalog record. A `.mp4` is fine now — the build converts it.
+
+| source file | note |
+|---|---|
+| `1new/point finger GIF.gif` | |
+| `1new/One Piece Conquerors Haki.gif` | also carries `@mod515` — needs a clean source, not just a logo |
+| `1new/One Piece Laughing.gif` | |
+| `1new/popcorn black dude.gif` | |
+| `1new/popcorn Michael Jackson.gif` | |
+| `1new/popcorn snl.gif` | |

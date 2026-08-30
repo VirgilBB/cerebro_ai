@@ -56,6 +56,7 @@ var NETWORK_WORDS = {
 
 function haystack(g) {
   return (g.title + ' ' + g.tags.join(' ') + ' ' + g.alt + ' ' +
+          '#' + g.num + ' ' + g.num + ' ' +
           (NETWORK_WORDS[g.branded] || '') + ' ' +
           g.reaction.replace(/-/g, ' ') + ' ' +
           g.source.replace(/-/g, ' ')).toLowerCase();
@@ -256,7 +257,7 @@ function card(g) {
   el.className = 'card';
   el.tabIndex = 0;
   el.setAttribute('role', 'button');
-  el.setAttribute('aria-label', g.title + ' — open');
+  el.setAttribute('aria-label', '#' + g.num + ' ' + g.title + ' — open');
   el._gif = g;
 
   var img = document.createElement('img');
@@ -268,6 +269,14 @@ function card(g) {
   // Without this a card drag would hand over the poster JPEG -- a still frame.
   attachDrag(img, g);
   el.appendChild(img);
+
+  // The number ties a card back to its numbered source file, so a problem with
+  // one can be reported as "#67" instead of by description.
+  var num = document.createElement('span');
+  num.className = 'num';
+  num.textContent = g.num;
+  num.setAttribute('aria-hidden', 'true');
+  el.appendChild(num);
 
   if (g.new) {
     var badge = document.createElement('span');
@@ -382,7 +391,7 @@ var current = null;
 
 function open(g) {
   current = g;
-  document.getElementById('lb-title').textContent = g.title;
+  document.getElementById('lb-title').textContent = '#' + g.num + ' · ' + g.title;
 
   var mb = (g.sizeBytes / 1048576).toFixed(1);
   var bits = [mb + ' MB GIF'];

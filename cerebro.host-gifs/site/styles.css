@@ -137,8 +137,20 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
    Mouse events fall through to the img (the drag source) and the card. */
 .card video { position: absolute; inset: 0; pointer-events: none; }
 
+/* Number chip: top-left, so it never collides with the download/copy controls
+   bottom-right. The "New" badge moves to top-right for the same reason. */
+.card .num {
+  position: absolute; top: 7px; left: 7px; z-index: 2;
+  background: rgba(10, 12, 14, 0.72); border: 1px solid var(--border-strong);
+  color: var(--text); border-radius: 20px;
+  padding: 2px 7px; font-size: 10px; font-weight: 700;
+  font-variant-numeric: tabular-nums; letter-spacing: 0.02em;
+  backdrop-filter: blur(10px); pointer-events: none;
+}
+.card .num::before { content: "#"; opacity: 0.55; }
+
 .card .badge {
-  position: absolute; top: 7px; left: 7px;
+  position: absolute; top: 7px; right: 7px;
   background: var(--accent-bg); border: 1px solid var(--accent-border);
   color: var(--accent); border-radius: 20px;
   padding: 2px 8px; font-size: 10px; font-weight: 700;
