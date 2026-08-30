@@ -34,7 +34,8 @@
     <img src="../../assets/gif/donald-duck-money.gif" alt="Donald Duck gleefully throwing money into the air"
          style="width:100%;border-radius:12px;border:1px solid var(--border)">
     <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
-      <a class="btn btn-primary" href="../../assets/gif/donald-duck-money.gif" download="donald-duck-money.gif">Download GIF</a>
+      <a class="btn btn-primary" id="dl" href="../../assets/gif/donald-duck-money.gif?dl=1"
+         download="donald-duck-money.gif">Download GIF</a>
       <p class="hint"><strong>Download, then drag into your X post</strong> —
          X only animates uploaded files, not links.</p>
       <div class="btn-row">
@@ -49,5 +50,16 @@
     </div>
   </div>
 </main>
+<script>
+/* This page is static, so the mobile-variant swap app.js does has to happen here
+   too -- otherwise a phone gets the full-size GIF, which for the 20 heavy items is
+   over X's 5MB mobile cap and simply will not upload. */
+(function () {
+  if (!false) return;
+  if (!window.matchMedia('(max-width: 820px)').matches) return;
+  var a = document.getElementById('dl');
+  a.href = '../../assets/gif-mobile/donald-duck-money.gif?dl=1';
+})();
+</script>
 </body>
 </html>

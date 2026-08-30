@@ -43,7 +43,8 @@ TPL = """<!doctype html>
     <img src="../../assets/gif/{slug}.gif" alt="{alt}"
          style="width:100%;border-radius:12px;border:1px solid var(--border)">
     <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
-      <a class="btn btn-primary" href="../../assets/gif/{slug}.gif" download="{slug}.gif">Download GIF</a>
+      <a class="btn btn-primary" id="dl" href="../../assets/gif/{slug}.gif?dl=1"
+         download="{slug}.gif">Download GIF</a>
       <p class="hint"><strong>Download, then drag into your X post</strong> —
          X only animates uploaded files, not links.</p>
       <div class="btn-row">
@@ -58,6 +59,17 @@ TPL = """<!doctype html>
     </div>
   </div>
 </main>
+<script>
+/* This page is static, so the mobile-variant swap app.js does has to happen here
+   too -- otherwise a phone gets the full-size GIF, which for the 20 heavy items is
+   over X's 5MB mobile cap and simply will not upload. */
+(function () {{
+  if (!{has_mobile}) return;
+  if (!window.matchMedia('(max-width: 820px)').matches) return;
+  var a = document.getElementById('dl');
+  a.href = '../../assets/gif-mobile/{slug}.gif?dl=1';
+}})();
+</script>
 </body>
 </html>
 """
@@ -84,7 +96,8 @@ def main():
         with open(os.path.join(d, "index.html"), "w") as f:
             f.write(TPL.format(
                 title=html.escape(g["title"]), alt=html.escape(g["alt"]),
-                slug=g["slug"], num=html.escape(g.get("num", "")), base=BASE, count=n))
+                slug=g["slug"], num=html.escape(g.get("num", "")), base=BASE, count=n,
+                has_mobile="true" if g.get("hasMobile") else "false"))
     # Drop pages for slugs that left the catalog, or a removed GIF keeps a live,
     # indexable page pointing at assets that no longer exist.
     live = {g["slug"] for g in data["gifs"]}
