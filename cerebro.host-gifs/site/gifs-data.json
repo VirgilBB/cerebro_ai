@@ -427,7 +427,7 @@
   },
   {
    "slug": "tombstone-wink",
-   "num": "84",
+   "num": "83",
    "title": "Tombstone \u2014 Wink",
    "alt": "Doc Holliday from Tombstone winking",
    "reaction": "approval",
@@ -810,7 +810,7 @@
   },
   {
    "slug": "back-at-it-again",
-   "num": "85",
+   "num": "84",
    "title": "Back At It Again",
    "alt": "A back at it again reaction",
    "reaction": "hype",
@@ -907,7 +907,7 @@
   },
   {
    "slug": "one-piece-joyboy-eyes",
-   "num": "87",
+   "num": "85",
    "title": "One Piece \u2014 Joyboy Eyes",
    "alt": "Luffy's eyes glowing in the Joyboy awakening from One Piece",
    "reaction": "hype",
@@ -926,7 +926,7 @@
   },
   {
    "slug": "one-piece-gear-5-laugh",
-   "num": "88",
+   "num": "86",
    "title": "One Piece \u2014 Gear 5 Laugh",
    "alt": "Luffy laughing in Gear 5 form from One Piece",
    "reaction": "hype",
@@ -945,7 +945,7 @@
   },
   {
    "slug": "luffy-laughing",
-   "num": "100",
+   "num": "96",
    "title": "Luffy \u2014 Laughing",
    "alt": "Monkey D. Luffy from One Piece throwing his head back laughing",
    "reaction": "hype",
@@ -957,7 +957,7 @@
     "laugh",
     "lol"
    ],
-   "sizeBytes": 347952,
+   "sizeBytes": 476448,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": true
@@ -1233,7 +1233,7 @@
   },
   {
    "slug": "happy-gilmore-shooter",
-   "num": "91",
+   "num": "89",
    "title": "Happy Gilmore \u2014 Shooter",
    "alt": "Shooter McGavin from Happy Gilmore doing his finger-guns gesture",
    "reaction": "celebration",
@@ -1252,7 +1252,7 @@
   },
   {
    "slug": "mario-level-up",
-   "num": "92",
+   "num": "90",
    "title": "Mario \u2014 Level Up",
    "alt": "Mario powering up and levelling up",
    "reaction": "celebration",
@@ -1367,7 +1367,7 @@
   },
   {
    "slug": "popcorn-murder-she-wrote",
-   "num": "89",
+   "num": "87",
    "title": "Popcorn \u2014 Murder She Wrote",
    "alt": "Jessica Fletcher from Murder She Wrote eating popcorn while watching intently",
    "reaction": "popcorn",
@@ -1750,7 +1750,7 @@
   },
   {
    "slug": "blinking-white-guy",
-   "num": "83",
+   "num": "82",
    "title": "Blinking White Guy",
    "alt": "The blinking white guy reaction",
    "reaction": "confused",
@@ -1769,7 +1769,7 @@
   },
   {
    "slug": "spongebob-learning",
-   "num": "90",
+   "num": "88",
    "title": "SpongeBob \u2014 Learning",
    "alt": "SpongeBob SquarePants reading a book attentively",
    "reaction": "approval",
@@ -1789,7 +1789,7 @@
   },
   {
    "slug": "napoleon-dynamite-yes-xpr",
-   "num": "93",
+   "num": "91",
    "title": "Napoleon Dynamite \u2014 Yes ($XPR)",
    "alt": "Napoleon Dynamite nodding yes, $XPR branded",
    "reaction": "approval",
@@ -1808,7 +1808,7 @@
   },
   {
    "slug": "napoleon-dynamite-yes-mtl",
-   "num": "93.1",
+   "num": "91.1",
    "title": "Napoleon Dynamite \u2014 Yes ($MTL)",
    "alt": "Napoleon Dynamite nodding yes, Metallicus branded",
    "reaction": "approval",
@@ -1827,7 +1827,7 @@
   },
   {
    "slug": "one-piece-ace",
-   "num": "95",
+   "num": "92",
    "title": "One Piece \u2014 Ace",
    "alt": "Ace from One Piece surrounded by flame",
    "reaction": "hype",
@@ -1846,7 +1846,7 @@
   },
   {
    "slug": "wolf-of-wall-street-dance",
-   "num": "96",
+   "num": "93",
    "title": "Wolf of Wall Street \u2014 Dance",
    "alt": "Jordan Belfort dancing on the trading floor",
    "reaction": "celebration",
@@ -1865,7 +1865,7 @@
   },
   {
    "slug": "fight-bear-xpr",
-   "num": "97",
+   "num": "94",
    "title": "Fight the Bear",
    "alt": "A man in an orange jumpsuit squaring up to a grizzly bear on a riverbank",
    "reaction": "hype",
@@ -1886,7 +1886,7 @@
   },
   {
    "slug": "fight-bear-mtl",
-   "num": "97.1",
+   "num": "94.1",
    "title": "Fight the Bear",
    "alt": "A man in an orange jumpsuit squaring up to a grizzly bear on a riverbank",
    "reaction": "hype",
@@ -1907,7 +1907,7 @@
   },
   {
    "slug": "one-piece-garp-laugh",
-   "num": "99",
+   "num": "95",
    "title": "Garp \u2014 Belly Laugh",
    "alt": "Garp from One Piece throwing his head back in a huge open-mouthed laugh",
    "reaction": "hype",

@@ -26,7 +26,7 @@
  ],
  "items": [
   {
-   "src": "live gifs/1.1-new-fry-take my money XPR.gif",
+   "src": "live gifs/1-fry take my money xpr.gif",
    "slug": "fry-take-my-money-xpr",
    "title": "Fry — Take My Money ($XPR)",
    "reaction": "take-my-money",
@@ -43,7 +43,7 @@
    "num": "1"
   },
   {
-   "src": "live gifs/86-fry take my money metal.gif",
+   "src": "live gifs/1.1-fry take my money mtl.gif",
    "slug": "fry-take-my-money-mtl",
    "title": "Fry — Take My Money ($MTL)",
    "reaction": "take-my-money",
@@ -384,7 +384,7 @@
    "num": "75"
   },
   {
-   "src": "live gifs/84-tombstone wink.gif",
+   "src": "live gifs/83-tombstone wink.gif",
    "slug": "tombstone-wink",
    "title": "Tombstone — Wink",
    "reaction": "approval",
@@ -397,7 +397,7 @@
     "sly"
    ],
    "alt": "Doc Holliday from Tombstone winking",
-   "num": "84"
+   "num": "83"
   },
   {
    "src": "live gifs/21-wojak hugs.gif",
@@ -707,7 +707,7 @@
    "num": "77"
   },
   {
-   "src": "live gifs/85-back at it again.gif",
+   "src": "live gifs/84-back at it again.gif",
    "slug": "back-at-it-again",
    "title": "Back At It Again",
    "reaction": "hype",
@@ -720,7 +720,7 @@
     "return"
    ],
    "alt": "A back at it again reaction",
-   "num": "85"
+   "num": "84"
   },
   {
    "src": "live gifs/63-pepe laughing purple.gif",
@@ -789,7 +789,7 @@
    "num": "37"
   },
   {
-   "src": "live gifs/87-one piece joyboy eyes.gif",
+   "src": "live gifs/85-one piece joyboy eyes.gif",
    "slug": "one-piece-joyboy-eyes",
    "title": "One Piece — Joyboy Eyes",
    "reaction": "hype",
@@ -802,10 +802,10 @@
     "awakening"
    ],
    "alt": "Luffy's eyes glowing in the Joyboy awakening from One Piece",
-   "num": "87"
+   "num": "85"
   },
   {
-   "src": "live gifs/88-One Piece Gear 5 laugh.gif",
+   "src": "live gifs/86-One Piece Gear 5 laugh.gif",
    "slug": "one-piece-gear-5-laugh",
    "title": "One Piece — Gear 5 Laugh",
    "reaction": "hype",
@@ -818,10 +818,10 @@
     "laugh"
    ],
    "alt": "Luffy laughing in Gear 5 form from One Piece",
-   "num": "88"
+   "num": "86"
   },
   {
-   "src": "live mp4s/100-one piece luffy-laughing xpr.mp4",
+   "src": "live gifs/96-one piece luffy-laughing xpr.gif",
    "slug": "luffy-laughing",
    "title": "Luffy — Laughing",
    "reaction": "hype",
@@ -835,7 +835,7 @@
    ],
    "alt": "Monkey D. Luffy from One Piece throwing his head back laughing",
    "new": true,
-   "num": "100"
+   "num": "96"
   },
   {
    "src": "live gifs/13-leo toast xpr.gif",
@@ -1066,7 +1066,7 @@
    "num": "79"
   },
   {
-   "src": "live gifs/91-happy gilmore shooter.gif",
+   "src": "live gifs/89-happy gilmore shooter.gif",
    "slug": "happy-gilmore-shooter",
    "title": "Happy Gilmore — Shooter",
    "reaction": "celebration",
@@ -1079,10 +1079,10 @@
     "celebrate"
    ],
    "alt": "Shooter McGavin from Happy Gilmore doing his finger-guns gesture",
-   "num": "91"
+   "num": "89"
   },
   {
-   "src": "live gifs/92-mario level up.gif",
+   "src": "live gifs/90-mario level up.gif",
    "slug": "mario-level-up",
    "title": "Mario — Level Up",
    "reaction": "celebration",
@@ -1096,7 +1096,7 @@
     "power up"
    ],
    "alt": "Mario powering up and levelling up",
-   "num": "92"
+   "num": "90"
   },
   {
    "src": "live gifs/26-hangover math.gif",
@@ -1179,7 +1179,7 @@
    "num": "29"
   },
   {
-   "src": "live gifs/89-popcorn Murder She Wrote.gif",
+   "src": "live gifs/87-popcorn Murder She Wrote.gif",
    "slug": "popcorn-murder-she-wrote",
    "title": "Popcorn — Murder She Wrote",
    "reaction": "popcorn",
@@ -1193,7 +1193,7 @@
     "jessica fletcher"
    ],
    "alt": "Jessica Fletcher from Murder She Wrote eating popcorn while watching intently",
-   "num": "89"
+   "num": "87"
   },
   {
    "src": "live gifs/3-Do It! $XPR.gif",
@@ -1521,7 +1521,7 @@
    "num": "81"
   },
   {
-   "src": "live gifs/83-blinking-white-guy.gif",
+   "src": "live gifs/82-blinking-white-guy.gif",
    "slug": "blinking-white-guy",
    "title": "Blinking White Guy",
    "reaction": "confused",
@@ -1535,10 +1535,10 @@
    ],
    "alt": "The blinking white guy reaction",
    "new": true,
-   "num": "83"
+   "num": "82"
   },
   {
-   "src": "live gifs/90-learning SpongeBob.gif",
+   "src": "live gifs/88-learning SpongeBob.gif",
    "slug": "spongebob-learning",
    "title": "SpongeBob — Learning",
    "reaction": "approval",
@@ -1553,10 +1553,10 @@
    ],
    "alt": "SpongeBob SquarePants reading a book attentively",
    "new": true,
-   "num": "90"
+   "num": "88"
   },
   {
-   "src": "live gifs/93-napoleon dynamite yes xpr.gif",
+   "src": "live gifs/91-napoleon dynamite yes xpr.gif",
    "slug": "napoleon-dynamite-yes-xpr",
    "title": "Napoleon Dynamite — Yes ($XPR)",
    "reaction": "approval",
@@ -1570,10 +1570,10 @@
    ],
    "alt": "Napoleon Dynamite nodding yes, $XPR branded",
    "new": true,
-   "num": "93"
+   "num": "91"
   },
   {
-   "src": "live gifs/94-napoleon dynamite yes mtl.gif",
+   "src": "live gifs/91.1-napoleon dynamite yes mtl.gif",
    "slug": "napoleon-dynamite-yes-mtl",
    "title": "Napoleon Dynamite — Yes ($MTL)",
    "reaction": "approval",
@@ -1587,10 +1587,10 @@
    ],
    "alt": "Napoleon Dynamite nodding yes, Metallicus branded",
    "new": true,
-   "num": "93.1"
+   "num": "91.1"
   },
   {
-   "src": "live gifs/95-One Piece Ace.gif",
+   "src": "live gifs/92-One Piece Ace.gif",
    "slug": "one-piece-ace",
    "title": "One Piece — Ace",
    "reaction": "hype",
@@ -1604,10 +1604,10 @@
    ],
    "alt": "Ace from One Piece surrounded by flame",
    "new": true,
-   "num": "95"
+   "num": "92"
   },
   {
-   "src": "live gifs/96-wolf of - leo dance.gif",
+   "src": "live gifs/93-wolf of - leo dance.gif",
    "slug": "wolf-of-wall-street-dance",
    "title": "Wolf of Wall Street — Dance",
    "reaction": "celebration",
@@ -1621,12 +1621,12 @@
    ],
    "alt": "Jordan Belfort dancing on the trading floor",
    "new": true,
-   "num": "96"
+   "num": "93"
   },
   {
-   "src": "live gifs/97-fight bear xpr.gif",
+   "src": "live gifs/94-fight bear xpr.gif",
    "slug": "fight-bear-xpr",
-   "num": "97",
+   "num": "94",
    "title": "Fight the Bear",
    "reaction": "hype",
    "source": "other",
@@ -1642,9 +1642,9 @@
    "alt": "A man in an orange jumpsuit squaring up to a grizzly bear on a riverbank"
   },
   {
-   "src": "live gifs/98-fight bear mtl.gif",
+   "src": "live gifs/94.1-fight bear mtl.gif",
    "slug": "fight-bear-mtl",
-   "num": "97.1",
+   "num": "94.1",
    "title": "Fight the Bear",
    "reaction": "hype",
    "source": "other",
@@ -1660,9 +1660,9 @@
    "alt": "A man in an orange jumpsuit squaring up to a grizzly bear on a riverbank"
   },
   {
-   "src": "live gifs/99-one piece garf laugh2 xpr.gif",
+   "src": "live gifs/95-one piece garf laugh2 xpr.gif",
    "slug": "one-piece-garp-laugh",
-   "num": "99",
+   "num": "95",
    "title": "Garp — Belly Laugh",
    "reaction": "hype",
    "source": "one-piece",
