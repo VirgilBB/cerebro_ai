@@ -162,26 +162,113 @@ var emptyEl = document.getElementById('empty');
 
 /* ---------------- boot ---------------- */
 
+function adopt(data) {
+  gifs = data.gifs || [];
+  // The build already writes these in numeric order; re-sort defensively so a
+  // stale or hand-edited gifs-data.json can never scramble the grid.
+  gifs.sort(function (a, b) { return parseFloat(a.num) - parseFloat(b.num); });
+  gifs.forEach(function (g) { g._hay = haystack(g); });
+}
+
+/* Signature of what is actually on screen: which items exist and which version
+   of each. Catches an addition, a removal, and a re-cut source alike -- a bare
+   count would miss the last two. */
+function signature(data) {
+  return (data.gifs || []).map(function (g) { return g.num + ':' + (g.v || ''); }).join(',');
+}
+
+var dataSig = '';
+
 fetch('gifs-data.json')
   .then(function (r) {
     if (!r.ok) throw new Error('HTTP ' + r.status);
     return r.json();
   })
   .then(function (data) {
-    gifs = data.gifs || [];
-    // The build already writes these in numeric order; re-sort defensively so a
-    // stale or hand-edited gifs-data.json can never scramble the grid.
-    gifs.sort(function (a, b) { return parseFloat(a.num) - parseFloat(b.num); });
-    gifs.forEach(function (g) { g._hay = haystack(g); });
+    dataSig = signature(data);
+    adopt(data);
     buildChips();
     render();
     openFromHash();
+    watchForUpdates();
   })
   .catch(function (err) {
     grid.innerHTML = '';
     emptyEl.hidden = false;
     emptyEl.textContent = 'Could not load the GIF library (' + err.message + '). Try a refresh.';
   });
+
+/* ---------------- live updates ---------------- */
+
+/* New gifs appear without a refresh. Static site, so this is a poll -- but only
+   while the tab is actually being looked at, plus an immediate check whenever it
+   regains focus, which is when someone is most likely to be returning to a page
+   left open. New items sort to the end (highest numbers), so re-rendering never
+   shifts what is already under the cursor. */
+function watchForUpdates() {
+  var POLL_MS = 60000;
+  var pending = null;
+  var timer = null;
+
+  function apply(data) {
+    // Never yank the grid out from under an open lightbox; wait for the close.
+    if (current) { pending = data; return; }
+    var before = gifs.length;
+    adopt(data);
+    buildChips();
+    syncChips();   // restore pressed state on the freshly built chips
+    render();
+    var added = gifs.length - before;
+    if (added > 0) toast(added === 1 ? '1 new gif added' : added + ' new gifs added');
+    else toast('Library updated');
+  }
+
+  function check() {
+    if (document.visibilityState !== 'visible') return;
+    fetch('gifs-data.json?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data || !data.gifs) return;
+        var sig = signature(data);
+        if (sig === dataSig) return;
+        dataSig = sig;
+        apply(data);
+      })
+      .catch(function () { /* offline or a blip -- the next tick retries */ });
+  }
+
+  function schedule() {
+    clearInterval(timer);
+    timer = setInterval(check, POLL_MS);
+  }
+
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'visible') { check(); schedule(); }
+    else clearInterval(timer);
+  });
+  window.addEventListener('focus', check);
+  schedule();
+
+  // Flush an update that arrived while the lightbox was open.
+  window.addEventListener('gifs:lbclosed', function () {
+    if (pending) { var d = pending; pending = null; apply(d); }
+  });
+}
+
+var toastEl = null;
+function toast(msg) {
+  if (!toastEl) {
+    toastEl = document.createElement('div');
+    toastEl.id = 'toast';
+    toastEl.setAttribute('role', 'status');
+    toastEl.setAttribute('aria-live', 'polite');
+    document.body.appendChild(toastEl);
+  }
+  toastEl.textContent = msg;
+  toastEl.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(function () { toastEl.classList.remove('show'); }, 4000);
+}
 
 /* ---------------- first-visit banner ---------------- */
 
@@ -215,6 +302,10 @@ function buildChips() {
   ];
   groups.forEach(function (g) {
     var box = document.getElementById(g[0]);
+    // Rebuilt on every library update, so clear first -- otherwise each poll that
+    // finds a change appends a second full set of chips. Counts change too: a new
+    // gif bumps its reaction/source/network tallies.
+    box.innerHTML = '';
     var label = document.createElement('span');
     label.className = 'chiplabel';
     label.textContent = g[1];
@@ -493,6 +584,8 @@ function pageUrl(g) {
 function close() {
   lbMedia.innerHTML = '';
   current = null;
+  // Lets a deferred library update apply now that nothing is on top of the grid.
+  window.dispatchEvent(new Event('gifs:lbclosed'));
   if (typeof lb.close === 'function' && lb.open) lb.close(); else lb.removeAttribute('open');
   history.replaceState(null, '', location.pathname + location.search);
 }

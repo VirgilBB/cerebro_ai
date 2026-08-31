@@ -3,8 +3,11 @@
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *
 
+# The page polls this to pick up new gifs without a refresh, so the window in
+# which an addition stays invisible is exactly this number. 30s is cheap -- the
+# file is ~40KB and only fetched by open tabs.
 /gifs-data.json
-  Cache-Control: public, max-age=300
+  Cache-Control: public, max-age=30
 
 /*
   X-Content-Type-Options: nosniff
