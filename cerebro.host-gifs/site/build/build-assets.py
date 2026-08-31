@@ -272,6 +272,11 @@ def main():
                 os.remove(os.path.join(dp, fn))
                 print(f"pruned {d}/{fn}")
 
+    # Ship in numeric order. catalog.json is grouped by taxonomy for editing, but
+    # the grid reads this file top to bottom, so the two must not be conflated.
+    # "13.1" sorts right after "13" and before "14" -- hence float, not string.
+    out_records.sort(key=lambda r: float(r["num"]))
+
     with open(os.path.join(SITE, "gifs-data.json"), "w") as f:
         json.dump({"count": len(out_records), "gifs": out_records}, f, indent=1)
 

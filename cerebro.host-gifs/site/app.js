@@ -143,6 +143,9 @@ fetch('gifs-data.json')
   })
   .then(function (data) {
     gifs = data.gifs || [];
+    // The build already writes these in numeric order; re-sort defensively so a
+    // stale or hand-edited gifs-data.json can never scramble the grid.
+    gifs.sort(function (a, b) { return parseFloat(a.num) - parseFloat(b.num); });
     gifs.forEach(function (g) { g._hay = haystack(g); });
     buildChips();
     render();

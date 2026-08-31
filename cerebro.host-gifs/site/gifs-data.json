@@ -42,22 +42,826 @@
    "new": false
   },
   {
-   "slug": "pepe-take-my-money",
-   "num": "67",
-   "title": "Pepe \u2014 Take My Money",
-   "alt": "Pepe the Frog shoving handfuls of cash toward the screen",
-   "reaction": "take-my-money",
-   "source": "pepe",
+   "slug": "lock-in",
+   "num": "2",
+   "title": "Lock In",
+   "alt": "A lock-in reaction, signalling total focus",
+   "reaction": "hype",
+   "source": "other",
    "branded": "xpr",
    "tags": [
-    "money",
-    "buy",
-    "cash",
-    "rich",
-    "shill"
+    "lock in",
+    "focus",
+    "grind",
+    "serious"
    ],
-   "sizeBytes": 6624152,
+   "sizeBytes": 406661,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "do-it-xpr",
+   "num": "3",
+   "title": "Do It! ($XPR)",
+   "alt": "A man in sunglasses urging DO IT, $XPR branded",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "do it",
+    "go",
+    "just do it",
+    "commit"
+   ],
+   "sizeBytes": 2235460,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "man-nodding",
+   "num": "4",
+   "title": "Man Nodding",
+   "alt": "A man nodding emphatically in agreement",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "nod",
+    "yes",
+    "agree",
+    "approve"
+   ],
+   "sizeBytes": 10055103,
    "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "im-in",
+   "num": "5",
+   "title": "I'm In",
+   "alt": "A character leaning out of a window declaring I'm in",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "im in",
+    "count me in",
+    "yes",
+    "join"
+   ],
+   "sizeBytes": 6938963,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "cat-dance",
+   "num": "6",
+   "title": "Cat Dance",
+   "alt": "A cat dancing on its hind legs",
+   "reaction": "celebration",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "cat",
+    "dance",
+    "party",
+    "happy"
+   ],
+   "sizeBytes": 9287211,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "margharetti",
+   "num": "7",
+   "title": "Margharetti",
+   "alt": "A Margharetti hype reaction",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "margharetti",
+    "hype",
+    "energy"
+   ],
+   "sizeBytes": 7263536,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "dog-smile",
+   "num": "8",
+   "title": "Dog Smile",
+   "alt": "A dog smiling contentedly at the camera",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dog",
+    "smile",
+    "happy",
+    "good boy"
+   ],
+   "sizeBytes": 4560835,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "marmot-surprised",
+   "num": "9",
+   "title": "Marmot \u2014 Surprised",
+   "alt": "A marmot rearing back in surprise",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "surprised",
+    "marmot",
+    "shocked",
+    "gasp"
+   ],
+   "sizeBytes": 2208400,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "happy-gilmore-swing",
+   "num": "10",
+   "title": "Happy Gilmore \u2014 The Swing",
+   "alt": "Happy Gilmore taking his running golf swing before a crowd",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "golf",
+    "swing",
+    "happy gilmore",
+    "win"
+   ],
+   "sizeBytes": 3984336,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "jack-nicholson-yes",
+   "num": "11",
+   "title": "Jack Nicholson \u2014 Yes",
+   "alt": "Jack Nicholson grinning and nodding in approval",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "nod",
+    "grin",
+    "approve",
+    "nicholson"
+   ],
+   "sizeBytes": 4270695,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "jesus-bless",
+   "num": "12",
+   "title": "Jesus Blessing",
+   "alt": "A depiction of Jesus raising a hand in blessing",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "bless",
+    "amen",
+    "blessed",
+    "pray"
+   ],
+   "sizeBytes": 3807626,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "leo-toast-xpr",
+   "num": "13",
+   "title": "Leo Toast ($XPR)",
+   "alt": "Leonardo DiCaprio raising a glass in a toast, $XPR branded",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cheers",
+    "toast",
+    "leo",
+    "gatsby",
+    "celebrate"
+   ],
+   "sizeBytes": 3337362,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "leo-toast-mtl",
+   "num": "13.1",
+   "title": "Leo Toast ($MTL)",
+   "alt": "Leonardo DiCaprio raising a glass in a toast, $MTL branded",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "cheers",
+    "toast",
+    "leo",
+    "gatsby",
+    "celebrate"
+   ],
+   "sizeBytes": 2461893,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "ryan-reynolds-smiling",
+   "num": "14",
+   "title": "Ryan Reynolds \u2014 Smiling",
+   "alt": "Ryan Reynolds breaking into a satisfied smile",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "smile",
+    "smug",
+    "pleased",
+    "reynolds"
+   ],
+   "sizeBytes": 680608,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "shaq-shimmy",
+   "num": "15",
+   "title": "Shaq Shimmy",
+   "alt": "Shaquille O'Neal doing a shoulder shimmy",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "shaq",
+    "shimmy",
+    "dance",
+    "celebrate"
+   ],
+   "sizeBytes": 1006482,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "so-cool-face",
+   "num": "16",
+   "title": "So Cool",
+   "alt": "A group reacting with amazement",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cool",
+    "amazed",
+    "wow",
+    "crowd"
+   ],
+   "sizeBytes": 3466236,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "chris-pratt-surprise",
+   "num": "17",
+   "title": "Chris Pratt \u2014 Surprise",
+   "alt": "Chris Pratt reacting with wide-eyed surprise",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "surprise",
+    "shocked",
+    "pratt",
+    "wow"
+   ],
+   "sizeBytes": 2055538,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "tigger-gm",
+   "num": "18",
+   "title": "Tigger \u2014 GM",
+   "alt": "Tigger bouncing energetically, captioned GM",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "gm",
+    "good morning",
+    "bounce",
+    "tigger",
+    "energy"
+   ],
+   "sizeBytes": 5145810,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "tom-jerry-love",
+   "num": "19",
+   "title": "Tom and Jerry \u2014 Heart Eyes",
+   "alt": "Tom from Tom and Jerry with heart-shaped eyes",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "love",
+    "heart eyes",
+    "tom and jerry",
+    "want"
+   ],
+   "sizeBytes": 1171491,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "drake-dance",
+   "num": "20",
+   "title": "Drake Dance",
+   "alt": "Drake dancing in the Hotline Bling style",
+   "reaction": "celebration",
+   "source": "drake",
+   "branded": "xpr",
+   "tags": [
+    "drake",
+    "dance",
+    "hotline bling",
+    "celebrate"
+   ],
+   "sizeBytes": 3052672,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "wojak-hugs",
+   "num": "21",
+   "title": "Wojak Hugs",
+   "alt": "Two Wojak figures embracing in consolation",
+   "reaction": "cope",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "cope",
+    "hug",
+    "comfort",
+    "wojak",
+    "sad"
+   ],
+   "sizeBytes": 2164271,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "chappelle-cant-stop",
+   "num": "22",
+   "title": "Chappelle \u2014 Can't Stop",
+   "alt": "Dave Chappelle in an unstoppable, hyped-up moment",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "cant stop",
+    "chappelle",
+    "unstoppable",
+    "hype"
+   ],
+   "sizeBytes": 8762994,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "charlie-murphy",
+   "num": "23",
+   "title": "Charlie Murphy",
+   "alt": "Charlie Murphy giving a skeptical sideways look",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "charlie murphy",
+    "skeptical",
+    "side eye",
+    "really"
+   ],
+   "sizeBytes": 14266167,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "chappelle-rick-james",
+   "num": "24",
+   "title": "Chappelle \u2014 Rick James",
+   "alt": "Dave Chappelle as Rick James gesturing wildly",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "rick james",
+    "chappelle",
+    "hype",
+    "cocaine is a hell of a drug"
+   ],
+   "sizeBytes": 4006258,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "fry-shocked",
+   "num": "25",
+   "title": "Fry \u2014 Shocked",
+   "alt": "Fry from Futurama reacting with shock",
+   "reaction": "confused",
+   "source": "fry",
+   "branded": "xpr",
+   "tags": [
+    "shocked",
+    "fry",
+    "futurama",
+    "wait what"
+   ],
+   "sizeBytes": 2136816,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "hangover-math",
+   "num": "26",
+   "title": "Hangover Math",
+   "alt": "The confused math lady meme with equations floating over her face",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "math",
+    "confused",
+    "calculating",
+    "hangover",
+    "lady"
+   ],
+   "sizeBytes": 2201607,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "sugar-rush",
+   "num": "27",
+   "title": "Sugar Rush",
+   "alt": "A frantic sugar-rush burst of energy",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "hyper",
+    "energy",
+    "sugar",
+    "wild"
+   ],
+   "sizeBytes": 9382520,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "vegeta",
+   "num": "28",
+   "title": "Vegeta",
+   "alt": "Vegeta from Dragon Ball powering up",
+   "reaction": "hype",
+   "source": "goku",
+   "branded": "xpr",
+   "tags": [
+    "vegeta",
+    "dragon ball",
+    "power",
+    "saiyan"
+   ],
+   "sizeBytes": 3828924,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "decocco",
+   "num": "29",
+   "title": "Decocco",
+   "alt": "A Decocco reaction",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "decocco",
+    "confused",
+    "reaction"
+   ],
+   "sizeBytes": 5872269,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "its-alive",
+   "num": "30",
+   "title": "It's Alive!",
+   "alt": "A mad scientist declaring it's alive",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "alive",
+    "frankenstein",
+    "it works",
+    "launch"
+   ],
+   "sizeBytes": 1944728,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "goku-super-saiyan",
+   "num": "31",
+   "title": "Goku \u2014 Super Saiyan",
+   "alt": "Goku transforming into Super Saiyan with an aura of energy",
+   "reaction": "hype",
+   "source": "goku",
+   "branded": "xpr",
+   "tags": [
+    "goku",
+    "super saiyan",
+    "power up",
+    "dragon ball"
+   ],
+   "sizeBytes": 4958278,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "smart-brain",
+   "num": "32",
+   "title": "Roll Safe \u2014 Think About It",
+   "alt": "Roll Safe tapping his temple in the think about it meme",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "roll safe",
+    "think",
+    "smart",
+    "galaxy brain",
+    "clever"
+   ],
+   "sizeBytes": 3577455,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "the-wire-webay",
+   "num": "33",
+   "title": "The Wire \u2014 WeBay",
+   "alt": "A scene from The Wire captioned WeBay",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "the wire",
+    "webay",
+    "corner",
+    "hustle"
+   ],
+   "sizeBytes": 6977980,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "bobs-burgers-dance",
+   "num": "34",
+   "title": "Bob's Burgers \u2014 Dance",
+   "alt": "A Bob's Burgers character doing a happy dance",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dance",
+    "bobs burgers",
+    "celebrate",
+    "happy"
+   ],
+   "sizeBytes": 1721315,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "rick-and-morty-point",
+   "num": "35",
+   "title": "Rick and Morty \u2014 Pointing",
+   "alt": "Rick and Morty pointing at something approvingly",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "point",
+    "this",
+    "agree",
+    "rick",
+    "morty"
+   ],
+   "sizeBytes": 1180952,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "cat-typing",
+   "num": "36",
+   "title": "Cat \u2014 Typing",
+   "alt": "A cat furiously typing at a keyboard",
+   "reaction": "hype",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "typing",
+    "cat",
+    "working",
+    "fast",
+    "grind"
+   ],
+   "sizeBytes": 3505747,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "cat-gang",
+   "num": "37",
+   "title": "Cat Gang",
+   "alt": "A group of cats moving together like a gang",
+   "reaction": "hype",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "cats",
+    "gang",
+    "crew",
+    "squad"
+   ],
+   "sizeBytes": 11288989,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "cat-excellent",
+   "num": "38",
+   "title": "Cat \u2014 Excellent",
+   "alt": "A cat steepling its paws in an excellent, scheming gesture",
+   "reaction": "approval",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "excellent",
+    "cat",
+    "scheming",
+    "perfect"
+   ],
+   "sizeBytes": 7615800,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "booyah",
+   "num": "39",
+   "title": "Booyah",
+   "alt": "A triumphant booyah celebration",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "booyah",
+    "win",
+    "yes",
+    "celebrate"
+   ],
+   "sizeBytes": 2942066,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "arnold-terminator",
+   "num": "40",
+   "title": "Arnold \u2014 Terminator Nod",
+   "alt": "Arnold Schwarzenegger as the Terminator nodding",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "terminator",
+    "arnold",
+    "nod",
+    "approve"
+   ],
+   "sizeBytes": 10748977,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "ric-flair-woo",
+   "num": "41",
+   "title": "Ric Flair \u2014 Woo",
+   "alt": "Ric Flair strutting and shouting Woo",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "woo",
+    "ric flair",
+    "wrestling",
+    "celebrate"
+   ],
+   "sizeBytes": 5734269,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "dlow",
+   "num": "42",
+   "title": "DLow",
+   "alt": "A DLow dance reaction",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "dlow",
+    "dance",
+    "hype",
+    "energy"
+   ],
+   "sizeBytes": 1916841,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "stickman-thrust",
+   "num": "43",
+   "title": "Stickman Thrust",
+   "alt": "An animated stick figure thrusting in a dance loop",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "stickman",
+    "dance",
+    "thrust",
+    "hype"
+   ],
+   "sizeBytes": 1731379,
+   "hasMobile": false,
    "mp4FromGif": false,
    "new": false
   },
@@ -81,20 +885,77 @@
    "new": false
   },
   {
-   "slug": "colbert-give-it-to-me",
-   "num": "78",
-   "title": "Colbert \u2014 Give It To Me",
-   "alt": "Stephen Colbert beckoning with both hands, wanting something badly",
-   "reaction": "take-my-money",
+   "slug": "snoopy-dance",
+   "num": "45",
+   "title": "Snoopy Dance",
+   "alt": "Snoopy doing his signature happy dance",
+   "reaction": "celebration",
    "source": "other",
    "branded": "xpr",
    "tags": [
-    "want",
-    "gimme",
-    "eager",
-    "colbert"
+    "snoopy",
+    "dance",
+    "happy",
+    "peanuts"
    ],
-   "sizeBytes": 3844571,
+   "sizeBytes": 1476614,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "xpr-celebrate",
+   "num": "46",
+   "title": "XPR Celebrate",
+   "alt": "An $XPR-branded celebration animation",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "celebrate",
+    "xpr",
+    "party",
+    "win"
+   ],
+   "sizeBytes": 4069439,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "wolf-of-wall-street",
+   "num": "47",
+   "title": "Wolf of Wall Street",
+   "alt": "Jordan Belfort riling up a trading floor in The Wolf of Wall Street",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "wolf of wall street",
+    "belfort",
+    "money",
+    "hype"
+   ],
+   "sizeBytes": 1270402,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "always-sunny",
+   "num": "48",
+   "title": "Always Sunny \u2014 Conspiracy",
+   "alt": "Charlie from Always Sunny frantically explaining a conspiracy board",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "charlie",
+    "conspiracy",
+    "always sunny",
+    "pepe silvia"
+   ],
+   "sizeBytes": 4137569,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
@@ -214,6 +1075,44 @@
    "new": false
   },
   {
+   "slug": "pepe-dance-jamming",
+   "num": "55",
+   "title": "Pepe \u2014 Dancing",
+   "alt": "Pepe the Frog dancing and jamming to music",
+   "reaction": "celebration",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "dance",
+    "pepe",
+    "jam",
+    "party"
+   ],
+   "sizeBytes": 374139,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "pepe-crazy",
+   "num": "56",
+   "title": "Pepe \u2014 Crazy",
+   "alt": "Pepe the Frog waving arms in a manic pose",
+   "reaction": "hype",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "crazy",
+    "wild",
+    "pepe",
+    "excited"
+   ],
+   "sizeBytes": 2533176,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
    "slug": "pepe-ok-sign",
    "num": "57",
    "title": "Pepe \u2014 OK Sign",
@@ -253,6 +1152,101 @@
    "new": false
   },
   {
+   "slug": "pepe-thinking",
+   "num": "59",
+   "title": "Pepe \u2014 Thinking",
+   "alt": "Pepe the Frog resting his chin on his hands, thinking",
+   "reaction": "confused",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "thinking",
+    "hmm",
+    "pepe",
+    "considering"
+   ],
+   "sizeBytes": 1555145,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "pepe-cat-dance",
+   "num": "60",
+   "title": "Pepe and Cat Dancing",
+   "alt": "Pepe the Frog dancing alongside a cat",
+   "reaction": "celebration",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "dance",
+    "pepe",
+    "cat",
+    "party"
+   ],
+   "sizeBytes": 1938457,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "cat-shocked",
+   "num": "61",
+   "title": "Cat \u2014 Shocked",
+   "alt": "A cat with wide shocked eyes",
+   "reaction": "confused",
+   "source": "cats",
+   "branded": "xpr",
+   "tags": [
+    "shocked",
+    "cat",
+    "surprised",
+    "wide eyes"
+   ],
+   "sizeBytes": 3674892,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "pepe-money",
+   "num": "62",
+   "title": "Pepe \u2014 Money",
+   "alt": "Pepe the Frog with money",
+   "reaction": "take-my-money",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "money",
+    "cash",
+    "pepe",
+    "rich"
+   ],
+   "sizeBytes": 416666,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "pepe-laughing-purple",
+   "num": "63",
+   "title": "Pepe \u2014 Laughing (Purple)",
+   "alt": "Pepe the Frog laughing hard against a purple background",
+   "reaction": "hype",
+   "source": "pepe",
+   "branded": "xpr",
+   "tags": [
+    "laugh",
+    "lol",
+    "pepe",
+    "purple"
+   ],
+   "sizeBytes": 623714,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
    "slug": "pepe-sounds-good",
    "num": "64",
    "title": "Pepe \u2014 Sounds Good",
@@ -267,199 +1261,6 @@
     "approve"
    ],
    "sizeBytes": 3084777,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "man-nodding",
-   "num": "4",
-   "title": "Man Nodding",
-   "alt": "A man nodding emphatically in agreement",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "nod",
-    "yes",
-    "agree",
-    "approve"
-   ],
-   "sizeBytes": 10055103,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "ryan-reynolds-smiling",
-   "num": "14",
-   "title": "Ryan Reynolds \u2014 Smiling",
-   "alt": "Ryan Reynolds breaking into a satisfied smile",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "smile",
-    "smug",
-    "pleased",
-    "reynolds"
-   ],
-   "sizeBytes": 680608,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "jesus-bless",
-   "num": "12",
-   "title": "Jesus Blessing",
-   "alt": "A depiction of Jesus raising a hand in blessing",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "mtl",
-   "tags": [
-    "bless",
-    "amen",
-    "blessed",
-    "pray"
-   ],
-   "sizeBytes": 3807626,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "smart-brain",
-   "num": "32",
-   "title": "Roll Safe \u2014 Think About It",
-   "alt": "Roll Safe tapping his temple in the think about it meme",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "roll safe",
-    "think",
-    "smart",
-    "galaxy brain",
-    "clever"
-   ],
-   "sizeBytes": 3577455,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "rick-and-morty-point",
-   "num": "35",
-   "title": "Rick and Morty \u2014 Pointing",
-   "alt": "Rick and Morty pointing at something approvingly",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "point",
-    "this",
-    "agree",
-    "rick",
-    "morty"
-   ],
-   "sizeBytes": 1180952,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "cat-excellent",
-   "num": "38",
-   "title": "Cat \u2014 Excellent",
-   "alt": "A cat steepling its paws in an excellent, scheming gesture",
-   "reaction": "approval",
-   "source": "cats",
-   "branded": "xpr",
-   "tags": [
-    "excellent",
-    "cat",
-    "scheming",
-    "perfect"
-   ],
-   "sizeBytes": 7615800,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "archer",
-   "num": "68",
-   "title": "Archer \u2014 My Body Is Ready",
-   "alt": "A character from Archer declaring my body is ready",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "archer",
-    "ready",
-    "eager",
-    "lets go"
-   ],
-   "sizeBytes": 3938208,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "ted-lasso-i-like",
-   "num": "75",
-   "title": "Ted Lasso \u2014 I Like It",
-   "alt": "Ted Lasso grinning with clear approval",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "like",
-    "approve",
-    "ted lasso",
-    "yes"
-   ],
-   "sizeBytes": 1357764,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "tombstone-wink",
-   "num": "83",
-   "title": "Tombstone \u2014 Wink",
-   "alt": "Doc Holliday from Tombstone winking",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "wink",
-    "doc holliday",
-    "knowing",
-    "sly"
-   ],
-   "sizeBytes": 2295785,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "wojak-hugs",
-   "num": "21",
-   "title": "Wojak Hugs",
-   "alt": "Two Wojak figures embracing in consolation",
-   "reaction": "cope",
-   "source": "other",
-   "branded": "mtl",
-   "tags": [
-    "cope",
-    "hug",
-    "comfort",
-    "wojak",
-    "sad"
-   ],
-   "sizeBytes": 2164271,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
@@ -485,231 +1286,60 @@
    "new": false
   },
   {
-   "slug": "simpsons-barney",
-   "num": "80",
-   "title": "Simpsons \u2014 Hook It To My Veins",
-   "alt": "A Simpsons character demanding it be hooked straight to his veins",
-   "reaction": "take-my-money",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "veins",
-    "want",
-    "more",
-    "simpsons",
-    "gimme"
-   ],
-   "sizeBytes": 1919173,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "lock-in",
-   "num": "2",
-   "title": "Lock In",
-   "alt": "A lock-in reaction, signalling total focus",
+   "slug": "pepe-purple-fire",
+   "num": "66",
+   "title": "Pepe \u2014 Purple Fire",
+   "alt": "Pepe the Frog surrounded by purple flames",
    "reaction": "hype",
-   "source": "other",
+   "source": "pepe",
    "branded": "xpr",
    "tags": [
-    "lock in",
-    "focus",
-    "grind",
-    "serious"
-   ],
-   "sizeBytes": 406661,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "tigger-gm",
-   "num": "18",
-   "title": "Tigger \u2014 GM",
-   "alt": "Tigger bouncing energetically, captioned GM",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "gm",
-    "good morning",
-    "bounce",
-    "tigger",
-    "energy"
-   ],
-   "sizeBytes": 5145810,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "chappelle-cant-stop",
-   "num": "22",
-   "title": "Chappelle \u2014 Can't Stop",
-   "alt": "Dave Chappelle in an unstoppable, hyped-up moment",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "cant stop",
-    "chappelle",
-    "unstoppable",
-    "hype"
-   ],
-   "sizeBytes": 8762994,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "sugar-rush",
-   "num": "27",
-   "title": "Sugar Rush",
-   "alt": "A frantic sugar-rush burst of energy",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "hyper",
-    "energy",
-    "sugar",
-    "wild"
-   ],
-   "sizeBytes": 9382520,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "vegeta",
-   "num": "28",
-   "title": "Vegeta",
-   "alt": "Vegeta from Dragon Ball powering up",
-   "reaction": "hype",
-   "source": "goku",
-   "branded": "xpr",
-   "tags": [
-    "vegeta",
-    "dragon ball",
-    "power",
-    "saiyan"
-   ],
-   "sizeBytes": 3828924,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "goku-super-saiyan",
-   "num": "31",
-   "title": "Goku \u2014 Super Saiyan",
-   "alt": "Goku transforming into Super Saiyan with an aura of energy",
-   "reaction": "hype",
-   "source": "goku",
-   "branded": "xpr",
-   "tags": [
-    "goku",
-    "super saiyan",
-    "power up",
-    "dragon ball"
-   ],
-   "sizeBytes": 4958278,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "its-alive",
-   "num": "30",
-   "title": "It's Alive!",
-   "alt": "A mad scientist declaring it's alive",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "alive",
-    "frankenstein",
-    "it works",
-    "launch"
-   ],
-   "sizeBytes": 1944728,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "the-wire-webay",
-   "num": "33",
-   "title": "The Wire \u2014 WeBay",
-   "alt": "A scene from The Wire captioned WeBay",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "the wire",
-    "webay",
-    "corner",
-    "hustle"
-   ],
-   "sizeBytes": 6977980,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "dlow",
-   "num": "42",
-   "title": "DLow",
-   "alt": "A DLow dance reaction",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "dlow",
-    "dance",
+    "fire",
+    "pepe",
+    "purple",
     "hype",
-    "energy"
+    "burn"
    ],
-   "sizeBytes": 1916841,
+   "sizeBytes": 2950838,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
   },
   {
-   "slug": "stickman-thrust",
-   "num": "43",
-   "title": "Stickman Thrust",
-   "alt": "An animated stick figure thrusting in a dance loop",
-   "reaction": "hype",
-   "source": "other",
+   "slug": "pepe-take-my-money",
+   "num": "67",
+   "title": "Pepe \u2014 Take My Money",
+   "alt": "Pepe the Frog shoving handfuls of cash toward the screen",
+   "reaction": "take-my-money",
+   "source": "pepe",
    "branded": "xpr",
    "tags": [
-    "stickman",
-    "dance",
-    "thrust",
-    "hype"
-   ],
-   "sizeBytes": 1731379,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "wolf-of-wall-street",
-   "num": "47",
-   "title": "Wolf of Wall Street",
-   "alt": "Jordan Belfort riling up a trading floor in The Wolf of Wall Street",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "wolf of wall street",
-    "belfort",
     "money",
-    "hype"
+    "buy",
+    "cash",
+    "rich",
+    "shill"
    ],
-   "sizeBytes": 1270402,
+   "sizeBytes": 6624152,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "archer",
+   "num": "68",
+   "title": "Archer \u2014 My Body Is Ready",
+   "alt": "A character from Archer declaring my body is ready",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "archer",
+    "ready",
+    "eager",
+    "lets go"
+   ],
+   "sizeBytes": 3938208,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
@@ -734,24 +1364,6 @@
    "new": false
   },
   {
-   "slug": "margharetti",
-   "num": "7",
-   "title": "Margharetti",
-   "alt": "A Margharetti hype reaction",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "margharetti",
-    "hype",
-    "energy"
-   ],
-   "sizeBytes": 7263536,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
    "slug": "metal-hand-fire",
    "num": "70",
    "title": "Metal Hand \u2014 Fire",
@@ -766,6 +1378,63 @@
     "rock"
    ],
    "sizeBytes": 4500286,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "lasso-dance",
+   "num": "71",
+   "title": "Lasso Dance",
+   "alt": "A lasso-swinging dance celebration",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "lasso",
+    "dance",
+    "celebrate",
+    "yeehaw"
+   ],
+   "sizeBytes": 2550793,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "ted-lasso-yes",
+   "num": "72",
+   "title": "Ted Lasso \u2014 Yes",
+   "alt": "Ted Lasso pointing and saying yes",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "ted lasso",
+    "approve",
+    "point"
+   ],
+   "sizeBytes": 752659,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "halo-dance",
+   "num": "73",
+   "title": "Halo \u2014 Dance",
+   "alt": "A Halo Spartan doing a victory dance",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "halo",
+    "dance",
+    "spartan",
+    "celebrate"
+   ],
+   "sizeBytes": 813923,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
@@ -790,6 +1459,45 @@
    "new": false
   },
   {
+   "slug": "ted-lasso-i-like",
+   "num": "75",
+   "title": "Ted Lasso \u2014 I Like It",
+   "alt": "Ted Lasso grinning with clear approval",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "like",
+    "approve",
+    "ted lasso",
+    "yes"
+   ],
+   "sizeBytes": 1357764,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "picard-make-it-so",
+   "num": "76",
+   "title": "Picard \u2014 Make It So",
+   "alt": "Captain Picard gesturing make it so",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "make it so",
+    "picard",
+    "star trek",
+    "go ahead",
+    "approve"
+   ],
+   "sizeBytes": 2899897,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
    "slug": "cage-lets-go",
    "num": "77",
    "title": "Nicolas Cage \u2014 Let's Go",
@@ -804,6 +1512,122 @@
     "ready"
    ],
    "sizeBytes": 1447049,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "colbert-give-it-to-me",
+   "num": "78",
+   "title": "Colbert \u2014 Give It To Me",
+   "alt": "Stephen Colbert beckoning with both hands, wanting something badly",
+   "reaction": "take-my-money",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "want",
+    "gimme",
+    "eager",
+    "colbert"
+   ],
+   "sizeBytes": 3844571,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "kid-yes",
+   "num": "79",
+   "title": "Success Kid \u2014 Yes",
+   "alt": "The success kid clenching a fist in triumph",
+   "reaction": "celebration",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "yes",
+    "success",
+    "kid",
+    "win",
+    "fist pump"
+   ],
+   "sizeBytes": 4095960,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "simpsons-barney",
+   "num": "80",
+   "title": "Simpsons \u2014 Hook It To My Veins",
+   "alt": "A Simpsons character demanding it be hooked straight to his veins",
+   "reaction": "take-my-money",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "veins",
+    "want",
+    "more",
+    "simpsons",
+    "gimme"
+   ],
+   "sizeBytes": 1919173,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "joe-rogan-omg",
+   "num": "81",
+   "title": "Joe Rogan \u2014 OMG",
+   "alt": "A commentator throwing his arms up in disbelief",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "omg",
+    "rogan",
+    "shocked",
+    "wild"
+   ],
+   "sizeBytes": 2695268,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "blinking-white-guy",
+   "num": "82",
+   "title": "Blinking White Guy",
+   "alt": "The blinking white guy reaction",
+   "reaction": "confused",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "blinking",
+    "confused",
+    "what",
+    "drew scanlon"
+   ],
+   "sizeBytes": 4606800,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
+  },
+  {
+   "slug": "tombstone-wink",
+   "num": "83",
+   "title": "Tombstone \u2014 Wink",
+   "alt": "Doc Holliday from Tombstone winking",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "wink",
+    "doc holliday",
+    "knowing",
+    "sly"
+   ],
+   "sizeBytes": 2295785,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
@@ -824,84 +1648,6 @@
    ],
    "sizeBytes": 2030733,
    "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "pepe-laughing-purple",
-   "num": "63",
-   "title": "Pepe \u2014 Laughing (Purple)",
-   "alt": "Pepe the Frog laughing hard against a purple background",
-   "reaction": "hype",
-   "source": "pepe",
-   "branded": "xpr",
-   "tags": [
-    "laugh",
-    "lol",
-    "pepe",
-    "purple"
-   ],
-   "sizeBytes": 623714,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "pepe-purple-fire",
-   "num": "66",
-   "title": "Pepe \u2014 Purple Fire",
-   "alt": "Pepe the Frog surrounded by purple flames",
-   "reaction": "hype",
-   "source": "pepe",
-   "branded": "xpr",
-   "tags": [
-    "fire",
-    "pepe",
-    "purple",
-    "hype",
-    "burn"
-   ],
-   "sizeBytes": 2950838,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "cat-typing",
-   "num": "36",
-   "title": "Cat \u2014 Typing",
-   "alt": "A cat furiously typing at a keyboard",
-   "reaction": "hype",
-   "source": "cats",
-   "branded": "xpr",
-   "tags": [
-    "typing",
-    "cat",
-    "working",
-    "fast",
-    "grind"
-   ],
-   "sizeBytes": 3505747,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "cat-gang",
-   "num": "37",
-   "title": "Cat Gang",
-   "alt": "A group of cats moving together like a gang",
-   "reaction": "hype",
-   "source": "cats",
-   "branded": "xpr",
-   "tags": [
-    "cats",
-    "gang",
-    "crew",
-    "squad"
-   ],
-   "sizeBytes": 11288989,
-   "hasMobile": true,
    "mp4FromGif": false,
    "new": false
   },
@@ -944,292 +1690,44 @@
    "new": false
   },
   {
-   "slug": "luffy-laughing",
-   "num": "96",
-   "title": "Luffy \u2014 Laughing",
-   "alt": "Monkey D. Luffy from One Piece throwing his head back laughing",
-   "reaction": "hype",
-   "source": "one-piece",
+   "slug": "popcorn-murder-she-wrote",
+   "num": "87",
+   "title": "Popcorn \u2014 Murder She Wrote",
+   "alt": "Jessica Fletcher from Murder She Wrote eating popcorn while watching intently",
+   "reaction": "popcorn",
+   "source": "other",
    "branded": "xpr",
    "tags": [
-    "one piece",
-    "luffy",
-    "laugh",
-    "lol"
+    "popcorn",
+    "watching",
+    "drama",
+    "tea",
+    "jessica fletcher"
    ],
-   "sizeBytes": 476448,
+   "sizeBytes": 3010486,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "spongebob-learning",
+   "num": "88",
+   "title": "SpongeBob \u2014 Learning",
+   "alt": "SpongeBob SquarePants reading a book attentively",
+   "reaction": "approval",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "learning",
+    "reading",
+    "studying",
+    "spongebob",
+    "taking notes"
+   ],
+   "sizeBytes": 465721,
    "hasMobile": false,
    "mp4FromGif": false,
    "new": true
-  },
-  {
-   "slug": "leo-toast-xpr",
-   "num": "13",
-   "title": "Leo Toast ($XPR)",
-   "alt": "Leonardo DiCaprio raising a glass in a toast, $XPR branded",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "cheers",
-    "toast",
-    "leo",
-    "gatsby",
-    "celebrate"
-   ],
-   "sizeBytes": 3337362,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "leo-toast-mtl",
-   "num": "13.1",
-   "title": "Leo Toast ($MTL)",
-   "alt": "Leonardo DiCaprio raising a glass in a toast, $MTL branded",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "mtl",
-   "tags": [
-    "cheers",
-    "toast",
-    "leo",
-    "gatsby",
-    "celebrate"
-   ],
-   "sizeBytes": 2461893,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "xpr-celebrate",
-   "num": "46",
-   "title": "XPR Celebrate",
-   "alt": "An $XPR-branded celebration animation",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "celebrate",
-    "xpr",
-    "party",
-    "win"
-   ],
-   "sizeBytes": 4069439,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "drake-dance",
-   "num": "20",
-   "title": "Drake Dance",
-   "alt": "Drake dancing in the Hotline Bling style",
-   "reaction": "celebration",
-   "source": "drake",
-   "branded": "xpr",
-   "tags": [
-    "drake",
-    "dance",
-    "hotline bling",
-    "celebrate"
-   ],
-   "sizeBytes": 3052672,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "bobs-burgers-dance",
-   "num": "34",
-   "title": "Bob's Burgers \u2014 Dance",
-   "alt": "A Bob's Burgers character doing a happy dance",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "dance",
-    "bobs burgers",
-    "celebrate",
-    "happy"
-   ],
-   "sizeBytes": 1721315,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "booyah",
-   "num": "39",
-   "title": "Booyah",
-   "alt": "A triumphant booyah celebration",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "booyah",
-    "win",
-    "yes",
-    "celebrate"
-   ],
-   "sizeBytes": 2942066,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "ric-flair-woo",
-   "num": "41",
-   "title": "Ric Flair \u2014 Woo",
-   "alt": "Ric Flair strutting and shouting Woo",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "woo",
-    "ric flair",
-    "wrestling",
-    "celebrate"
-   ],
-   "sizeBytes": 5734269,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "snoopy-dance",
-   "num": "45",
-   "title": "Snoopy Dance",
-   "alt": "Snoopy doing his signature happy dance",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "snoopy",
-    "dance",
-    "happy",
-    "peanuts"
-   ],
-   "sizeBytes": 1476614,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "pepe-dance-jamming",
-   "num": "55",
-   "title": "Pepe \u2014 Dancing",
-   "alt": "Pepe the Frog dancing and jamming to music",
-   "reaction": "celebration",
-   "source": "pepe",
-   "branded": "xpr",
-   "tags": [
-    "dance",
-    "pepe",
-    "jam",
-    "party"
-   ],
-   "sizeBytes": 374139,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "pepe-cat-dance",
-   "num": "60",
-   "title": "Pepe and Cat Dancing",
-   "alt": "Pepe the Frog dancing alongside a cat",
-   "reaction": "celebration",
-   "source": "pepe",
-   "branded": "xpr",
-   "tags": [
-    "dance",
-    "pepe",
-    "cat",
-    "party"
-   ],
-   "sizeBytes": 1938457,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "cat-dance",
-   "num": "6",
-   "title": "Cat Dance",
-   "alt": "A cat dancing on its hind legs",
-   "reaction": "celebration",
-   "source": "cats",
-   "branded": "xpr",
-   "tags": [
-    "cat",
-    "dance",
-    "party",
-    "happy"
-   ],
-   "sizeBytes": 9287211,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "lasso-dance",
-   "num": "71",
-   "title": "Lasso Dance",
-   "alt": "A lasso-swinging dance celebration",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "lasso",
-    "dance",
-    "celebrate",
-    "yeehaw"
-   ],
-   "sizeBytes": 2550793,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "halo-dance",
-   "num": "73",
-   "title": "Halo \u2014 Dance",
-   "alt": "A Halo Spartan doing a victory dance",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "halo",
-    "dance",
-    "spartan",
-    "celebrate"
-   ],
-   "sizeBytes": 813923,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "kid-yes",
-   "num": "79",
-   "title": "Success Kid \u2014 Yes",
-   "alt": "The success kid clenching a fist in triumph",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "yes",
-    "success",
-    "kid",
-    "win",
-    "fist pump"
-   ],
-   "sizeBytes": 4095960,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
   },
   {
    "slug": "happy-gilmore-shooter",
@@ -1269,523 +1767,6 @@
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
-  },
-  {
-   "slug": "hangover-math",
-   "num": "26",
-   "title": "Hangover Math",
-   "alt": "The confused math lady meme with equations floating over her face",
-   "reaction": "confused",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "math",
-    "confused",
-    "calculating",
-    "hangover",
-    "lady"
-   ],
-   "sizeBytes": 2201607,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "always-sunny",
-   "num": "48",
-   "title": "Always Sunny \u2014 Conspiracy",
-   "alt": "Charlie from Always Sunny frantically explaining a conspiracy board",
-   "reaction": "confused",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "charlie",
-    "conspiracy",
-    "always sunny",
-    "pepe silvia"
-   ],
-   "sizeBytes": 4137569,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "cat-shocked",
-   "num": "61",
-   "title": "Cat \u2014 Shocked",
-   "alt": "A cat with wide shocked eyes",
-   "reaction": "confused",
-   "source": "cats",
-   "branded": "xpr",
-   "tags": [
-    "shocked",
-    "cat",
-    "surprised",
-    "wide eyes"
-   ],
-   "sizeBytes": 3674892,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "marmot-surprised",
-   "num": "9",
-   "title": "Marmot \u2014 Surprised",
-   "alt": "A marmot rearing back in surprise",
-   "reaction": "confused",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "surprised",
-    "marmot",
-    "shocked",
-    "gasp"
-   ],
-   "sizeBytes": 2208400,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "decocco",
-   "num": "29",
-   "title": "Decocco",
-   "alt": "A Decocco reaction",
-   "reaction": "confused",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "decocco",
-    "confused",
-    "reaction"
-   ],
-   "sizeBytes": 5872269,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "popcorn-murder-she-wrote",
-   "num": "87",
-   "title": "Popcorn \u2014 Murder She Wrote",
-   "alt": "Jessica Fletcher from Murder She Wrote eating popcorn while watching intently",
-   "reaction": "popcorn",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "popcorn",
-    "watching",
-    "drama",
-    "tea",
-    "jessica fletcher"
-   ],
-   "sizeBytes": 3010486,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": false
-  },
-  {
-   "slug": "do-it-xpr",
-   "num": "3",
-   "title": "Do It! ($XPR)",
-   "alt": "A man in sunglasses urging DO IT, $XPR branded",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "do it",
-    "go",
-    "just do it",
-    "commit"
-   ],
-   "sizeBytes": 2235460,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "happy-gilmore-swing",
-   "num": "10",
-   "title": "Happy Gilmore \u2014 The Swing",
-   "alt": "Happy Gilmore taking his running golf swing before a crowd",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "golf",
-    "swing",
-    "happy gilmore",
-    "win"
-   ],
-   "sizeBytes": 3984336,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "jack-nicholson-yes",
-   "num": "11",
-   "title": "Jack Nicholson \u2014 Yes",
-   "alt": "Jack Nicholson grinning and nodding in approval",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "yes",
-    "nod",
-    "grin",
-    "approve",
-    "nicholson"
-   ],
-   "sizeBytes": 4270695,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "shaq-shimmy",
-   "num": "15",
-   "title": "Shaq Shimmy",
-   "alt": "Shaquille O'Neal doing a shoulder shimmy",
-   "reaction": "celebration",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "shaq",
-    "shimmy",
-    "dance",
-    "celebrate"
-   ],
-   "sizeBytes": 1006482,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "so-cool-face",
-   "num": "16",
-   "title": "So Cool",
-   "alt": "A group reacting with amazement",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "cool",
-    "amazed",
-    "wow",
-    "crowd"
-   ],
-   "sizeBytes": 3466236,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "chris-pratt-surprise",
-   "num": "17",
-   "title": "Chris Pratt \u2014 Surprise",
-   "alt": "Chris Pratt reacting with wide-eyed surprise",
-   "reaction": "confused",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "surprise",
-    "shocked",
-    "pratt",
-    "wow"
-   ],
-   "sizeBytes": 2055538,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "tom-jerry-love",
-   "num": "19",
-   "title": "Tom and Jerry \u2014 Heart Eyes",
-   "alt": "Tom from Tom and Jerry with heart-shaped eyes",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "love",
-    "heart eyes",
-    "tom and jerry",
-    "want"
-   ],
-   "sizeBytes": 1171491,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "im-in",
-   "num": "5",
-   "title": "I'm In",
-   "alt": "A character leaning out of a window declaring I'm in",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "im in",
-    "count me in",
-    "yes",
-    "join"
-   ],
-   "sizeBytes": 6938963,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "dog-smile",
-   "num": "8",
-   "title": "Dog Smile",
-   "alt": "A dog smiling contentedly at the camera",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "dog",
-    "smile",
-    "happy",
-    "good boy"
-   ],
-   "sizeBytes": 4560835,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "charlie-murphy",
-   "num": "23",
-   "title": "Charlie Murphy",
-   "alt": "Charlie Murphy giving a skeptical sideways look",
-   "reaction": "confused",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "charlie murphy",
-    "skeptical",
-    "side eye",
-    "really"
-   ],
-   "sizeBytes": 14266167,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "chappelle-rick-james",
-   "num": "24",
-   "title": "Chappelle \u2014 Rick James",
-   "alt": "Dave Chappelle as Rick James gesturing wildly",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "rick james",
-    "chappelle",
-    "hype",
-    "cocaine is a hell of a drug"
-   ],
-   "sizeBytes": 4006258,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "fry-shocked",
-   "num": "25",
-   "title": "Fry \u2014 Shocked",
-   "alt": "Fry from Futurama reacting with shock",
-   "reaction": "confused",
-   "source": "fry",
-   "branded": "xpr",
-   "tags": [
-    "shocked",
-    "fry",
-    "futurama",
-    "wait what"
-   ],
-   "sizeBytes": 2136816,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "arnold-terminator",
-   "num": "40",
-   "title": "Arnold \u2014 Terminator Nod",
-   "alt": "Arnold Schwarzenegger as the Terminator nodding",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "terminator",
-    "arnold",
-    "nod",
-    "approve"
-   ],
-   "sizeBytes": 10748977,
-   "hasMobile": true,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "pepe-crazy",
-   "num": "56",
-   "title": "Pepe \u2014 Crazy",
-   "alt": "Pepe the Frog waving arms in a manic pose",
-   "reaction": "hype",
-   "source": "pepe",
-   "branded": "xpr",
-   "tags": [
-    "crazy",
-    "wild",
-    "pepe",
-    "excited"
-   ],
-   "sizeBytes": 2533176,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "pepe-thinking",
-   "num": "59",
-   "title": "Pepe \u2014 Thinking",
-   "alt": "Pepe the Frog resting his chin on his hands, thinking",
-   "reaction": "confused",
-   "source": "pepe",
-   "branded": "xpr",
-   "tags": [
-    "thinking",
-    "hmm",
-    "pepe",
-    "considering"
-   ],
-   "sizeBytes": 1555145,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "pepe-money",
-   "num": "62",
-   "title": "Pepe \u2014 Money",
-   "alt": "Pepe the Frog with money",
-   "reaction": "take-my-money",
-   "source": "pepe",
-   "branded": "xpr",
-   "tags": [
-    "money",
-    "cash",
-    "pepe",
-    "rich"
-   ],
-   "sizeBytes": 416666,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "ted-lasso-yes",
-   "num": "72",
-   "title": "Ted Lasso \u2014 Yes",
-   "alt": "Ted Lasso pointing and saying yes",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "yes",
-    "ted lasso",
-    "approve",
-    "point"
-   ],
-   "sizeBytes": 752659,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "picard-make-it-so",
-   "num": "76",
-   "title": "Picard \u2014 Make It So",
-   "alt": "Captain Picard gesturing make it so",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "make it so",
-    "picard",
-    "star trek",
-    "go ahead",
-    "approve"
-   ],
-   "sizeBytes": 2899897,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "joe-rogan-omg",
-   "num": "81",
-   "title": "Joe Rogan \u2014 OMG",
-   "alt": "A commentator throwing his arms up in disbelief",
-   "reaction": "hype",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "omg",
-    "rogan",
-    "shocked",
-    "wild"
-   ],
-   "sizeBytes": 2695268,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "blinking-white-guy",
-   "num": "82",
-   "title": "Blinking White Guy",
-   "alt": "The blinking white guy reaction",
-   "reaction": "confused",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "blinking",
-    "confused",
-    "what",
-    "drew scanlon"
-   ],
-   "sizeBytes": 4606800,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
-  },
-  {
-   "slug": "spongebob-learning",
-   "num": "88",
-   "title": "SpongeBob \u2014 Learning",
-   "alt": "SpongeBob SquarePants reading a book attentively",
-   "reaction": "approval",
-   "source": "other",
-   "branded": "xpr",
-   "tags": [
-    "learning",
-    "reading",
-    "studying",
-    "spongebob",
-    "taking notes"
-   ],
-   "sizeBytes": 465721,
-   "hasMobile": false,
-   "mp4FromGif": false,
-   "new": true
   },
   {
    "slug": "napoleon-dynamite-yes-xpr",
@@ -1925,6 +1906,25 @@
    "hasMobile": false,
    "mp4FromGif": false,
    "new": false
+  },
+  {
+   "slug": "luffy-laughing",
+   "num": "96",
+   "title": "Luffy \u2014 Laughing",
+   "alt": "Monkey D. Luffy from One Piece throwing his head back laughing",
+   "reaction": "hype",
+   "source": "one-piece",
+   "branded": "xpr",
+   "tags": [
+    "one piece",
+    "luffy",
+    "laugh",
+    "lol"
+   ],
+   "sizeBytes": 476448,
+   "hasMobile": false,
+   "mp4FromGif": false,
+   "new": true
   }
  ]
 }
