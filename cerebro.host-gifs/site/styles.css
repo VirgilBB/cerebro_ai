@@ -2,6 +2,7 @@
    lifted from cerebro.host-articles/GREEN-BUTTON-STYLE-GUIDE.md. */
 
 :root {
+  color-scheme: dark;
   --bg: #0a0c0e;
   --surface: #121619;
   --surface-2: #191f23;
@@ -9,11 +10,43 @@
   --border-strong: rgba(255, 255, 255, 0.20);
   --text: #f2f5f7;
   --text-dim: rgba(255, 255, 255, 0.72); /* never below /70 -- contrast rule */
+  --placeholder: rgba(255, 255, 255, 0.72);
+  --sticky: rgba(10, 12, 14, 0.94);      /* the sticky filter bar, over content */
+  --backdrop: rgba(5, 7, 8, 0.86);
   --accent: #10b981;
+  --accent-fg: #04140d;                   /* text ON the accent fill */
   --accent-bg: rgba(16, 185, 129, 0.15);
   --accent-border: rgba(16, 185, 129, 0.35);
   --radius: 12px;
   --tile-gap: 10px;
+
+  /* Chips and buttons that sit ON a GIF, not on the page. These stay dark in
+     both schemes -- the thing behind them is the artwork, not the background. */
+  --on-media: #f2f5f7;
+  --media-scrim: rgba(10, 12, 14, 0.78);
+  --media-border: rgba(255, 255, 255, 0.28);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    --bg: #f6f8f9;
+    --surface: #ffffff;
+    --surface-2: #eef1f4;
+    --border: rgba(0, 0, 0, 0.12);
+    --border-strong: rgba(0, 0, 0, 0.26);
+    --text: #0b1013;
+    --text-dim: rgba(0, 0, 0, 0.72);
+    --placeholder: rgba(0, 0, 0, 0.70);
+    --sticky: rgba(246, 248, 249, 0.94);
+    --backdrop: rgba(11, 16, 19, 0.55);
+    /* #10b981 is only ~2.3:1 on white -- too weak for text or a thin border.
+       The darker emerald keeps the same hue at ~5.9:1. */
+    --accent: #047857;
+    --accent-fg: #ffffff;
+    --accent-bg: rgba(4, 120, 87, 0.10);
+    --accent-border: rgba(4, 120, 87, 0.32);
+  }
 }
 
 * { box-sizing: border-box; }
@@ -58,7 +91,7 @@ a { color: var(--accent); }
   color: var(--accent); border-radius: 20px;
   padding: 5px 14px; font: inherit; font-size: 13px; cursor: pointer;
 }
-#banner button:hover { background: rgba(16, 185, 129, 0.25); }
+#banner button:hover { background: var(--accent-bg); border-color: var(--accent); }
 
 /* ---------- header ---------- */
 
@@ -76,7 +109,7 @@ h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: -0.02em; }
 
 .controls {
   position: sticky; top: 0; z-index: 20;
-  background: rgba(10, 12, 14, 0.94);
+  background: var(--sticky);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -89,7 +122,7 @@ h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: -0.02em; }
   border: 1px solid var(--border); border-radius: 20px;
   padding: 10px 16px; font: inherit; font-size: 14px;
 }
-#search::placeholder { color: rgba(255, 255, 255, 0.5); }
+#search::placeholder { color: var(--placeholder); }
 #search:focus { border-color: var(--accent-border); outline: none; }
 #count { font-size: 13px; color: var(--text-dim); white-space: nowrap; }
 
@@ -141,8 +174,8 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
    bottom-right. The "New" badge moves to top-right for the same reason. */
 .card .num {
   position: absolute; top: 7px; left: 7px; z-index: 2;
-  background: rgba(10, 12, 14, 0.72); border: 1px solid var(--border-strong);
-  color: var(--text); border-radius: 20px;
+  background: var(--media-scrim); border: 1px solid var(--media-border);
+  color: var(--on-media); border-radius: 20px;
   padding: 2px 7px; font-size: 10px; font-weight: 700;
   font-variant-numeric: tabular-nums; letter-spacing: 0.02em;
   backdrop-filter: blur(10px); pointer-events: none;
@@ -151,7 +184,7 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
 
 .card .badge {
   position: absolute; top: 7px; right: 7px;
-  background: var(--accent-bg); border: 1px solid var(--accent-border);
+  background: var(--media-scrim); border: 1px solid var(--accent-border);
   color: var(--accent); border-radius: 20px;
   padding: 2px 8px; font-size: 10px; font-weight: 700;
   letter-spacing: 0.06em; text-transform: uppercase;
@@ -164,18 +197,18 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
   position: absolute; right: 7px; bottom: 7px;
   padding: 0; font: inherit; cursor: pointer;
   width: 34px; height: 34px; display: grid; place-items: center;
-  background: rgba(10, 12, 14, 0.78); border: 1px solid var(--border-strong);
-  border-radius: 50%; color: var(--text);
+  background: var(--media-scrim); border: 1px solid var(--media-border);
+  border-radius: 50%; color: var(--on-media);
   opacity: 0; transform: translateY(4px);
   transition: opacity .15s, transform .15s, background .15s;
   backdrop-filter: blur(10px);
 }
 .card:hover .dl, .card:focus-within .dl { opacity: 1; transform: none; }
 .card .dl.copied { opacity: 1; transform: none; }
-.card .dl:hover { background: var(--accent); color: #04140d; border-color: var(--accent); }
+.card .dl:hover { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 .card .dl svg { width: 16px; height: 16px; }
 .card .dl.cp { right: 47px; }
-.card .dl.copied { background: var(--accent); color: #04140d; border-color: var(--accent); }
+.card .dl.copied { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 @media (hover: none) { .card .dl { opacity: 1; transform: none; } }
 
 .empty { color: var(--text-dim); padding: 50px 0; text-align: center; }
@@ -184,7 +217,7 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
 
 #lb {
   position: fixed; inset: 0; z-index: 50;
-  background: transparent;
+  background: transparent; color: var(--text);
   place-items: center; padding: 20px;
   border: 0; max-width: 100%; max-height: 100%; width: 100%; height: 100%;
   overflow: hidden;
@@ -193,7 +226,7 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
    unconditionally overrides that and leaves an empty lightbox open on page load. */
 #lb[open] { display: grid; }
 #lb:not([open]) { display: none; }
-#lb::backdrop { background: rgba(5, 7, 8, 0.86); backdrop-filter: blur(6px); }
+#lb::backdrop { background: var(--backdrop); backdrop-filter: blur(6px); }
 
 .lb-panel {
   position: relative;
@@ -204,6 +237,7 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
 }
 @media (max-width: 720px) { .lb-panel { grid-template-columns: 1fr; } }
 
+/* Letterbox stays black in both schemes -- it frames the artwork. */
 .lb-media { background: #000; display: grid; place-items: center; min-height: 260px; }
 .lb-media video, .lb-media img { width: 100%; height: 100%; object-fit: contain; display: block; }
 /* Signals the image is draggable before anyone tries it. */
@@ -211,7 +245,7 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
 .lb-media img:active { cursor: grabbing; }
 
 .lb-body { padding: 22px; display: flex; flex-direction: column; gap: 14px; }
-.lb-body h2 { margin: 0; font-size: 19px; letter-spacing: -0.01em; }
+.lb-body h2 { margin: 0; font-size: 19px; letter-spacing: -0.01em; color: var(--text); }
 .lb-meta { margin: 0; font-size: 13px; color: var(--text-dim); }
 
 .btn {
@@ -220,8 +254,8 @@ main .wrap { padding-top: 22px; padding-bottom: 60px; }
   font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid transparent;
   transition: background .2s, border-color .2s;
 }
-.btn-primary { background: var(--accent); color: #04140d; width: 100%; }
-.btn-primary:hover { background: #0da271; }
+.btn-primary { background: var(--accent); color: var(--accent-fg); width: 100%; }
+.btn-primary:hover { filter: brightness(1.08); }
 .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
 .btn-ghost {
   background: var(--surface-2); color: var(--text);
@@ -268,7 +302,7 @@ footer .spacer { margin-left: auto; }
 }
 .card .play {
   position: absolute; inset: 0; display: none; place-items: center;
-  color: #fff; pointer-events: none;
+  color: var(--on-media); pointer-events: none;
 }
 .card .play svg { width: 42px; height: 42px; filter: drop-shadow(0 2px 6px rgba(0,0,0,.6)); }
 body.reduced .card .play { display: grid; }
