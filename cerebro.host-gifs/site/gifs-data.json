@@ -1,5 +1,5 @@
 {
- "count": 102,
+ "count": 103,
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
@@ -2072,6 +2072,31 @@
     "shill"
    ],
    "sizeBytes": 7119335,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "xpr-bull",
+   "num": "99",
+   "v": "6b5c35c8",
+   "title": "$XPR Bull",
+   "alt": "A 3D bull charging forward between two XPR logo coins under a neon $XPR sign",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "bull",
+    "bullish",
+    "bull run",
+    "pump",
+    "moon",
+    "gains",
+    "charge",
+    "xpr",
+    "green"
+   ],
+   "sizeBytes": 12812684,
    "hasMobile": true,
    "mp4FromGif": false,
    "new": false
