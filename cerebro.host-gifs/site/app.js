@@ -27,6 +27,20 @@ var NETWORKS = [['xpr', '$XPR'], ['mtl', '$MTL / Metallicus'], ['none', 'Unbrand
 
 var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var coarse = window.matchMedia('(hover: none)').matches;
+
+/* Dragging a card out to a folder lands a real, named .gif -- but only via the
+   `DownloadURL` dataTransfer entry, which is Chromium-only. Firefox and Safari
+   get the link instead, so the shortcut is only mentioned where it works.
+   Confirmed by hand in Chrome; note this is a drag to the FILESYSTEM. Dropping
+   on another website still conveys a link, whatever the browser. */
+var canDragOut = (function () {
+  if (coarse) return false;
+  var uad = navigator.userAgentData;
+  if (uad && uad.brands) {
+    return uad.brands.some(function (b) { return b.brand === 'Chromium'; });
+  }
+  return /Chrome\/|Chromium\//.test(navigator.userAgent);
+})();
 if (reduced) document.body.classList.add('reduced');
 
 
@@ -173,6 +187,13 @@ fetch('gifs-data.json')
 
 (function () {
   var banner = document.getElementById('banner');
+  if (canDragOut) {
+    var line = document.getElementById('banner-line');
+    if (line) {
+      line.textContent = ' Drag one straight to your desktop, or download it — then ' +
+        'attach it to your post. A pasted link shows a still frame.';
+    }
+  }
   var seen;
   try { seen = localStorage.getItem('xprgifs-banner'); } catch (e) { seen = null; }
   if (!seen) banner.hidden = false;
@@ -443,8 +464,11 @@ function open(g) {
 
   document.getElementById('lb-hint').innerHTML = coarse
     ? '<strong>Long-press the GIF to save it</strong>, then attach it in your X post.'
-    : '<strong>Download it, then attach it to your post.</strong> ' +
-      'X only animates files you upload — a pasted link shows a still frame.';
+    : canDragOut
+      ? '<strong>Drag it to your desktop, or download it</strong> — then attach it ' +
+        'to your post. X only animates files you upload; a pasted link shows a still frame.'
+      : '<strong>Download it, then attach it to your post.</strong> ' +
+        'X only animates files you upload — a pasted link shows a still frame.';
 
   var url = pageUrl(g);
   document.getElementById('lb-copy').textContent = 'Copy link';
