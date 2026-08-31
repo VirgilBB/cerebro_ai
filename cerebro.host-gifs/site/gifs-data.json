@@ -1,5 +1,5 @@
 {
- "count": 103,
+ "count": 104,
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
@@ -2097,6 +2097,30 @@
     "green"
    ],
    "sizeBytes": 12812684,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "metallicus-banking-better",
+   "num": "100",
+   "v": "4fc04215",
+   "title": "Banking Is Better on Blockchain",
+   "alt": "A morphing particle sphere carrying the line: Banking is better on blockchain",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "metallicus",
+    "metal",
+    "mtl",
+    "banking",
+    "blockchain",
+    "fintech",
+    "brand",
+    "promo"
+   ],
+   "sizeBytes": 8358861,
    "hasMobile": true,
    "mp4FromGif": false,
    "new": false

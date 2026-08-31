@@ -159,23 +159,31 @@ def encode_gif(src, out, width, fps, colors=128):
         os.remove(pal)
     return ok and os.path.exists(out) and os.path.getsize(out) > 0
 
-def gif_from_mp4(src, out, width=480):
-    """Publish an mp4-only source as a GIF.
+def gif_from_mp4(src, out, width=None, fps=None):
+    """Publish an mp4 source as a GIF, sized to actually be postable.
 
-    480px matches the rest of the library. Sources are commonly 1080x1080, and a
-    full-size GIF of one is enormous for no visible gain at the size these get
-    posted. Falls back through smaller widths only if the encode fails outright;
-    the desktop/mobile size caps are enforced by the caller as for any other item.
+    480px suits the usual 1-5s square clip. A long one is a different problem:
+    #100 is 13.5s, and a naive encode of it lands at 32MB -- past X's 15MB
+    desktop cap AND past Cloudflare Pages' 25MB per-file limit, i.e. not merely
+    poor but unhostable. So the ladder steps down until the result fits, rather
+    than emitting whatever falls out and failing the cap check afterwards.
+
+    `gifWidth`/`gifFps` in the catalog pin the top rung when a clip deserves
+    better than the default.
     """
-    # Only decimate clips long enough to spare the frames. Several of these are
-    # 5-frame reaction loops; capping those at 20fps drops two of the five and
-    # visibly stutters the loop.
     src_fps = probe_fps(src)
-    fps = src_fps if probe_frames(src) <= 30 else min(20, max(10, round(src_fps)))
-    for w in [width, 400, 320]:
-        if encode_gif(src, out, w, fps):
+    auto_fps = src_fps if probe_frames(src) <= 30 else min(20, max(10, round(src_fps)))
+    ladder = [(width or 480, fps or auto_fps), (720, 15), (600, 15),
+              (480, 15), (400, 12), (320, 10)]
+    seen = set()
+    for w, f in ladder:
+        if (w, f) in seen:
+            continue
+        seen.add((w, f))
+        if encode_gif(src, out, w, f) and os.path.getsize(out) <= DESKTOP_CAP:
             return True
     return False
+
 
 def shrink_gif(src, out, cap):
     """Step down scale/fps until the GIF fits under cap. Returns True if it fit."""
@@ -211,7 +219,8 @@ def main():
         # never converted by hand can still be published.
         if FORCE or not os.path.exists(p_gif):
             if is_mp4:
-                if not gif_from_mp4(src, p_gif):
+                if not gif_from_mp4(src, p_gif,
+                                    it.get("gifWidth"), it.get("gifFps")):
                     problems.append(f"{slug}: could not encode a GIF from {it['src']}")
                     continue
             else:
