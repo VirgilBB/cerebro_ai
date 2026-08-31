@@ -17,7 +17,7 @@ Outputs per item:
   assets/preview/<slug>.mp4     480px hover playback, never a download
   assets/mp4/<slug>.mp4         720px optional secondary download
 """
-import json, os, shutil, subprocess, sys
+import hashlib, json, os, shutil, subprocess, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SITE = os.path.join(ROOT, "site")
@@ -246,8 +246,16 @@ def main():
             if not it.get(field):
                 problems.append(f"{slug}: missing required field `{field}`")
 
+        # Short content hash, appended to every asset URL for this item as ?v=.
+        # `_headers` marks assets immutable for a year and the filenames are
+        # slug-based, so without this a swapped source keeps serving out of the
+        # visitor's own browser cache -- Cloudflare invalidates on deploy, but
+        # the browser was told it never needs to ask again.
+        with open(p_gif, "rb") as fh:
+            ver = hashlib.sha256(fh.read()).hexdigest()[:8]
+
         rec = {
-            "slug": slug, "num": it.get("num", ""),
+            "slug": slug, "num": it.get("num", ""), "v": ver,
             "title": it["title"], "alt": it["alt"],
             "reaction": it["reaction"], "source": it["source"],
             "branded": it["branded"], "tags": it.get("tags", []),

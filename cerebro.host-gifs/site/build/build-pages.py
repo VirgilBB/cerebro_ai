@@ -21,12 +21,12 @@ TPL = """<!doctype html>
 <meta property="og:description" content="{alt}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{base}/g/{slug}/">
-<meta property="og:image" content="{base}/assets/poster/{slug}.jpg">
+<meta property="og:image" content="{base}/assets/poster/{slug}.jpg?v={v}">
 <meta property="og:image:alt" content="{alt}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{alt}">
-<meta name="twitter:image" content="{base}/assets/poster/{slug}.jpg">
+<meta name="twitter:image" content="{base}/assets/poster/{slug}.jpg?v={v}">
 <link rel="canonical" href="{base}/g/{slug}/">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="256x256" href="../../assets/brand/cerebro-256.png">
@@ -55,15 +55,15 @@ try {{
 </header>
 <main>
   <div class="wrap" style="max-width:620px">
-    <img src="../../assets/gif/{slug}.gif" alt="{alt}"
+    <img src="../../assets/gif/{slug}.gif?v={v}" alt="{alt}"
          style="width:100%;border-radius:12px;border:1px solid var(--border)">
     <div style="display:flex;flex-direction:column;gap:12px;margin-top:20px">
-      <a class="btn btn-primary" id="dl" href="../../assets/gif/{slug}.gif?dl=1"
+      <a class="btn btn-primary" id="dl" href="../../assets/gif/{slug}.gif?v={v}&amp;dl=1"
          download="{slug}.gif">Download GIF</a>
       <p class="hint"><strong>Download, then attach it to your X post.</strong>
          X only animates files you upload — a pasted link shows a still frame.</p>
       <div class="btn-row">
-        <a class="btn btn-ghost" href="../../assets/mp4/{slug}.mp4" download="{slug}.mp4">MP4</a>
+        <a class="btn btn-ghost" href="../../assets/mp4/{slug}.mp4?v={v}" download="{slug}.mp4">MP4</a>
         <a class="btn btn-ghost" href="../../">Browse all {count} gifs</a>
       </div>
       <div class="platforms">
@@ -96,7 +96,7 @@ try {{
   if (!{has_mobile}) return;
   if (!window.matchMedia('(max-width: 820px)').matches) return;
   var a = document.getElementById('dl');
-  a.href = '../../assets/gif-mobile/{slug}.gif?dl=1';
+  a.href = '../../assets/gif-mobile/{slug}.gif?v={v}&dl=1';
 }})();
 </script>
 </body>
@@ -126,7 +126,8 @@ def main():
             f.write(TPL.format(
                 title=html.escape(g["title"]), alt=html.escape(g["alt"]),
                 slug=g["slug"], num=html.escape(g.get("num", "")), base=BASE, count=n,
-                has_mobile="true" if g.get("hasMobile") else "false"))
+                has_mobile="true" if g.get("hasMobile") else "false",
+                v=html.escape(g.get("v", ""))))
     # Drop pages for slugs that left the catalog, or a removed GIF keeps a live,
     # indexable page pointing at assets that no longer exist.
     live = {g["slug"] for g in data["gifs"]}

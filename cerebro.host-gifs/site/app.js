@@ -297,7 +297,7 @@ function card(g) {
   el._gif = g;
 
   var img = document.createElement('img');
-  img.src = 'assets/poster/' + g.slug + '.jpg';
+  img.src = posterHref(g);
   img.alt = g.alt;
   img.loading = 'lazy';
   img.decoding = 'async';
@@ -390,8 +390,8 @@ function playCard(el, g) {
   v.preload = 'none';
   // Poster behind the video: if decode is slow or autoplay is refused, the card
   // shows the frame rather than a black box.
-  v.poster = 'assets/poster/' + g.slug + '.jpg';
-  v.src = 'assets/preview/' + g.slug + '.mp4';
+  v.poster = posterHref(g);
+  v.src = 'assets/preview/' + g.slug + '.mp4' + ver(g);
   v.draggable = true;
   attachDrag(v, g);
   el.appendChild(v);
@@ -413,11 +413,19 @@ function stopCard(el) {
 
 /* The 14 GIFs over 5MB can't be posted from a phone. Hand small screens the
    compressed variant so the download is always actually usable where you are. */
+/* ?v= is the item's content hash. Assets are cached immutable for a year under
+   slug-based filenames, so a re-cut gif would otherwise keep serving from the
+   visitor's browser cache indefinitely. Changing the token changes the URL.
+   The Worker drops the query before going upstream, so this never fragments the
+   Pages cache -- it only busts the client's. */
+function ver(g) { return g.v ? '?v=' + g.v : ''; }
+function posterHref(g) { return 'assets/poster/' + g.slug + '.jpg' + ver(g); }
+
 function gifHref(g) {
   var small = window.matchMedia('(max-width: 820px)').matches;
-  return (small && g.hasMobile ? 'assets/gif-mobile/' : 'assets/gif/') + g.slug + '.gif';
+  return (small && g.hasMobile ? 'assets/gif-mobile/' : 'assets/gif/') + g.slug + '.gif' + ver(g);
 }
-function downloadHref(g) { return gifHref(g) + '?dl=1'; }
+function downloadHref(g) { return gifHref(g) + (g.v ? '&' : '?') + 'dl=1'; }
 
 /* ---------------- lightbox ---------------- */
 
@@ -441,16 +449,16 @@ function open(g) {
   // actual artifact: right-click-save and drag-to-desktop both need it to be one.
   // Poster sits behind it as a background so there is no blank while it loads.
   var im = document.createElement('img');
-  im.src = reduced ? ('assets/poster/' + g.slug + '.jpg') : gifHref(g);
+  im.src = reduced ? posterHref(g) : gifHref(g);
   im.alt = g.alt;
   im.draggable = true;
-  im.style.backgroundImage = 'url("assets/poster/' + g.slug + '.jpg")';
+  im.style.backgroundImage = 'url("' + posterHref(g) + '")';
   im.style.backgroundSize = 'contain';
   im.style.backgroundRepeat = 'no-repeat';
   im.style.backgroundPosition = 'center';
   attachDrag(im, g);
   im.addEventListener('error', function () {
-    im.src = 'assets/poster/' + g.slug + '.jpg';
+    im.src = posterHref(g);
   });
   lbMedia.appendChild(im);
 
@@ -459,7 +467,7 @@ function open(g) {
   d.setAttribute('download', g.slug + '.gif');
 
   var m = document.getElementById('lb-mp4');
-  m.href = 'assets/mp4/' + g.slug + '.mp4';
+  m.href = 'assets/mp4/' + g.slug + '.mp4' + ver(g);
   m.setAttribute('download', g.slug + '.mp4');
 
   document.getElementById('lb-hint').innerHTML = coarse
