@@ -27,8 +27,12 @@
   --media-border: rgba(255, 255, 255, 0.28);
 }
 
+/* Three blocks, not one. The media query is the default; the [data-theme]
+   rules are the toggle overriding it, and both directions are needed -- a
+   light-OS user choosing dark has no media query to fall back on. The
+   :not() keeps an explicit dark choice from being re-lit by the OS. */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme="dark"]) {
     color-scheme: light;
     --bg: #f6f8f9;
     --surface: #ffffff;
@@ -47,6 +51,44 @@
     --accent-bg: rgba(4, 120, 87, 0.10);
     --accent-border: rgba(4, 120, 87, 0.32);
   }
+}
+
+:root[data-theme="light"] {
+    color-scheme: light;
+    --bg: #f6f8f9;
+    --surface: #ffffff;
+    --surface-2: #eef1f4;
+    --border: rgba(0, 0, 0, 0.12);
+    --border-strong: rgba(0, 0, 0, 0.26);
+    --text: #0b1013;
+    --text-dim: rgba(0, 0, 0, 0.72);
+    --placeholder: rgba(0, 0, 0, 0.70);
+    --sticky: rgba(246, 248, 249, 0.94);
+    --backdrop: rgba(11, 16, 19, 0.55);
+    /* #10b981 is only ~2.3:1 on white -- too weak for text or a thin border.
+       The darker emerald keeps the same hue at ~5.9:1. */
+    --accent: #047857;
+    --accent-fg: #ffffff;
+    --accent-bg: rgba(4, 120, 87, 0.10);
+    --accent-border: rgba(4, 120, 87, 0.32);
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0a0c0e;
+    --surface: #121619;
+    --surface-2: #191f23;
+    --border: rgba(255, 255, 255, 0.10);
+    --border-strong: rgba(255, 255, 255, 0.20);
+    --text: #f2f5f7;
+    --text-dim: rgba(255, 255, 255, 0.72);
+    --placeholder: rgba(255, 255, 255, 0.72);
+    --sticky: rgba(10, 12, 14, 0.94);
+    --backdrop: rgba(5, 7, 8, 0.86);
+    --accent: #10b981;
+    --accent-fg: #04140d;
+    --accent-bg: rgba(16, 185, 129, 0.15);
+    --accent-border: rgba(16, 185, 129, 0.35);
 }
 
 * { box-sizing: border-box; }
@@ -96,7 +138,27 @@ a { color: var(--accent); }
 /* ---------- header ---------- */
 
 header { border-bottom: 1px solid var(--border); }
-header .wrap { padding-top: 30px; padding-bottom: 22px; }
+header .wrap { padding-top: 30px; padding-bottom: 22px; position: relative; }
+
+#theme {
+  position: absolute; top: 26px; right: 20px;
+  width: 38px; height: 38px; display: grid; place-items: center;
+  background: var(--surface); color: var(--text);
+  border: 1px solid var(--border); border-radius: 50%;
+  cursor: pointer; padding: 0;
+  transition: border-color .15s, color .15s;
+}
+#theme:hover { border-color: var(--accent-border); color: var(--accent); }
+#theme svg { width: 17px; height: 17px; }
+/* Show the icon for the scheme you would switch TO, not the one you are in. */
+#theme .i-sun { display: none; }
+:root[data-theme="dark"] #theme .i-sun { display: block; }
+:root[data-theme="dark"] #theme .i-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) #theme .i-sun { display: block; }
+  :root:not([data-theme="light"]) #theme .i-moon { display: none; }
+}
+@media (max-width: 520px) { #theme { top: 22px; right: 16px; } }
 .eyebrow {
   margin: 0 0 6px; font-size: 12px; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--accent);

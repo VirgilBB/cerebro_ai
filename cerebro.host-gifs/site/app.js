@@ -1,6 +1,15 @@
 /* XPR Gifs -- grid, filters, hover playback, lightbox.
+
+   There is deliberately no "Post on X" button. x.com/intent/post accepts text
+   and a url and nothing else -- there is no media parameter, so an intent link
+   can never carry the gif. X animates a gif only when the file goes through its
+   media upload endpoint, which needs OAuth user context and a paid API tier.
+   A button that opened the composer with a link in it produced a still frame
+   every time, which is worse than not offering it: it looks like it works.
+   Download, drag, and copy-link are the paths that actually do something.
+
    Hard rule: the grid paints posters only. No .gif or .mp4 byte is fetched until
-   the user shows intent (hover on desktop, tap on touch). 79 items at ~3MB each
+   the user shows intent (hover on desktop, tap on touch). 100 items at ~3MB each
    would otherwise be a quarter-gigabyte scroll. */
 
 'use strict';
@@ -435,10 +444,6 @@ function open(g) {
       'X only animates uploaded files, never links.';
 
   var url = pageUrl(g);
-  // Link only -- no prefilled title text.
-  document.getElementById('lb-x').href =
-    'https://x.com/intent/post?url=' + encodeURIComponent(url);
-
   document.getElementById('lb-copy').textContent = 'Copy link';
   document.getElementById('lb-copy').dataset.url = url;
 
@@ -457,6 +462,26 @@ function close() {
   history.replaceState(null, '', location.pathname + location.search);
 }
 
+/* Colour scheme toggle. No stored value means "follow the OS"; the first click
+   writes an explicit choice that outlives the session. localStorage throws in
+   some privacy modes, so every access is guarded -- the toggle degrades to
+   per-page rather than breaking the script. */
+(function () {
+  var btn = document.getElementById('theme');
+  if (!btn) return;
+  var root = document.documentElement;
+  function current() {
+    var set = root.getAttribute('data-theme');
+    if (set) return set;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+  btn.addEventListener('click', function () {
+    var next = current() === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('gifs-theme', next); } catch (e) {}
+  });
+})();
+
 document.getElementById('lb-close').addEventListener('click', close);
 lb.addEventListener('cancel', function (e) { e.preventDefault(); close(); });
 lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
@@ -464,10 +489,6 @@ lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
 document.getElementById('lb-copy').addEventListener('click', function () {
   copyLink(this.dataset.url, this);
   if (current) track('copy', current.slug);
-});
-
-document.getElementById('lb-x').addEventListener('click', function () {
-  if (current) track('share', current.slug);
 });
 
 document.getElementById('lb-download').addEventListener('click', function () {
