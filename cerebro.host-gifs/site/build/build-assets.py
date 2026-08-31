@@ -85,7 +85,7 @@ def frame_interest(path):
     except Exception:
         return 0.0
 
-def make_poster(gif, out):
+def make_poster(gif, out, at=None):
     """JPEG, not WebP: this ffmpeg build ships no webp encoder and sips cannot write
     webp either. Samples several timestamps and keeps the most visually interesting
     frame -- a fixed offset lands on fades and transition flashes (vegeta was a white
@@ -96,7 +96,13 @@ def make_poster(gif, out):
     args = ["-frames:v", "1", "-vf", "scale=480:-1:flags=lanczos,format=yuvj420p",
             "-q:v", "4"]
     dur = probe_duration(gif)
-    offsets = [dur * f for f in (0.15, 0.35, 0.55, 0.75)] if dur > 0.4 else [0.0]
+    # `posterAt` pins the thumbnail to a chosen second. Variance scoring picks the
+    # busiest frame, which is not always the most legible one -- on a wide
+    # establishing shot it lands on texture rather than on the character.
+    if at is not None:
+        offsets = [float(at)]
+    else:
+        offsets = [dur * f for f in (0.15, 0.35, 0.55, 0.75)] if dur > 0.4 else [0.0]
     best, best_score = None, -1.0
     for n, off in enumerate(offsets):
         cand = out + f".c{n}.jpg"
@@ -211,7 +217,8 @@ def main():
 
         # 3. Poster.
         if FORCE or not os.path.exists(p_poster):
-            if not make_poster(src, p_poster):   # mp4 source = cleaner frame than the gif
+            # mp4 source = cleaner frame than the gif
+            if not make_poster(src, p_poster, it.get("posterAt")):
                 problems.append(f"{slug}: poster generation failed")
 
         # 4+5. Motion. Prefer the pristine wave original over the lossy GIF.

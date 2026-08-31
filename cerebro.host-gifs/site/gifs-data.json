@@ -1,5 +1,5 @@
 {
- "count": 100,
+ "count": 101,
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
@@ -2025,6 +2025,33 @@
    "hasMobile": false,
    "mp4FromGif": false,
    "new": true
+  },
+  {
+   "slug": "scrooge-mcduck-dive",
+   "num": "97",
+   "v": "6fb8cc34",
+   "title": "Scrooge McDuck \u2014 Money Dive",
+   "alt": "Scrooge McDuck diving off a springboard into a vault piled with gold coins",
+   "reaction": "take-my-money",
+   "source": "other",
+   "branded": "xpr",
+   "tags": [
+    "money",
+    "rich",
+    "gains",
+    "profit",
+    "wealth",
+    "cash",
+    "scrooge",
+    "duck",
+    "dive",
+    "vault",
+    "gold"
+   ],
+   "sizeBytes": 8770061,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
   }
  ]
 }
