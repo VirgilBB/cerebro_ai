@@ -6,7 +6,7 @@
    media upload endpoint, which needs OAuth user context and a paid API tier.
    A button that opened the composer with a link in it produced a still frame
    every time, which is worse than not offering it: it looks like it works.
-   Download, drag, and copy-link are the paths that actually do something.
+   Downloading the file is the only path to an animated gif in a post.
 
    Hard rule: the grid paints posters only. No .gif or .mp4 byte is fetched until
    the user shows intent (hover on desktop, tap on touch). 100 items at ~3MB each
@@ -80,9 +80,12 @@ function haystack(g) {
  *   2. text/uri-list + text/plain -- the universal fallback. Targets that accept a
  *      URL (most chat composers) get the absolute gif link.
  *
- * Dragging the lightbox image straight into a composer works in Chromium browsers
- * because the drag source is a genuine GIF element. Behaviour in other browsers and
- * target apps varies and is not something this page can guarantee.
+ * What this does NOT do is put the file into another website. Dropping on x.com
+ * delivers text/uri-list -- a link, which X renders as a still frame. A page
+ * cannot hand a File to a cross-origin drop target; `items.add(file)` above is
+ * kept only because it is free when ignored. Confirmed against the live site.
+ * The only route to an animated gif in a post is downloading it and attaching it,
+ * so that is what the copy says.
  */
 function absUrl(path) {
   return new URL(path, location.href).href;
@@ -414,7 +417,7 @@ function open(g) {
 
   lbMedia.innerHTML = '';
   // The real .gif, not the mp4 preview. Costs more bytes on open, but it is the
-  // actual artifact -- which is what makes dragging it into X/Discord work at all.
+  // actual artifact: right-click-save and drag-to-desktop both need it to be one.
   // Poster sits behind it as a background so there is no blank while it loads.
   var im = document.createElement('img');
   im.src = reduced ? ('assets/poster/' + g.slug + '.jpg') : gifHref(g);
@@ -440,8 +443,8 @@ function open(g) {
 
   document.getElementById('lb-hint').innerHTML = coarse
     ? '<strong>Long-press the GIF to save it</strong>, then attach it in your X post.'
-    : '<strong>Drag the GIF straight into your X post</strong> — or download it first. ' +
-      'X only animates uploaded files, never links.';
+    : '<strong>Download it, then attach it to your post.</strong> ' +
+      'X only animates files you upload — a pasted link shows a still frame.';
 
   var url = pageUrl(g);
   document.getElementById('lb-copy').textContent = 'Copy link';
