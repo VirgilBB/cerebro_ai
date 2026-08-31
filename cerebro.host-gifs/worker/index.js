@@ -68,10 +68,25 @@ export default {
 
     // Body streams through untouched; headers are copied so the Pages _headers
     // rules (immutable asset caching, CORS) survive the hop.
+    const headers = new Headers(res.headers);
+
+    // Pages redirects a directory URL to its trailing-slash form, and its
+    // Location is relative to the Pages root -- which has no /gifs prefix. Passed
+    // through verbatim it sent /gifs/g/<slug> to /g/<slug>/, off this route
+    // entirely and into Sitejet, so a link without the trailing slash unfurled as
+    // the bare domain instead of a card. Re-add the prefix.
+    const loc = headers.get('location');
+    if (loc) {
+      const to = new URL(loc, upstream);
+      if (to.hostname === ORIGIN) {
+        headers.set('location', '/gifs' + to.pathname + to.search + to.hash);
+      }
+    }
+
     return new Response(res.body, {
       status: res.status,
       statusText: res.statusText,
-      headers: res.headers,
+      headers,
     });
   },
 };

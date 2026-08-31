@@ -337,6 +337,8 @@ def main():
                    ("preview", ".mp4"), ("mp4", ".mp4")]:
         dp = os.path.join(ASSETS, d)
         for fn in os.listdir(dp):
+            if fn.startswith("_"):
+                continue   # hand-built, e.g. card/_index.jpg for the library page
             if fn.endswith(ext) and fn[: -len(ext)] not in live:
                 os.remove(os.path.join(dp, fn))
                 print(f"pruned {d}/{fn}")
