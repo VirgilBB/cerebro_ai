@@ -824,7 +824,7 @@
    ],
    "sizeBytes": 2030733,
    "hasMobile": false,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {
@@ -921,7 +921,7 @@
    ],
    "sizeBytes": 3311231,
    "hasMobile": false,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {
@@ -940,7 +940,7 @@
    ],
    "sizeBytes": 2490055,
    "hasMobile": false,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {
@@ -1247,7 +1247,7 @@
    ],
    "sizeBytes": 3190850,
    "hasMobile": false,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {
@@ -1382,7 +1382,7 @@
    ],
    "sizeBytes": 3010486,
    "hasMobile": false,
-   "mp4FromGif": true,
+   "mp4FromGif": false,
    "new": false
   },
   {

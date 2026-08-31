@@ -219,7 +219,14 @@ def main():
         # wave original does not share the GIF's basename. Never guess this by fuzzy
         # name match -- several near-matches are the same scene with a *different*
         # brand watermark, which would ship an off-brand MP4.
+        # A dangling mp4src used to fail quietly: ffmpeg errored, no mp4 was
+        # written, and `from_gif` still read False (motion_src != src), so the
+        # item counted as having a pristine master while serving nothing at all.
+        # Flattening wave1-5 into `live mp4s/` left exactly one such override.
         override = it.get("mp4src")
+        if override and not os.path.exists(os.path.join(ROOT, override)):
+            problems.append(f"{slug}: mp4src points at a missing file -> {override}")
+            override = None
         motion_src = (os.path.join(ROOT, override) if override
                       else find_source_mp4(it["src"])) or src
         from_gif = motion_src == src and not is_mp4
