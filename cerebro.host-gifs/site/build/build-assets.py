@@ -132,6 +132,32 @@ def probe_width(path):
     except ValueError:
         return 0
 
+def make_card(src, out, at=None):
+    """1200x630 social card for og:image / twitter:image.
+
+    The 480px poster is under X's recommended 1200x628 for summary_large_image,
+    which renders soft and can make X fall back to the small card layout. This
+    renders from the ORIGINAL source, not the poster, so a 1080p master upscales
+    not at all and a 450px gif only to 630 high.
+
+    Square art on a 1.91:1 card would either stretch or sit on dead bars, so the
+    frame is centred sharp over a blurred, darkened cover of itself.
+    """
+    dur = probe_duration(src)
+    off = float(at) if at is not None else (dur * 0.35 if dur > 0.4 else 0.0)
+    fc = ("[0:v]split=2[bg][fg];"
+          "[bg]scale=1200:630:force_original_aspect_ratio=increase,crop=1200:630,"
+          "boxblur=24:2,eq=brightness=-0.18[bgb];"
+          "[fg]scale=-2:630:flags=lanczos[fgs];"
+          "[bgb][fgs]overlay=(W-w)/2:0,format=yuvj420p")
+    ok, _ = ffmpeg(["-ss", f"{off:.3f}", "-i", src, "-frames:v", "1",
+                    "-filter_complex", fc, "-q:v", "3", out])
+    if ok and os.path.exists(out) and os.path.getsize(out) > 0:
+        return True
+    # Very short clip: the seek overshot, take the first frame.
+    ok, _ = ffmpeg(["-i", src, "-frames:v", "1", "-filter_complex", fc, "-q:v", "3", out])
+    return ok and os.path.exists(out) and os.path.getsize(out) > 0
+
 def make_mp4(src, out, width, crf):
     # Never upscale. Most masters are 1080x1080, but not all -- blowing a 320px
     # source up to 720 just spends bytes on blur.
@@ -195,7 +221,7 @@ def shrink_gif(src, out, cap):
 def main():
     catalog = json.load(open(os.path.join(SITE, "build", "catalog.json")))
     items = catalog["items"]
-    for d in ["gif", "gif-mobile", "poster", "preview", "mp4"]:
+    for d in ["gif", "gif-mobile", "poster", "card", "preview", "mp4"]:
         os.makedirs(os.path.join(ASSETS, d), exist_ok=True)
 
     out_records, problems = [], []
@@ -211,6 +237,7 @@ def main():
         p_gif    = os.path.join(ASSETS, "gif", slug + ".gif")
         p_mobile = os.path.join(ASSETS, "gif-mobile", slug + ".gif")
         p_poster = os.path.join(ASSETS, "poster", slug + ".jpg")
+        p_card   = os.path.join(ASSETS, "card", slug + ".jpg")
         p_prev   = os.path.join(ASSETS, "preview", slug + ".mp4")
         p_mp4    = os.path.join(ASSETS, "mp4", slug + ".mp4")
 
@@ -243,6 +270,9 @@ def main():
             # mp4 source = cleaner frame than the gif
             if not make_poster(src, p_poster, it.get("posterAt")):
                 problems.append(f"{slug}: poster generation failed")
+        if FORCE or not os.path.exists(p_card):
+            if not make_card(src, p_card, it.get("posterAt")):
+                problems.append(f"{slug}: social card generation failed")
 
         # 4+5. Motion. Prefer the pristine wave original over the lossy GIF.
         # `mp4src` is an explicit, frame-verified override for the cases where the
@@ -303,6 +333,7 @@ def main():
     # would mean "pulled from the site" but still live.
     live = {r["slug"] for r in out_records}
     for d, ext in [("gif", ".gif"), ("gif-mobile", ".gif"), ("poster", ".jpg"),
+                   ("card", ".jpg"),
                    ("preview", ".mp4"), ("mp4", ".mp4")]:
         dp = os.path.join(ASSETS, d)
         for fn in os.listdir(dp):

@@ -21,12 +21,16 @@ TPL = """<!doctype html>
 <meta property="og:description" content="{alt}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{base}/g/{slug}/">
-<meta property="og:image" content="{base}/assets/poster/{slug}.jpg?v={v}">
+<meta property="og:image" content="{base}/assets/card/{slug}.jpg?v={v}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:alt" content="{alt}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{alt}">
-<meta name="twitter:image" content="{base}/assets/poster/{slug}.jpg?v={v}">
+<meta name="twitter:image" content="{base}/assets/card/{slug}.jpg?v={v}">
+<meta name="twitter:image:alt" content="{alt}">
 <link rel="canonical" href="{base}/g/{slug}/">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/brand/favicon-32.png">
 <link rel="icon" type="image/png" sizes="256x256" href="../../assets/brand/cerebro-256.png">
