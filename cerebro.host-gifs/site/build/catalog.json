@@ -1699,6 +1699,25 @@
    ],
    "alt": "Scrooge McDuck diving off a springboard into a vault piled with gold coins",
    "posterAt": 2.6
+  },
+  {
+   "src": "live gifs/98-metallicus.gif",
+   "slug": "metallicus-logo",
+   "num": "98",
+   "title": "Metallicus",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "metallicus",
+    "metal",
+    "mtl",
+    "logo",
+    "brand",
+    "tiles",
+    "shill"
+   ],
+   "alt": "Rows of Metallicus M logo tiles with light sweeping across them"
   }
  ]
 }

@@ -123,7 +123,21 @@ def make_poster(gif, out, at=None):
     ok, _ = ffmpeg(["-i", gif] + args + [out])
     return ok and os.path.exists(out) and os.path.getsize(out) > 0
 
+def probe_width(path):
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0",
+                        "-show_entries", "stream=width", "-of", "csv=p=0", path],
+                       capture_output=True, text=True)
+    try:
+        return int(r.stdout.strip())
+    except ValueError:
+        return 0
+
 def make_mp4(src, out, width, crf):
+    # Never upscale. Most masters are 1080x1080, but not all -- blowing a 320px
+    # source up to 720 just spends bytes on blur.
+    sw = probe_width(src)
+    if sw:
+        width = min(width, sw)
     # yuv420p + even dimensions + baseline profile: required for iOS Safari.
     vf = f"scale={width}:-2:flags=lanczos,crop=trunc(iw/2)*2:trunc(ih/2)*2"
     return ffmpeg(["-i", src, "-an", "-movflags", "+faststart",

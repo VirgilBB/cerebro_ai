@@ -1,5 +1,5 @@
 {
- "count": 101,
+ "count": 102,
  "gifs": [
   {
    "slug": "fry-take-my-money-xpr",
@@ -2049,6 +2049,29 @@
     "gold"
    ],
    "sizeBytes": 8770061,
+   "hasMobile": true,
+   "mp4FromGif": false,
+   "new": false
+  },
+  {
+   "slug": "metallicus-logo",
+   "num": "98",
+   "v": "d27b9bab",
+   "title": "Metallicus",
+   "alt": "Rows of Metallicus M logo tiles with light sweeping across them",
+   "reaction": "hype",
+   "source": "other",
+   "branded": "mtl",
+   "tags": [
+    "metallicus",
+    "metal",
+    "mtl",
+    "logo",
+    "brand",
+    "tiles",
+    "shill"
+   ],
+   "sizeBytes": 7119335,
    "hasMobile": true,
    "mp4FromGif": false,
    "new": false
